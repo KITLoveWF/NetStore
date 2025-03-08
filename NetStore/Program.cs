@@ -14,6 +14,7 @@ namespace NetStore
         [STAThread]
         static void Main()
         {
+            Console.Write("xin chào");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
