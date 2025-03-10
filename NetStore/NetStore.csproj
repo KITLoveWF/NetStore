@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\..\..\SECOND\WINDOWPROGRAMING\kryton\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,8 +61,77 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormLoginAndFoget\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLoginAndFoget\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLoginAndFoget\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLoginAndFoget\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\AddComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\AddComputer.Designer.cs">
+      <DependentUpon>AddComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\EditComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\EditComputer.Designer.cs">
+      <DependentUpon>EditComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\StateComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\StateComputer.Designer.cs">
+      <DependentUpon>StateComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCReceiptComputer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCReceiptComputer.Designer.cs">
+      <DependentUpon>UCReceiptComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCSideBarTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCSideBarTop.Designer.cs">
+      <DependentUpon>UCSideBarTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCTopReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCTopReceipt.Designer.cs">
+      <DependentUpon>UCTopReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\FormLoginAndFoget\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLoginAndFoget\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\AddComputer.resx">
+      <DependentUpon>AddComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\EditComputer.resx">
+      <DependentUpon>EditComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\UCReceiptComputer.resx">
+      <DependentUpon>UCReceiptComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\UCSideBarTop.resx">
+      <DependentUpon>UCSideBarTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\UCTopReceipt.resx">
+      <DependentUpon>UCTopReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +140,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols_desktop-mac-outline-rounded %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
