@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NetStore
+namespace NetStore.Form.FormStateComputer
 {
-    public partial class Form1 : System.Windows.Forms.Form
+    public partial class UCSideBarTop : UserControl
     {
-        public Form1()
+        public UCSideBarTop()
         {
             InitializeComponent();
         }
