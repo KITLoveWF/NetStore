@@ -109,6 +109,12 @@
     <Compile Include="Form\FormStateComputer\UCTopReceipt.Designer.cs">
       <DependentUpon>UCTopReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\FormLoginAndFoget\ForgotPassword.resx">
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormStateComputer\UCTopReceipt.resx">
       <DependentUpon>UCTopReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ImportForm.resx">
+      <DependentUpon>ImportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
