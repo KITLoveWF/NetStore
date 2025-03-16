@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NetStore.Form.FormLoginAndFoget
+namespace NetStore.Form.FormMenu
 {
-    public partial class Login : System.Windows.Forms.Form
+    public partial class AddNewFood : System.Windows.Forms.Form
     {
-        public Login()
+        public AddNewFood()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

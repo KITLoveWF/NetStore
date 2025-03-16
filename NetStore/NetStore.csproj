@@ -61,6 +61,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Customer\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormLoginAndFoget\ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,18 @@
     </Compile>
     <Compile Include="Form\FormLoginAndFoget\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMenu\AddNewFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMenu\AddNewFood.Designer.cs">
+      <DependentUpon>AddNewFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMenu\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMenu\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormStateComputer\AddComputer.cs">
       <SubType>Form</SubType>
@@ -111,11 +135,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\Customer\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLoginAndFoget\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLoginAndFoget\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMenu\AddNewFood.resx">
+      <DependentUpon>AddNewFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMenu\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormStateComputer\AddComputer.resx">
       <DependentUpon>AddComputer.cs</DependentUpon>
@@ -161,6 +197,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\FormCustomer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

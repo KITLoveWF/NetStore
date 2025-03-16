@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NetStore.Form.FormLoginAndFoget
+namespace NetStore.Form.Customer
 {
-    public partial class Login : System.Windows.Forms.Form
+    public partial class AddCustomer : System.Windows.Forms.Form
     {
-        public Login()
+        public AddCustomer()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void AddCustomer_Load(object sender, EventArgs e)
         {
 
         }
