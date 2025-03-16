@@ -33,7 +33,7 @@
             this.btnAddcomputer = new Guna.UI2.WinForms.Guna2Button();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.txtNamecomputer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTypecomputer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbbTypecomputer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // lblNamecomputer
@@ -109,26 +109,20 @@
             this.txtNamecomputer.Size = new System.Drawing.Size(466, 50);
             this.txtNamecomputer.TabIndex = 4;
             // 
-            // txtTypecomputer
+            // cbbTypecomputer
             // 
-            this.txtTypecomputer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTypecomputer.DefaultText = "";
-            this.txtTypecomputer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTypecomputer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTypecomputer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTypecomputer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTypecomputer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtTypecomputer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTypecomputer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTypecomputer.ForeColor = System.Drawing.Color.White;
-            this.txtTypecomputer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTypecomputer.Location = new System.Drawing.Point(259, 156);
-            this.txtTypecomputer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTypecomputer.Name = "txtTypecomputer";
-            this.txtTypecomputer.PlaceholderText = "";
-            this.txtTypecomputer.SelectedText = "";
-            this.txtTypecomputer.Size = new System.Drawing.Size(466, 50);
-            this.txtTypecomputer.TabIndex = 5;
+            this.cbbTypecomputer.BackColor = System.Drawing.Color.Transparent;
+            this.cbbTypecomputer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTypecomputer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTypecomputer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTypecomputer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTypecomputer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTypecomputer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbTypecomputer.ItemHeight = 30;
+            this.cbbTypecomputer.Location = new System.Drawing.Point(259, 170);
+            this.cbbTypecomputer.Name = "cbbTypecomputer";
+            this.cbbTypecomputer.Size = new System.Drawing.Size(466, 36);
+            this.cbbTypecomputer.TabIndex = 6;
             // 
             // AddComputer
             // 
@@ -136,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 343);
-            this.Controls.Add(this.txtTypecomputer);
+            this.Controls.Add(this.cbbTypecomputer);
             this.Controls.Add(this.txtNamecomputer);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAddcomputer);
@@ -156,6 +150,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAddcomputer;
         private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2TextBox txtNamecomputer;
-        private Guna.UI2.WinForms.Guna2TextBox txtTypecomputer;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbTypecomputer;
     }
 }

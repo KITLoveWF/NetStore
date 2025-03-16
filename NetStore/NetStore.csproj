@@ -103,6 +103,18 @@
     <Compile Include="Form\FormStateComputer\UCSideBarTop.Designer.cs">
       <DependentUpon>UCSideBarTop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormStateComputer\UCSideLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCSideLeft.Designer.cs">
+      <DependentUpon>UCSideLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCTypeComputer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\UCTypeComputer.Designer.cs">
+      <DependentUpon>UCTypeComputer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormStateComputer\UCTopReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,8 +141,14 @@
     <EmbeddedResource Include="Form\FormStateComputer\UCSideBarTop.resx">
       <DependentUpon>UCSideBarTop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\UCSideLeft.resx">
+      <DependentUpon>UCSideLeft.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormStateComputer\UCTopReceipt.resx">
       <DependentUpon>UCTopReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\UCTypeComputer.resx">
+      <DependentUpon>UCTypeComputer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +179,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 5 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 5 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols_desktop-mac-outline-rounded %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\majesticons_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols_fastfood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ix_customer-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
