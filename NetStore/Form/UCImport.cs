@@ -16,5 +16,25 @@ namespace NetStore.Form
         {
             InitializeComponent();
         }
+
+        private void UCImport_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCyphergaming_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
