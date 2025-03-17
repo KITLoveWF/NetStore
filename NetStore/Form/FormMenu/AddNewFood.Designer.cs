@@ -49,9 +49,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 249);
+            this.label1.Location = new System.Drawing.Point(101, 311);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 28);
+            this.label1.Size = new System.Drawing.Size(52, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên";
             // 
@@ -59,9 +59,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(90, 316);
+            this.label2.Location = new System.Drawing.Point(101, 395);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 28);
+            this.label2.Size = new System.Drawing.Size(48, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Giá";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -69,9 +69,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NetStore.Properties.Resources.image_5;
-            this.pictureBox1.Location = new System.Drawing.Point(165, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(186, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(264, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -79,9 +81,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(79, 466);
+            this.label3.Location = new System.Drawing.Point(89, 582);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 28);
+            this.label3.Size = new System.Drawing.Size(64, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ảnh ";
             // 
@@ -89,9 +91,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 391);
+            this.label4.Location = new System.Drawing.Point(44, 489);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 28);
+            this.label4.Size = new System.Drawing.Size(112, 32);
             this.label4.TabIndex = 5;
             this.label4.Text = "Phân loại";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -108,12 +110,12 @@
             this.txtname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtname.Location = new System.Drawing.Point(155, 249);
-            this.txtname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtname.Location = new System.Drawing.Point(174, 311);
+            this.txtname.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtname.Name = "txtname";
             this.txtname.PlaceholderText = "";
             this.txtname.SelectedText = "";
-            this.txtname.Size = new System.Drawing.Size(299, 31);
+            this.txtname.Size = new System.Drawing.Size(336, 39);
             this.txtname.TabIndex = 6;
             // 
             // txtprice
@@ -121,17 +123,18 @@
             this.txtprice.BackColor = System.Drawing.Color.Transparent;
             this.txtprice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtprice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtprice.Location = new System.Drawing.Point(155, 316);
-            this.txtprice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtprice.Location = new System.Drawing.Point(174, 395);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtprice.Name = "txtprice";
-            this.txtprice.Size = new System.Drawing.Size(299, 37);
+            this.txtprice.Size = new System.Drawing.Size(336, 46);
             this.txtprice.TabIndex = 7;
             // 
             // picupload
             // 
-            this.picupload.Location = new System.Drawing.Point(155, 466);
+            this.picupload.Location = new System.Drawing.Point(174, 582);
+            this.picupload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picupload.Name = "picupload";
-            this.picupload.Size = new System.Drawing.Size(299, 92);
+            this.picupload.Size = new System.Drawing.Size(336, 115);
             this.picupload.TabIndex = 8;
             this.picupload.TabStop = false;
             // 
@@ -143,9 +146,10 @@
             this.btnupload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnupload.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnupload.ForeColor = System.Drawing.Color.White;
-            this.btnupload.Location = new System.Drawing.Point(155, 553);
+            this.btnupload.Location = new System.Drawing.Point(174, 691);
+            this.btnupload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnupload.Name = "btnupload";
-            this.btnupload.Size = new System.Drawing.Size(299, 26);
+            this.btnupload.Size = new System.Drawing.Size(336, 32);
             this.btnupload.TabIndex = 9;
             this.btnupload.Text = "Upload ";
             // 
@@ -158,9 +162,10 @@
             this.btncancel.FillColor = System.Drawing.Color.Red;
             this.btncancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btncancel.ForeColor = System.Drawing.Color.White;
-            this.btncancel.Location = new System.Drawing.Point(123, 620);
+            this.btncancel.Location = new System.Drawing.Point(138, 775);
+            this.btncancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(123, 45);
+            this.btncancel.Size = new System.Drawing.Size(138, 56);
             this.btncancel.TabIndex = 10;
             this.btncancel.Text = "Cancel";
             // 
@@ -173,9 +178,10 @@
             this.btnsave.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnsave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnsave.ForeColor = System.Drawing.Color.White;
-            this.btnsave.Location = new System.Drawing.Point(345, 620);
+            this.btnsave.Location = new System.Drawing.Point(388, 775);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(123, 45);
+            this.btnsave.Size = new System.Drawing.Size(138, 56);
             this.btnsave.TabIndex = 11;
             this.btnsave.Text = "Save";
             // 
@@ -194,16 +200,17 @@
             "Nước",
             "Mỳ",
             "Thẻ cào"});
-            this.combocategory.Location = new System.Drawing.Point(153, 391);
+            this.combocategory.Location = new System.Drawing.Point(172, 489);
+            this.combocategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.combocategory.Name = "combocategory";
-            this.combocategory.Size = new System.Drawing.Size(301, 36);
+            this.combocategory.Size = new System.Drawing.Size(338, 36);
             this.combocategory.TabIndex = 13;
             // 
             // AddNewFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 703);
+            this.ClientSize = new System.Drawing.Size(623, 879);
             this.Controls.Add(this.combocategory);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btncancel);
@@ -216,6 +223,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddNewFood";
             this.Text = "AddNewFood";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

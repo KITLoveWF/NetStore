@@ -48,7 +48,7 @@
             // 
             this.lblNamestaff.AutoSize = true;
             this.lblNamestaff.Font = new System.Drawing.Font("Cooper Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamestaff.Location = new System.Drawing.Point(907, 47);
+            this.lblNamestaff.Location = new System.Drawing.Point(1132, 48);
             this.lblNamestaff.Name = "lblNamestaff";
             this.lblNamestaff.Size = new System.Drawing.Size(163, 36);
             this.lblNamestaff.TabIndex = 1;
@@ -57,9 +57,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NetStore.Properties.Resources.Vector;
-            this.pictureBox1.Location = new System.Drawing.Point(853, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(1078, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -71,7 +72,7 @@
             this.Controls.Add(this.lblNamestaff);
             this.Controls.Add(this.lblStatecomputer);
             this.Name = "UCSideBarTop";
-            this.Size = new System.Drawing.Size(1093, 123);
+            this.Size = new System.Drawing.Size(1326, 123);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
