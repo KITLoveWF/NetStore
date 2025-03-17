@@ -361,7 +361,7 @@
             this.Controls.Add(this.guna2ComboBox2);
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "ImportUC";
+            //this.Name = "ImportUC";
             this.Size = new System.Drawing.Size(1553, 1226);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);

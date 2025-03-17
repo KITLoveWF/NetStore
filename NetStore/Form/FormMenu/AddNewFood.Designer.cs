@@ -68,7 +68,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::NetStore.Properties.Resources.images_removebg_preview;
+            this.pictureBox1.Image = global::NetStore.Properties.Resources.image_5;
             this.pictureBox1.Location = new System.Drawing.Point(165, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(235, 193);
