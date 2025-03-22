@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NetStore.Form.FormStateComputer
+namespace NetStore.Form.ComputerMaintaince
 {
-    public partial class UCTopReceipt : UserControl
+    public partial class UCDeviceReceipt : UserControl
     {
-        public UCTopReceipt()
+        public UCDeviceReceipt()
         {
             InitializeComponent();
         }
 
-        private void lblTimereal_Click(object sender, EventArgs e)
+        private void lblFood1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuantity1_Click(object sender, EventArgs e)
         {
 
         }

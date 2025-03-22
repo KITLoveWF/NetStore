@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NetStore.Form.FormStateComputer
+namespace NetStore.Form.ComputerMaintaince
 {
-    public partial class UCTopReceipt : UserControl
+    public partial class UCSideBarTopCompMaintain : UserControl
     {
-        public UCTopReceipt()
+        public UCSideBarTopCompMaintain()
         {
             InitializeComponent();
-        }
-
-        private void lblTimereal_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

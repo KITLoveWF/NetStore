@@ -55,6 +55,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\ComputerMaintaince\UCChoosingDeviceToMaintain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCChoosingDeviceToMaintain.Designer.cs">
+      <DependentUpon>UCChoosingDeviceToMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCCompMaintainaceForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCCompMaintainaceForm.Designer.cs">
+      <DependentUpon>UCCompMaintainaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCComputerState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCComputerState.Designer.cs">
+      <DependentUpon>UCComputerState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCDeviceReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCDeviceReceipt.Designer.cs">
+      <DependentUpon>UCDeviceReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCSideBarTopCompMaintain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\ComputerMaintaince\UCSideBarTopCompMaintain.Designer.cs">
+      <DependentUpon>UCSideBarTopCompMaintain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Customer\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +189,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\ComputerMaintaince\UCChoosingDeviceToMaintain.resx">
+      <DependentUpon>UCChoosingDeviceToMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ComputerMaintaince\UCCompMaintainaceForm.resx">
+      <DependentUpon>UCCompMaintainaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ComputerMaintaince\UCComputerState.resx">
+      <DependentUpon>UCComputerState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ComputerMaintaince\UCDeviceReceipt.resx">
+      <DependentUpon>UCDeviceReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ComputerMaintaince\UCSideBarTopCompMaintain.resx">
+      <DependentUpon>UCSideBarTopCompMaintain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Customer\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
