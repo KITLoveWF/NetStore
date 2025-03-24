@@ -64,11 +64,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -78,7 +73,6 @@
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label11
@@ -106,7 +100,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.IndianRed;
-            this.panel10.Location = new System.Drawing.Point(968, 43);
+            this.panel10.Location = new System.Drawing.Point(919, 43);
             this.panel10.Margin = new System.Windows.Forms.Padding(5);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(78, 35);
@@ -115,9 +109,10 @@
             // lblCompStatus
             // 
             this.lblCompStatus.AutoSize = true;
+            this.lblCompStatus.BackColor = System.Drawing.Color.White;
             this.lblCompStatus.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCompStatus.ForeColor = System.Drawing.Color.White;
-            this.lblCompStatus.Location = new System.Drawing.Point(719, 43);
+            this.lblCompStatus.ForeColor = System.Drawing.Color.Black;
+            this.lblCompStatus.Location = new System.Drawing.Point(664, 39);
             this.lblCompStatus.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCompStatus.Name = "lblCompStatus";
             this.lblCompStatus.Size = new System.Drawing.Size(218, 35);
@@ -152,6 +147,7 @@
             this.guna2ComboBox1.BorderRadius = 5;
             this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,14 +165,14 @@
             this.guna2ComboBox1.Location = new System.Drawing.Point(291, 37);
             this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(755, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(608, 36);
             this.guna2ComboBox1.TabIndex = 30;
             // 
             // lblBoPhanBaoTri
             // 
             this.lblBoPhanBaoTri.AutoSize = true;
             this.lblBoPhanBaoTri.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.lblBoPhanBaoTri.ForeColor = System.Drawing.Color.White;
+            this.lblBoPhanBaoTri.ForeColor = System.Drawing.Color.Black;
             this.lblBoPhanBaoTri.Location = new System.Drawing.Point(30, 38);
             this.lblBoPhanBaoTri.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBoPhanBaoTri.Name = "lblBoPhanBaoTri";
@@ -203,6 +199,7 @@
             this.moTaTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.moTaTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.moTaTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.moTaTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.moTaTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.moTaTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.moTaTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -211,14 +208,14 @@
             this.moTaTextBox.Name = "moTaTextBox";
             this.moTaTextBox.PlaceholderText = "";
             this.moTaTextBox.SelectedText = "";
-            this.moTaTextBox.Size = new System.Drawing.Size(755, 55);
+            this.moTaTextBox.Size = new System.Drawing.Size(608, 55);
             this.moTaTextBox.TabIndex = 32;
             // 
             // moTaLabel
             // 
             this.moTaLabel.AutoSize = true;
             this.moTaLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.moTaLabel.ForeColor = System.Drawing.Color.White;
+            this.moTaLabel.ForeColor = System.Drawing.Color.Black;
             this.moTaLabel.Location = new System.Drawing.Point(38, 40);
             this.moTaLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.moTaLabel.Name = "moTaLabel";
@@ -232,16 +229,16 @@
             this.panel14.Controls.Add(this.lblTotalmoney);
             this.panel14.Controls.Add(this.btnReceipt);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(0, 914);
+            this.panel14.Location = new System.Drawing.Point(0, 890);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1098, 133);
+            this.panel14.Size = new System.Drawing.Size(1098, 157);
             this.panel14.TabIndex = 34;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(810, 23);
+            this.lblTotal.Location = new System.Drawing.Point(261, 39);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(236, 49);
@@ -252,7 +249,7 @@
             // 
             this.lblTotalmoney.AutoSize = true;
             this.lblTotalmoney.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.lblTotalmoney.Location = new System.Drawing.Point(37, 31);
+            this.lblTotalmoney.Location = new System.Drawing.Point(86, 39);
             this.lblTotalmoney.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTotalmoney.Name = "lblTotalmoney";
             this.lblTotalmoney.Size = new System.Drawing.Size(165, 49);
@@ -270,10 +267,10 @@
             this.btnReceipt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnReceipt.ForeColor = System.Drawing.Color.Black;
-            this.btnReceipt.Location = new System.Drawing.Point(324, 63);
+            this.btnReceipt.Location = new System.Drawing.Point(604, 12);
             this.btnReceipt.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Size = new System.Drawing.Size(414, 55);
+            this.btnReceipt.Size = new System.Drawing.Size(414, 96);
             this.btnReceipt.TabIndex = 23;
             this.btnReceipt.Text = "Xuất hóa đơn";
             // 
@@ -287,16 +284,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 320);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1098, 594);
+            this.panel1.Size = new System.Drawing.Size(1098, 570);
             this.panel1.TabIndex = 35;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(46, 100);
+            this.panel2.Location = new System.Drawing.Point(111, 102);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 10);
+            this.panel2.Size = new System.Drawing.Size(807, 10);
             this.panel2.TabIndex = 25;
             // 
             // flowLayoutPanel1
@@ -305,11 +302,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Controls.Add(this.panel9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(47, 118);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(95, 120);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1030, 426);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(890, 426);
             this.flowLayoutPanel1.TabIndex = 26;
             // 
             // panel3
@@ -321,7 +317,7 @@
             this.panel3.Location = new System.Drawing.Point(5, 4);
             this.panel3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(994, 123);
+            this.panel3.Size = new System.Drawing.Size(885, 123);
             this.panel3.TabIndex = 12;
             // 
             // lblFood1
@@ -342,14 +338,14 @@
             this.panel4.Location = new System.Drawing.Point(23, 87);
             this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(926, 10);
+            this.panel4.Size = new System.Drawing.Size(796, 10);
             this.panel4.TabIndex = 11;
             // 
             // lblQuantity1
             // 
             this.lblQuantity1.AutoSize = true;
             this.lblQuantity1.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.lblQuantity1.Location = new System.Drawing.Point(483, 29);
+            this.lblQuantity1.Location = new System.Drawing.Point(382, 29);
             this.lblQuantity1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblQuantity1.Name = "lblQuantity1";
             this.lblQuantity1.Size = new System.Drawing.Size(26, 32);
@@ -360,7 +356,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label3.Location = new System.Drawing.Point(809, 29);
+            this.label3.Location = new System.Drawing.Point(655, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 32);
@@ -371,7 +367,7 @@
             // 
             this.lblMoney.AutoSize = true;
             this.lblMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblMoney.Location = new System.Drawing.Point(859, 42);
+            this.lblMoney.Location = new System.Drawing.Point(743, 44);
             this.lblMoney.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblMoney.Name = "lblMoney";
             this.lblMoney.Size = new System.Drawing.Size(156, 36);
@@ -382,7 +378,7 @@
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblQuantity.Location = new System.Drawing.Point(476, 42);
+            this.lblQuantity.Location = new System.Drawing.Point(428, 44);
             this.lblQuantity.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(135, 36);
@@ -393,7 +389,7 @@
             // 
             this.lblFood.AutoSize = true;
             this.lblFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblFood.Location = new System.Drawing.Point(32, 42);
+            this.lblFood.Location = new System.Drawing.Point(109, 44);
             this.lblFood.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblFood.Name = "lblFood";
             this.lblFood.Size = new System.Drawing.Size(131, 36);
@@ -409,7 +405,7 @@
             this.panel5.Location = new System.Drawing.Point(5, 135);
             this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(994, 123);
+            this.panel5.Size = new System.Drawing.Size(885, 123);
             this.panel5.TabIndex = 13;
             // 
             // label1
@@ -430,14 +426,14 @@
             this.panel6.Location = new System.Drawing.Point(23, 87);
             this.panel6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(926, 10);
+            this.panel6.Size = new System.Drawing.Size(796, 10);
             this.panel6.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label2.Location = new System.Drawing.Point(483, 29);
+            this.label2.Location = new System.Drawing.Point(382, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 32);
@@ -448,7 +444,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label4.Location = new System.Drawing.Point(809, 29);
+            this.label4.Location = new System.Drawing.Point(655, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 32);
@@ -464,7 +460,7 @@
             this.panel7.Location = new System.Drawing.Point(5, 266);
             this.panel7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(994, 123);
+            this.panel7.Size = new System.Drawing.Size(885, 123);
             this.panel7.TabIndex = 14;
             // 
             // label5
@@ -485,14 +481,14 @@
             this.panel8.Location = new System.Drawing.Point(23, 87);
             this.panel8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(926, 10);
+            this.panel8.Size = new System.Drawing.Size(796, 10);
             this.panel8.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label6.Location = new System.Drawing.Point(483, 29);
+            this.label6.Location = new System.Drawing.Point(382, 29);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 32);
@@ -503,80 +499,25 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label7.Location = new System.Drawing.Point(809, 29);
+            this.label7.Location = new System.Drawing.Point(655, 29);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(154, 32);
             this.label7.TabIndex = 7;
             this.label7.Text = "950.000 VND";
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.panel15);
-            this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.label10);
-            this.panel9.Location = new System.Drawing.Point(5, 397);
-            this.panel9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(994, 123);
-            this.panel9.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label8.Location = new System.Drawing.Point(9, 29);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 32);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Logitech G502 Hero";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.DimGray;
-            this.panel15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel15.Location = new System.Drawing.Point(23, 87);
-            this.panel15.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(926, 10);
-            this.panel15.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label9.Location = new System.Drawing.Point(483, 29);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 32);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "1";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label10.Location = new System.Drawing.Point(809, 29);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 32);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "950.000 VND";
-            // 
             // UCDeviceReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.label11);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCDeviceReceipt";
             this.Size = new System.Drawing.Size(1098, 1047);
             this.panel11.ResumeLayout(false);
@@ -596,8 +537,6 @@
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,10 +579,5 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
     }
 }
