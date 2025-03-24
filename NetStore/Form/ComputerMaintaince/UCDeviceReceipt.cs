@@ -31,5 +31,15 @@ namespace NetStore.Form.ComputerMaintaince
         {
 
         }
+
+        private void moTaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalmoney_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

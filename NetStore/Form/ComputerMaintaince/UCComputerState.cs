@@ -21,5 +21,25 @@ namespace NetStore.Form.ComputerMaintaince
         {
 
         }
+
+        private void lblOffline_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void plOffline_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
