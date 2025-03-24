@@ -40,9 +40,9 @@
             this.lblNamecomputer.AutoSize = true;
             this.lblNamecomputer.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNamecomputer.ForeColor = System.Drawing.Color.White;
-            this.lblNamecomputer.Location = new System.Drawing.Point(3, 48);
+            this.lblNamecomputer.Location = new System.Drawing.Point(3, 38);
             this.lblNamecomputer.Name = "lblNamecomputer";
-            this.lblNamecomputer.Size = new System.Drawing.Size(117, 36);
+            this.lblNamecomputer.Size = new System.Drawing.Size(101, 31);
             this.lblNamecomputer.TabIndex = 0;
             this.lblNamecomputer.Text = "Máy 05";
             // 
@@ -51,9 +51,9 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(168, 19);
+            this.lblTime.Location = new System.Drawing.Point(149, 15);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(159, 36);
+            this.lblTime.Size = new System.Drawing.Size(136, 31);
             this.lblTime.TabIndex = 1;
             this.lblTime.Text = "Thời gian:";
             // 
@@ -62,9 +62,9 @@
             this.lblMoney.AutoSize = true;
             this.lblMoney.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoney.ForeColor = System.Drawing.Color.White;
-            this.lblMoney.Location = new System.Drawing.Point(168, 75);
+            this.lblMoney.Location = new System.Drawing.Point(149, 60);
             this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(165, 36);
+            this.lblMoney.Size = new System.Drawing.Size(141, 31);
             this.lblMoney.TabIndex = 2;
             this.lblMoney.Text = "Tổng tiền: ";
             // 
@@ -73,26 +73,27 @@
             this.lblTimereal.AutoSize = true;
             this.lblTimereal.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimereal.ForeColor = System.Drawing.Color.White;
-            this.lblTimereal.Location = new System.Drawing.Point(348, 19);
+            this.lblTimereal.Location = new System.Drawing.Point(309, 15);
             this.lblTimereal.Name = "lblTimereal";
-            this.lblTimereal.Size = new System.Drawing.Size(49, 36);
+            this.lblTimereal.Size = new System.Drawing.Size(43, 31);
             this.lblTimereal.TabIndex = 3;
             this.lblTimereal.Text = "1h";
+            this.lblTimereal.Click += new System.EventHandler(this.lblTimereal_Click);
             // 
             // lblMoneyreal
             // 
             this.lblMoneyreal.AutoSize = true;
             this.lblMoneyreal.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoneyreal.ForeColor = System.Drawing.Color.White;
-            this.lblMoneyreal.Location = new System.Drawing.Point(348, 77);
+            this.lblMoneyreal.Location = new System.Drawing.Point(309, 60);
             this.lblMoneyreal.Name = "lblMoneyreal";
-            this.lblMoneyreal.Size = new System.Drawing.Size(163, 36);
+            this.lblMoneyreal.Size = new System.Drawing.Size(143, 31);
             this.lblMoneyreal.TabIndex = 4;
             this.lblMoneyreal.Text = "7.000 VND";
             // 
             // UCTopReceipt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.Controls.Add(this.lblMoneyreal);
@@ -100,8 +101,9 @@
             this.Controls.Add(this.lblMoney);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblNamecomputer);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCTopReceipt";
-            this.Size = new System.Drawing.Size(540, 134);
+            this.Size = new System.Drawing.Size(480, 107);
             this.ResumeLayout(false);
             this.PerformLayout();
 

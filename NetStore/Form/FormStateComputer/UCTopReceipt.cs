@@ -16,5 +16,10 @@ namespace NetStore.Form.FormStateComputer
         {
             InitializeComponent();
         }
+
+        private void lblTimereal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

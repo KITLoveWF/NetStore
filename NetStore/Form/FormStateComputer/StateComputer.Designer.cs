@@ -33,12 +33,27 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.ucImport1 = new NetStore.Form.UCImport();
             this.ucFormStateComputer1 = new NetStore.Form.FormStateComputer.UCFormStateComputer();
+<<<<<<< HEAD
             this.ucSideLeft1 = new NetStore.Form.FormStateComputer.UCSideLeft();
             this.ucInvoice1 = new NetStore.Form.UCInvoice();
+=======
+            this.ucCompMaintainaceForm1 = new NetStore.Form.ComputerMaintaince.UCCompMaintainaceForm();
+>>>>>>> undertaker
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
+=======
+            // ucSideLeft1
+            // 
+            this.ucSideLeft1.Location = new System.Drawing.Point(5, 4);
+            this.ucSideLeft1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.ucSideLeft1.Name = "ucSideLeft1";
+            this.ucSideLeft1.Size = new System.Drawing.Size(338, 1030);
+            this.ucSideLeft1.TabIndex = 0;
+            // 
+>>>>>>> undertaker
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
@@ -60,8 +75,12 @@
             // 
             // panel3
             // 
+<<<<<<< HEAD
             this.panel3.Controls.Add(this.ucInvoice1);
             this.panel3.Controls.Add(this.ucImport1);
+=======
+            this.panel3.Controls.Add(this.ucCompMaintainaceForm1);
+>>>>>>> undertaker
             this.panel3.Controls.Add(this.ucFormStateComputer1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(352, 0);
@@ -87,6 +106,7 @@
             this.ucFormStateComputer1.Size = new System.Drawing.Size(2063, 1193);
             this.ucFormStateComputer1.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // ucSideLeft1
             // 
             this.ucSideLeft1.Location = new System.Drawing.Point(5, 4);
@@ -103,6 +123,16 @@
             this.ucInvoice1.Name = "ucInvoice1";
             this.ucInvoice1.Size = new System.Drawing.Size(2089, 1204);
             this.ucInvoice1.TabIndex = 2;
+=======
+            // ucCompMaintainaceForm1
+            // 
+            this.ucCompMaintainaceForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucCompMaintainaceForm1.Location = new System.Drawing.Point(0, 0);
+            this.ucCompMaintainaceForm1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ucCompMaintainaceForm1.Name = "ucCompMaintainaceForm1";
+            this.ucCompMaintainaceForm1.Size = new System.Drawing.Size(2089, 1204);
+            this.ucCompMaintainaceForm1.TabIndex = 1;
+>>>>>>> undertaker
             // 
             // StateComputer
             // 
@@ -128,7 +158,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private UCFormStateComputer ucFormStateComputer1;
+<<<<<<< HEAD
         private UCImport ucImport1;
         private UCInvoice ucInvoice1;
+=======
+        private ComputerMaintaince.UCCompMaintainaceForm ucCompMaintainaceForm1;
+>>>>>>> undertaker
     }
 }
