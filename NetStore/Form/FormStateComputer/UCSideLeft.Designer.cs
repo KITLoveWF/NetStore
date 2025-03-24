@@ -307,14 +307,14 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnTotalreceipt;
-        private Guna.UI2.WinForms.Guna2Button btnImport;
-        private Guna.UI2.WinForms.Guna2Button btnCustomer;
-        private Guna.UI2.WinForms.Guna2Button btnFoodandrink;
-        private Guna.UI2.WinForms.Guna2Button btnStatecomputer;
-        private Guna.UI2.WinForms.Guna2Button btnError;
+        public Guna.UI2.WinForms.Guna2Button btnTotalreceipt;
+        public Guna.UI2.WinForms.Guna2Button btnImport;
+        public Guna.UI2.WinForms.Guna2Button btnCustomer;
+        public Guna.UI2.WinForms.Guna2Button btnFoodandrink;
+        public Guna.UI2.WinForms.Guna2Button btnStatecomputer;
+        public Guna.UI2.WinForms.Guna2Button btnError;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        public Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;

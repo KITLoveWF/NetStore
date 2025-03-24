@@ -15,6 +15,32 @@ namespace NetStore.Form.FormStateComputer
         public StateComputer()
         {
             InitializeComponent();
+            this.ucImport1.Hide();
+            this.ucInvoice1.Hide();
+            this.ucFormStateComputer1.Show();
+            ucSideLeft1.btnStatecomputer.Click += performStateComputer;
+            ucSideLeft1.btnImport.Click += performImport;
+            ucSideLeft1.btnTotalreceipt.Click += performInvoice;
         }
+        private void performStateComputer(object sender, EventArgs e)
+        {
+            this.ucFormStateComputer1.Show();
+            this.ucImport1.Hide();
+            this.ucInvoice1.Hide();
+        }
+        private void performImport(object sender, EventArgs e)
+        {
+            this.ucImport1.Show();
+            this.ucFormStateComputer1.Hide();
+            this.ucInvoice1.Hide();
+        }
+        private void performInvoice(object sender, EventArgs e)
+        {
+            this.ucInvoice1.Show();
+            this.ucFormStateComputer1.Hide();
+            this.ucImport1.Hide();
+        }
+
+
     }
 }
