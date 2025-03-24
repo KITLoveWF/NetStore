@@ -28,32 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucSideBarTop1 = new NetStore.Form.FormStateComputer.UCSideBarTop();
-            this.ucReceiptComputer1 = new NetStore.Form.FormStateComputer.UCReceiptComputer();
-            this.ucTypeComputer1 = new NetStore.Form.FormStateComputer.UCTypeComputer();
             this.ucTopReceipt1 = new NetStore.Form.FormStateComputer.UCTopReceipt();
+            this.ucTypeComputer1 = new NetStore.Form.FormStateComputer.UCTypeComputer();
+            this.ucReceiptComputer1 = new NetStore.Form.FormStateComputer.UCReceiptComputer();
+            this.ucSideBarTop1 = new NetStore.Form.FormStateComputer.UCSideBarTop();
             this.SuspendLayout();
-            // 
-            // ucSideBarTop1
-            // 
-            this.ucSideBarTop1.Location = new System.Drawing.Point(-3, 0);
-            this.ucSideBarTop1.Name = "ucSideBarTop1";
-            this.ucSideBarTop1.Size = new System.Drawing.Size(1326, 123);
-            this.ucSideBarTop1.TabIndex = 0;
-            // 
-            // ucReceiptComputer1
-            // 
-            this.ucReceiptComputer1.Location = new System.Drawing.Point(804, 230);
-            this.ucReceiptComputer1.Name = "ucReceiptComputer1";
-            this.ucReceiptComputer1.Size = new System.Drawing.Size(522, 605);
-            this.ucReceiptComputer1.TabIndex = 1;
-            // 
-            // ucTypeComputer1
-            // 
-            this.ucTypeComputer1.Location = new System.Drawing.Point(-9, 114);
-            this.ucTypeComputer1.Name = "ucTypeComputer1";
-            this.ucTypeComputer1.Size = new System.Drawing.Size(786, 563);
-            this.ucTypeComputer1.TabIndex = 2;
             // 
             // ucTopReceipt1
             // 
@@ -63,10 +42,34 @@
             this.ucTopReceipt1.Size = new System.Drawing.Size(540, 134);
             this.ucTopReceipt1.TabIndex = 3;
             // 
+            // ucTypeComputer1
+            // 
+            this.ucTypeComputer1.BackColor = System.Drawing.Color.White;
+            this.ucTypeComputer1.Location = new System.Drawing.Point(-9, 114);
+            this.ucTypeComputer1.Name = "ucTypeComputer1";
+            this.ucTypeComputer1.Size = new System.Drawing.Size(786, 563);
+            this.ucTypeComputer1.TabIndex = 2;
+            // 
+            // ucReceiptComputer1
+            // 
+            this.ucReceiptComputer1.BackColor = System.Drawing.Color.White;
+            this.ucReceiptComputer1.Location = new System.Drawing.Point(804, 230);
+            this.ucReceiptComputer1.Name = "ucReceiptComputer1";
+            this.ucReceiptComputer1.Size = new System.Drawing.Size(522, 605);
+            this.ucReceiptComputer1.TabIndex = 1;
+            // 
+            // ucSideBarTop1
+            // 
+            this.ucSideBarTop1.Location = new System.Drawing.Point(-3, 0);
+            this.ucSideBarTop1.Name = "ucSideBarTop1";
+            this.ucSideBarTop1.Size = new System.Drawing.Size(1326, 123);
+            this.ucSideBarTop1.TabIndex = 0;
+            // 
             // UCFormStateComputer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.ucTopReceipt1);
             this.Controls.Add(this.ucTypeComputer1);
             this.Controls.Add(this.ucReceiptComputer1);

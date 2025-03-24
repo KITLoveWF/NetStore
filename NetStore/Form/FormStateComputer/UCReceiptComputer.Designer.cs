@@ -67,7 +67,7 @@
             // 
             this.lblFood.AutoSize = true;
             this.lblFood.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFood.Location = new System.Drawing.Point(12, 57);
+            this.lblFood.Location = new System.Drawing.Point(27, 57);
             this.lblFood.Name = "lblFood";
             this.lblFood.Size = new System.Drawing.Size(117, 27);
             this.lblFood.TabIndex = 0;
@@ -77,7 +77,7 @@
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(188, 57);
+            this.lblQuantity.Location = new System.Drawing.Point(203, 57);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(108, 27);
             this.lblQuantity.TabIndex = 1;
@@ -87,7 +87,7 @@
             // 
             this.lblMoney.AutoSize = true;
             this.lblMoney.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoney.Location = new System.Drawing.Point(355, 57);
+            this.lblMoney.Location = new System.Drawing.Point(370, 57);
             this.lblMoney.Name = "lblMoney";
             this.lblMoney.Size = new System.Drawing.Size(145, 27);
             this.lblMoney.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.btnReceipt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnReceipt.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReceipt.ForeColor = System.Drawing.Color.Black;
-            this.btnReceipt.Location = new System.Drawing.Point(161, 525);
+            this.btnReceipt.Location = new System.Drawing.Point(176, 525);
             this.btnReceipt.Name = "btnReceipt";
             this.btnReceipt.Size = new System.Drawing.Size(219, 60);
             this.btnReceipt.TabIndex = 3;
@@ -113,7 +113,7 @@
             // 
             this.lblTotalmoney.AutoSize = true;
             this.lblTotalmoney.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalmoney.Location = new System.Drawing.Point(21, 468);
+            this.lblTotalmoney.Location = new System.Drawing.Point(36, 468);
             this.lblTotalmoney.Name = "lblTotalmoney";
             this.lblTotalmoney.Size = new System.Drawing.Size(108, 32);
             this.lblTotalmoney.TabIndex = 4;
@@ -152,7 +152,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(16, 100);
+            this.panel1.Location = new System.Drawing.Point(31, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 5);
             this.panel1.TabIndex = 10;
@@ -184,7 +184,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Controls.Add(this.panel8);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 129);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(29, 129);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(486, 316);
             this.flowLayoutPanel1.TabIndex = 13;
@@ -343,7 +343,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(295, 468);
+            this.lblTotal.Location = new System.Drawing.Point(310, 468);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(183, 38);
             this.lblTotal.TabIndex = 14;
@@ -353,6 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -362,7 +363,7 @@
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.lblFood);
             this.Name = "UCReceiptComputer";
-            this.Size = new System.Drawing.Size(522, 605);
+            this.Size = new System.Drawing.Size(540, 605);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
