@@ -16,5 +16,10 @@ namespace NetStore.Form.ComputerMaintaince
         {
             InitializeComponent();
         }
+
+        private void UCComputerState_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

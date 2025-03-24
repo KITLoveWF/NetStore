@@ -55,7 +55,7 @@
             // plError
             // 
             this.plError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(108)))), ((int)(((byte)(99)))));
-            this.plError.Location = new System.Drawing.Point(480, 95);
+            this.plError.Location = new System.Drawing.Point(496, 95);
             this.plError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plError.Name = "plError";
             this.plError.Size = new System.Drawing.Size(68, 40);
@@ -64,7 +64,7 @@
             // plOffline
             // 
             this.plOffline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(175)))), ((int)(((byte)(250)))));
-            this.plOffline.Location = new System.Drawing.Point(251, 95);
+            this.plOffline.Location = new System.Drawing.Point(267, 95);
             this.plOffline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plOffline.Name = "plOffline";
             this.plOffline.Size = new System.Drawing.Size(68, 40);
@@ -73,7 +73,7 @@
             // plOnline
             // 
             this.plOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(226)))), ((int)(((byte)(105)))));
-            this.plOnline.Location = new System.Drawing.Point(40, 95);
+            this.plOnline.Location = new System.Drawing.Point(56, 95);
             this.plOnline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plOnline.Name = "plOnline";
             this.plOnline.Size = new System.Drawing.Size(68, 40);
@@ -94,7 +94,7 @@
             "Offline",
             "Error ",
             "Tất cả "});
-            this.cbbTypecomputer.Location = new System.Drawing.Point(387, 42);
+            this.cbbTypecomputer.Location = new System.Drawing.Point(428, 42);
             this.cbbTypecomputer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTypecomputer.Name = "cbbTypecomputer";
             this.cbbTypecomputer.Size = new System.Drawing.Size(272, 36);
@@ -103,40 +103,40 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.Location = new System.Drawing.Point(576, 103);
+            this.lblError.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Location = new System.Drawing.Point(592, 103);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(54, 25);
+            this.lblError.Size = new System.Drawing.Size(61, 26);
             this.lblError.TabIndex = 26;
             this.lblError.Text = "Error";
             // 
             // lblTypeonline
             // 
             this.lblTypeonline.AutoSize = true;
-            this.lblTypeonline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeonline.Location = new System.Drawing.Point(132, 103);
+            this.lblTypeonline.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTypeonline.Location = new System.Drawing.Point(148, 103);
             this.lblTypeonline.Name = "lblTypeonline";
-            this.lblTypeonline.Size = new System.Drawing.Size(69, 25);
+            this.lblTypeonline.Size = new System.Drawing.Size(75, 26);
             this.lblTypeonline.TabIndex = 25;
             this.lblTypeonline.Text = "Online";
             // 
             // lblOffline
             // 
             this.lblOffline.AutoSize = true;
-            this.lblOffline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOffline.Location = new System.Drawing.Point(355, 103);
+            this.lblOffline.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOffline.Location = new System.Drawing.Point(371, 103);
             this.lblOffline.Name = "lblOffline";
-            this.lblOffline.Size = new System.Drawing.Size(68, 25);
+            this.lblOffline.Size = new System.Drawing.Size(79, 26);
             this.lblOffline.TabIndex = 23;
             this.lblOffline.Text = "Offline";
             // 
             // lblTypecomputer
             // 
             this.lblTypecomputer.AutoSize = true;
-            this.lblTypecomputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypecomputer.Location = new System.Drawing.Point(24, 42);
+            this.lblTypecomputer.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTypecomputer.Location = new System.Drawing.Point(50, 42);
             this.lblTypecomputer.Name = "lblTypecomputer";
-            this.lblTypecomputer.Size = new System.Drawing.Size(109, 29);
+            this.lblTypecomputer.Size = new System.Drawing.Size(104, 25);
             this.lblTypecomputer.TabIndex = 22;
             this.lblTypecomputer.Text = "Loại máy";
             // 
@@ -257,7 +257,7 @@
             this.flowLayoutPanel1.Controls.Add(this.guna2Button4);
             this.flowLayoutPanel1.Controls.Add(this.guna2Button5);
             this.flowLayoutPanel1.Controls.Add(this.guna2Button6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(77, 154);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(93, 154);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(554, 465);
@@ -379,7 +379,8 @@
             this.Controls.Add(this.lblTypecomputer);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "UCComputerState";
-            this.Size = new System.Drawing.Size(699, 624);
+            this.Size = new System.Drawing.Size(747, 624);
+            this.Load += new System.EventHandler(this.UCComputerState_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

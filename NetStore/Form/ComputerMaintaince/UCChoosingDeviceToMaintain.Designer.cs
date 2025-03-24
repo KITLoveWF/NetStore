@@ -97,12 +97,21 @@
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "Chuột ",
+            "Bàn phím ",
+            "Máy tính ",
+            "Tai nghe",
+            "Màn hình ",
+            "CPU ",
+            "GPU ",
+            "RAM "});
             this.guna2ComboBox1.Location = new System.Drawing.Point(181, 72);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(177, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(351, 36);
             this.guna2ComboBox1.TabIndex = 7;
             // 
             // moTaLabel
@@ -110,7 +119,7 @@
             this.moTaLabel.AutoSize = true;
             this.moTaLabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moTaLabel.ForeColor = System.Drawing.Color.White;
-            this.moTaLabel.Location = new System.Drawing.Point(8, 126);
+            this.moTaLabel.Location = new System.Drawing.Point(3, 126);
             this.moTaLabel.Name = "moTaLabel";
             this.moTaLabel.Size = new System.Drawing.Size(87, 25);
             this.moTaLabel.TabIndex = 8;
@@ -133,7 +142,7 @@
             this.moTaTextBox.Name = "moTaTextBox";
             this.moTaTextBox.PlaceholderText = "";
             this.moTaTextBox.SelectedText = "";
-            this.moTaTextBox.Size = new System.Drawing.Size(267, 82);
+            this.moTaTextBox.Size = new System.Drawing.Size(351, 102);
             this.moTaTextBox.TabIndex = 9;
             // 
             // UCChoosingDeviceToMaintain
@@ -150,7 +159,7 @@
             this.Controls.Add(this.lblCompStatus);
             this.Controls.Add(this.lblNamecomputer);
             this.Name = "UCChoosingDeviceToMaintain";
-            this.Size = new System.Drawing.Size(464, 210);
+            this.Size = new System.Drawing.Size(545, 233);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -67,7 +67,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(267, 359);
+            this.lblTotal.Location = new System.Drawing.Point(347, 356);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(157, 32);
             this.lblTotal.TabIndex = 22;
@@ -112,24 +112,24 @@
             this.panel8.Location = new System.Drawing.Point(3, 218);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(429, 68);
+            this.panel8.Size = new System.Drawing.Size(454, 68);
             this.panel8.TabIndex = 15;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(293, 16);
+            this.label10.Location = new System.Drawing.Point(311, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 23);
+            this.label10.Size = new System.Drawing.Size(125, 23);
             this.label10.TabIndex = 7;
-            this.label10.Text = "10.000 VND";
+            this.label10.Text = "1.000.000 VND";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 16);
+            this.label5.Location = new System.Drawing.Point(2, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(210, 23);
             this.label5.TabIndex = 5;
@@ -159,11 +159,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(298, 16);
+            this.label7.Location = new System.Drawing.Point(311, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 23);
+            this.label7.Size = new System.Drawing.Size(125, 23);
             this.label7.TabIndex = 7;
-            this.label7.Text = "10.000 VND";
+            this.label7.Text = "1.000.000 VND";
             // 
             // panel6
             // 
@@ -174,7 +174,7 @@
             this.panel6.Location = new System.Drawing.Point(3, 146);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(429, 68);
+            this.panel6.Size = new System.Drawing.Size(454, 68);
             this.panel6.TabIndex = 14;
             // 
             // panel4
@@ -186,8 +186,9 @@
             this.panel4.Location = new System.Drawing.Point(3, 74);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(429, 68);
+            this.panel4.Size = new System.Drawing.Size(454, 68);
             this.panel4.TabIndex = 13;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label1
             // 
@@ -223,7 +224,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(280, 16);
+            this.label4.Location = new System.Drawing.Point(311, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 23);
             this.label4.TabIndex = 7;
@@ -238,16 +239,16 @@
             this.panel3.Location = new System.Drawing.Point(3, 2);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(429, 68);
+            this.panel3.Size = new System.Drawing.Size(454, 68);
             this.panel3.TabIndex = 12;
             // 
             // lblFood1
             // 
             this.lblFood1.AutoSize = true;
-            this.lblFood1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFood1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFood1.Location = new System.Drawing.Point(5, 16);
             this.lblFood1.Name = "lblFood1";
-            this.lblFood1.Size = new System.Drawing.Size(142, 20);
+            this.lblFood1.Size = new System.Drawing.Size(161, 23);
             this.lblFood1.TabIndex = 5;
             this.lblFood1.Text = "Logitech G502 Hero";
             this.lblFood1.Click += new System.EventHandler(this.lblFood1_Click);
@@ -277,7 +278,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(293, 16);
+            this.label3.Location = new System.Drawing.Point(321, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 7;
@@ -286,7 +287,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(19, 65);
+            this.panel1.Location = new System.Drawing.Point(56, 65);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(427, 4);
@@ -299,17 +300,17 @@
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Controls.Add(this.panel8);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 88);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(47, 88);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(432, 253);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(469, 253);
             this.flowLayoutPanel1.TabIndex = 21;
             // 
             // lblTotalmoney
             // 
             this.lblTotalmoney.AutoSize = true;
             this.lblTotalmoney.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalmoney.Location = new System.Drawing.Point(24, 359);
+            this.lblTotalmoney.Location = new System.Drawing.Point(52, 359);
             this.lblTotalmoney.Name = "lblTotalmoney";
             this.lblTotalmoney.Size = new System.Drawing.Size(93, 27);
             this.lblTotalmoney.TabIndex = 19;
@@ -325,7 +326,7 @@
             this.btnReceipt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReceipt.ForeColor = System.Drawing.Color.Black;
-            this.btnReceipt.Location = new System.Drawing.Point(133, 393);
+            this.btnReceipt.Location = new System.Drawing.Point(173, 401);
             this.btnReceipt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReceipt.Name = "btnReceipt";
             this.btnReceipt.Size = new System.Drawing.Size(195, 48);
@@ -336,7 +337,7 @@
             // 
             this.lblMoney.AutoSize = true;
             this.lblMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoney.Location = new System.Drawing.Point(320, 31);
+            this.lblMoney.Location = new System.Drawing.Point(378, 31);
             this.lblMoney.Name = "lblMoney";
             this.lblMoney.Size = new System.Drawing.Size(105, 25);
             this.lblMoney.TabIndex = 17;
@@ -346,7 +347,7 @@
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(224, 31);
+            this.lblQuantity.Location = new System.Drawing.Point(261, 31);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(90, 25);
             this.lblQuantity.TabIndex = 16;
@@ -356,7 +357,7 @@
             // 
             this.lblFood.AutoSize = true;
             this.lblFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFood.Location = new System.Drawing.Point(16, 31);
+            this.lblFood.Location = new System.Drawing.Point(55, 31);
             this.lblFood.Name = "lblFood";
             this.lblFood.Size = new System.Drawing.Size(90, 25);
             this.lblFood.TabIndex = 15;
@@ -376,7 +377,7 @@
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.lblFood);
             this.Name = "UCDeviceReceipt";
-            this.Size = new System.Drawing.Size(464, 452);
+            this.Size = new System.Drawing.Size(545, 451);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);

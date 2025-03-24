@@ -26,5 +26,10 @@ namespace NetStore.Form.ComputerMaintaince
         {
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
