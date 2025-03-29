@@ -30,28 +30,30 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtprice = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.picupload = new System.Windows.Forms.PictureBox();
             this.btnupload = new Guna.UI2.WinForms.Guna2Button();
             this.btncancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnsave = new Guna.UI2.WinForms.Guna2Button();
             this.combocategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picupload = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtprice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picupload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 311);
+            this.label1.Location = new System.Drawing.Point(90, 249);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 32);
+            this.label1.Size = new System.Drawing.Size(41, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên";
             // 
@@ -59,31 +61,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(101, 395);
+            this.label2.Location = new System.Drawing.Point(90, 316);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 32);
+            this.label2.Size = new System.Drawing.Size(41, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Giá";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NetStore.Properties.Resources.image_5;
-            this.pictureBox1.Location = new System.Drawing.Point(186, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(264, 241);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(89, 582);
+            this.label3.Location = new System.Drawing.Point(78, 520);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 32);
+            this.label3.Size = new System.Drawing.Size(52, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ảnh ";
             // 
@@ -91,9 +82,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 489);
+            this.label4.Location = new System.Drawing.Point(39, 379);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 32);
+            this.label4.Size = new System.Drawing.Size(92, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "Phân loại";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -110,33 +101,26 @@
             this.txtname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtname.Location = new System.Drawing.Point(174, 311);
-            this.txtname.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtname.Location = new System.Drawing.Point(155, 249);
+            this.txtname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtname.Name = "txtname";
             this.txtname.PlaceholderText = "";
             this.txtname.SelectedText = "";
-            this.txtname.Size = new System.Drawing.Size(336, 39);
+            this.txtname.Size = new System.Drawing.Size(299, 31);
             this.txtname.TabIndex = 6;
             // 
             // txtprice
             // 
+            this.txtprice.AutoRoundedCorners = true;
             this.txtprice.BackColor = System.Drawing.Color.Transparent;
+            this.txtprice.BorderRadius = 13;
             this.txtprice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtprice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtprice.Location = new System.Drawing.Point(174, 395);
-            this.txtprice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtprice.Location = new System.Drawing.Point(155, 316);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtprice.Name = "txtprice";
-            this.txtprice.Size = new System.Drawing.Size(336, 46);
+            this.txtprice.Size = new System.Drawing.Size(299, 28);
             this.txtprice.TabIndex = 7;
-            // 
-            // picupload
-            // 
-            this.picupload.Location = new System.Drawing.Point(174, 582);
-            this.picupload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picupload.Name = "picupload";
-            this.picupload.Size = new System.Drawing.Size(336, 115);
-            this.picupload.TabIndex = 8;
-            this.picupload.TabStop = false;
             // 
             // btnupload
             // 
@@ -146,15 +130,15 @@
             this.btnupload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnupload.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnupload.ForeColor = System.Drawing.Color.White;
-            this.btnupload.Location = new System.Drawing.Point(174, 691);
-            this.btnupload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnupload.Location = new System.Drawing.Point(155, 631);
             this.btnupload.Name = "btnupload";
-            this.btnupload.Size = new System.Drawing.Size(336, 32);
+            this.btnupload.Size = new System.Drawing.Size(299, 26);
             this.btnupload.TabIndex = 9;
             this.btnupload.Text = "Upload ";
             // 
             // btncancel
             // 
+            this.btncancel.AutoRoundedCorners = true;
             this.btncancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btncancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btncancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -162,15 +146,15 @@
             this.btncancel.FillColor = System.Drawing.Color.Red;
             this.btncancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btncancel.ForeColor = System.Drawing.Color.White;
-            this.btncancel.Location = new System.Drawing.Point(138, 775);
-            this.btncancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btncancel.Location = new System.Drawing.Point(115, 689);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(138, 56);
+            this.btncancel.Size = new System.Drawing.Size(159, 45);
             this.btncancel.TabIndex = 10;
             this.btncancel.Text = "Cancel";
             // 
             // btnsave
             // 
+            this.btnsave.AutoRoundedCorners = true;
             this.btnsave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -178,15 +162,15 @@
             this.btnsave.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnsave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnsave.ForeColor = System.Drawing.Color.White;
-            this.btnsave.Location = new System.Drawing.Point(388, 775);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnsave.Location = new System.Drawing.Point(338, 689);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(138, 56);
+            this.btnsave.Size = new System.Drawing.Size(159, 45);
             this.btnsave.TabIndex = 11;
             this.btnsave.Text = "Save";
             // 
             // combocategory
             // 
+            this.combocategory.AutoRoundedCorners = true;
             this.combocategory.BackColor = System.Drawing.Color.Transparent;
             this.combocategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combocategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -200,17 +184,66 @@
             "Nước",
             "Mỳ",
             "Thẻ cào"});
-            this.combocategory.Location = new System.Drawing.Point(172, 489);
-            this.combocategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.combocategory.Location = new System.Drawing.Point(155, 379);
             this.combocategory.Name = "combocategory";
-            this.combocategory.Size = new System.Drawing.Size(338, 36);
+            this.combocategory.Size = new System.Drawing.Size(301, 36);
             this.combocategory.TabIndex = 13;
+            // 
+            // picupload
+            // 
+            this.picupload.Location = new System.Drawing.Point(154, 520);
+            this.picupload.Name = "picupload";
+            this.picupload.Size = new System.Drawing.Size(299, 109);
+            this.picupload.TabIndex = 8;
+            this.picupload.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NetStore.Properties.Resources.image_5;
+            this.pictureBox1.Location = new System.Drawing.Point(177, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(235, 193);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.AutoRoundedCorners = true;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(157, 448);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(299, 35);
+            this.guna2TextBox1.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(39, 455);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 28);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Số lượng";
             // 
             // AddNewFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 879);
+            this.ClientSize = new System.Drawing.Size(589, 761);
+            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.combocategory);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btncancel);
@@ -223,12 +256,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddNewFood";
             this.Text = "AddNewFood";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picupload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +280,7 @@
         private Guna.UI2.WinForms.Guna2Button btncancel;
         private Guna.UI2.WinForms.Guna2Button btnsave;
         private Guna.UI2.WinForms.Guna2ComboBox combocategory;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

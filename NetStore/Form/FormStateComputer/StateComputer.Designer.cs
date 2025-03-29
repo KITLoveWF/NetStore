@@ -30,116 +30,122 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.ucImport1 = new NetStore.Form.UCImport();
-            this.ucFormStateComputer1 = new NetStore.Form.FormStateComputer.UCFormStateComputer();
-
             this.ucSideLeft1 = new NetStore.Form.FormStateComputer.UCSideLeft();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.ucInvoice1 = new NetStore.Form.UCInvoice();
-
+            this.ucImport1 = new NetStore.Form.UCImport();
             this.ucCompMaintainaceForm1 = new NetStore.Form.ComputerMaintaince.UCCompMaintainaceForm();
-
+            this.ucFormStateComputer1 = new NetStore.Form.FormStateComputer.UCFormStateComputer();
+            this.ucCustomer1 = new NetStore.Form.Customer.UCCustomer();
+            this.ucMenu1 = new NetStore.Form.FormMenu.UCMenu();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-
-            // ucSideLeft1
-            // 
-            this.ucSideLeft1.Location = new System.Drawing.Point(5, 4);
-            this.ucSideLeft1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.ucSideLeft1.Name = "ucSideLeft1";
-            this.ucSideLeft1.Size = new System.Drawing.Size(338, 1030);
-            this.ucSideLeft1.TabIndex = 0;
-            // 
-
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.ucSideLeft1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 1204);
+            this.panel1.Size = new System.Drawing.Size(201, 611);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(352, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel2.Location = new System.Drawing.Point(201, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1510, 442);
+            this.panel2.Size = new System.Drawing.Size(863, 244);
             this.panel2.TabIndex = 2;
-            // 
-            // panel3
-            // 
-
-            this.panel3.Controls.Add(this.ucInvoice1);
-            this.panel3.Controls.Add(this.ucImport1);
-
-            this.panel3.Controls.Add(this.ucCompMaintainaceForm1);
-
-            this.panel3.Controls.Add(this.ucFormStateComputer1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(352, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2089, 1204);
-            this.panel3.TabIndex = 2;
-            // 
-            // ucImport1
-            // 
-            this.ucImport1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.ucImport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucImport1.Location = new System.Drawing.Point(0, 0);
-            this.ucImport1.Name = "ucImport1";
-            this.ucImport1.Size = new System.Drawing.Size(2089, 1204);
-            this.ucImport1.TabIndex = 1;
-            // 
-            // ucFormStateComputer1
-            // 
-            this.ucFormStateComputer1.Location = new System.Drawing.Point(9, 4);
-            this.ucFormStateComputer1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.ucFormStateComputer1.Name = "ucFormStateComputer1";
-            this.ucFormStateComputer1.Size = new System.Drawing.Size(2063, 1193);
-            this.ucFormStateComputer1.TabIndex = 0;
             // 
             // ucSideLeft1
             // 
-            this.ucSideLeft1.Location = new System.Drawing.Point(5, 4);
-            this.ucSideLeft1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.ucSideLeft1.Location = new System.Drawing.Point(3, 2);
+            this.ucSideLeft1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.ucSideLeft1.Name = "ucSideLeft1";
-            this.ucSideLeft1.Size = new System.Drawing.Size(338, 1030);
+            this.ucSideLeft1.Size = new System.Drawing.Size(193, 568);
             this.ucSideLeft1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ucMenu1);
+            this.panel3.Controls.Add(this.ucCustomer1);
+            this.panel3.Controls.Add(this.ucInvoice1);
+            this.panel3.Controls.Add(this.ucImport1);
+            this.panel3.Controls.Add(this.ucCompMaintainaceForm1);
+            this.panel3.Controls.Add(this.ucFormStateComputer1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(201, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1186, 611);
+            this.panel3.TabIndex = 2;
             // 
             // ucInvoice1
             // 
             this.ucInvoice1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.ucInvoice1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucInvoice1.Location = new System.Drawing.Point(0, 0);
+            this.ucInvoice1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ucInvoice1.Name = "ucInvoice1";
-            this.ucInvoice1.Size = new System.Drawing.Size(2089, 1204);
+            this.ucInvoice1.Size = new System.Drawing.Size(1186, 611);
             this.ucInvoice1.TabIndex = 2;
-
+            // 
+            // ucImport1
+            // 
+            this.ucImport1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.ucImport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucImport1.Location = new System.Drawing.Point(0, 0);
+            this.ucImport1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ucImport1.Name = "ucImport1";
+            this.ucImport1.Size = new System.Drawing.Size(1186, 611);
+            this.ucImport1.TabIndex = 1;
+            // 
             // ucCompMaintainaceForm1
             // 
             this.ucCompMaintainaceForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucCompMaintainaceForm1.Location = new System.Drawing.Point(0, 0);
-            this.ucCompMaintainaceForm1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ucCompMaintainaceForm1.Name = "ucCompMaintainaceForm1";
-            this.ucCompMaintainaceForm1.Size = new System.Drawing.Size(2089, 1204);
+            this.ucCompMaintainaceForm1.Size = new System.Drawing.Size(1186, 611);
             this.ucCompMaintainaceForm1.TabIndex = 1;
-
+            // 
+            // ucFormStateComputer1
+            // 
+            this.ucFormStateComputer1.BackColor = System.Drawing.SystemColors.Control;
+            this.ucFormStateComputer1.Location = new System.Drawing.Point(5, 2);
+            this.ucFormStateComputer1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.ucFormStateComputer1.Name = "ucFormStateComputer1";
+            this.ucFormStateComputer1.Size = new System.Drawing.Size(1179, 658);
+            this.ucFormStateComputer1.TabIndex = 0;
+            // 
+            // ucCustomer1
+            // 
+            this.ucCustomer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucCustomer1.Location = new System.Drawing.Point(0, 0);
+            this.ucCustomer1.Name = "ucCustomer1";
+            this.ucCustomer1.Size = new System.Drawing.Size(1186, 611);
+            this.ucCustomer1.TabIndex = 3;
+            // 
+            // ucMenu1
+            // 
+            this.ucMenu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ucMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMenu1.Location = new System.Drawing.Point(0, 0);
+            this.ucMenu1.Name = "ucMenu1";
+            this.ucMenu1.Size = new System.Drawing.Size(1186, 611);
+            this.ucMenu1.TabIndex = 4;
             // 
             // StateComputer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2441, 1204);
+            this.ClientSize = new System.Drawing.Size(1387, 611);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StateComputer";
             this.Text = "StateComputer";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -161,6 +167,7 @@
         private UCInvoice ucInvoice1;
 
         private ComputerMaintaince.UCCompMaintainaceForm ucCompMaintainaceForm1;
-
+        private Customer.UCCustomer ucCustomer1;
+        private FormMenu.UCMenu ucMenu1;
     }
 }
