@@ -1,6 +1,8 @@
 ﻿using NetStore.Form.FormLoginAndFoget;
 using NetStore.Form.FormMenu;
 using NetStore.Form.FormStateComputer;
+using NetStore.Form.FormCustomer;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +23,7 @@ namespace NetStore
             Console.Write("xin chào");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StateComputer());
+            Application.Run(new CustomerForm());
         }
     }
 }

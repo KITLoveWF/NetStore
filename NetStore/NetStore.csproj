@@ -91,6 +91,18 @@
     <Compile Include="Form\Customer\UCCustomer.Designer.cs">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormCustomer\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCustomer\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCustomer\UCCustomerSideLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormCustomer\UCCustomerSideLeft.Designer.cs">
+      <DependentUpon>UCCustomerSideLeft.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormLoginAndFoget\ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +243,12 @@
     <EmbeddedResource Include="Form\Customer\UCCustomer.resx">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCustomer\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCustomer\UCCustomerSideLeft.resx">
+      <DependentUpon>UCCustomerSideLeft.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLoginAndFoget\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +375,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hamburger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
