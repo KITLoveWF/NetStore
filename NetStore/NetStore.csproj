@@ -193,10 +193,10 @@
     <Compile Include="Form\FormStateComputer\UCTopReceipt.Designer.cs">
       <DependentUpon>UCTopReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\UCCustomerOrderFood.cs">
+    <Compile Include="Form\FormCustomer\UCCustomerOrderFood.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\UCCustomerOrderFood.Designer.cs">
+    <Compile Include="Form\FormCustomer\UCCustomerOrderFood.Designer.cs">
       <DependentUpon>UCCustomerOrderFood.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\UCImport.cs">
@@ -211,16 +211,16 @@
     <Compile Include="Form\UCInvoice.Designer.cs">
       <DependentUpon>UCInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\UCPayment.cs">
+    <Compile Include="Form\FormCustomer\UCPayment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\UCPayment.Designer.cs">
+    <Compile Include="Form\FormCustomer\UCPayment.Designer.cs">
       <DependentUpon>UCPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\UCSingleFood.cs">
+    <Compile Include="Form\FormCustomer\UCSingleFood.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\UCSingleFood.Designer.cs">
+    <Compile Include="Form\FormCustomer\UCSingleFood.Designer.cs">
       <DependentUpon>UCSingleFood.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -294,7 +294,7 @@
     <EmbeddedResource Include="Form\FormStateComputer\UCTypeComputer.resx">
       <DependentUpon>UCTypeComputer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\UCCustomerOrderFood.resx">
+    <EmbeddedResource Include="Form\FormCustomer\UCCustomerOrderFood.resx">
       <DependentUpon>UCCustomerOrderFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UCImport.resx">
@@ -304,10 +304,10 @@
     <EmbeddedResource Include="Form\UCInvoice.resx">
       <DependentUpon>UCInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\UCPayment.resx">
+    <EmbeddedResource Include="Form\FormCustomer\UCPayment.resx">
       <DependentUpon>UCPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\UCSingleFood.resx">
+    <EmbeddedResource Include="Form\FormCustomer\UCSingleFood.resx">
       <DependentUpon>UCSingleFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -377,7 +377,10 @@
     <None Include="Resources\hamburger.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minus.png" />
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
