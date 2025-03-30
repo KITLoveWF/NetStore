@@ -181,6 +181,12 @@
     <Compile Include="Form\FormStateComputer\UCTopReceipt.Designer.cs">
       <DependentUpon>UCTopReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\UCCustomerOrderFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\UCCustomerOrderFood.Designer.cs">
+      <DependentUpon>UCCustomerOrderFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\UCImport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,6 +198,18 @@
     </Compile>
     <Compile Include="Form\UCInvoice.Designer.cs">
       <DependentUpon>UCInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UCPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\UCPayment.Designer.cs">
+      <DependentUpon>UCPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UCSingleFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\UCSingleFood.Designer.cs">
+      <DependentUpon>UCSingleFood.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -258,12 +276,21 @@
     <EmbeddedResource Include="Form\FormStateComputer\UCTypeComputer.resx">
       <DependentUpon>UCTypeComputer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\UCCustomerOrderFood.resx">
+      <DependentUpon>UCCustomerOrderFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\UCImport.resx">
       <DependentUpon>UCImport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UCInvoice.resx">
       <DependentUpon>UCInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UCPayment.resx">
+      <DependentUpon>UCPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UCSingleFood.resx">
+      <DependentUpon>UCSingleFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -327,6 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburger.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
