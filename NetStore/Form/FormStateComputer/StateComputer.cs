@@ -18,8 +18,10 @@ namespace NetStore.Form.FormStateComputer
             this.ucImport1.Hide();
             this.ucInvoice1.Hide();
             this.ucCompMaintainaceForm1.Hide();
-            this.ucFormStateComputer1.Show();
+            this.ucFormStateComputer1.Hide();
             this.ucCompMaintainaceForm1.Hide();
+            this.ucMenu1.Hide();
+            this.ucCustomer1.Hide();
             ucSideLeft1.btnStatecomputer.Click += performStateComputer;
             ucSideLeft1.btnImport.Click += performImport;
             ucSideLeft1.btnTotalreceipt.Click += performInvoice;

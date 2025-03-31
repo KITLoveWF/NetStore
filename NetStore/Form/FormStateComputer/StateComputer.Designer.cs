@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ucSideLeft1 = new NetStore.Form.FormStateComputer.UCSideLeft();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ucMenu1 = new NetStore.Form.FormMenu.UCMenu();
             this.ucCustomer1 = new NetStore.Form.Customer.UCCustomer();
@@ -37,8 +38,6 @@
             this.ucImport1 = new NetStore.Form.UCImport();
             this.ucCompMaintainaceForm1 = new NetStore.Form.ComputerMaintaince.UCCompMaintainaceForm();
             this.ucFormStateComputer1 = new NetStore.Form.FormStateComputer.UCFormStateComputer();
-            this.ucSideLeft1 = new NetStore.Form.FormStateComputer.UCSideLeft();
-            this.ucPayment1 = new NetStore.Form.UCPayment();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -62,9 +61,16 @@
             this.panel2.Size = new System.Drawing.Size(1510, 442);
             this.panel2.TabIndex = 2;
             // 
+            // ucSideLeft1
+            // 
+            this.ucSideLeft1.Location = new System.Drawing.Point(5, 4);
+            this.ucSideLeft1.Margin = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.ucSideLeft1.Name = "ucSideLeft1";
+            this.ucSideLeft1.Size = new System.Drawing.Size(338, 1030);
+            this.ucSideLeft1.TabIndex = 0;
+            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.ucPayment1);
             this.panel3.Controls.Add(this.ucMenu1);
             this.panel3.Controls.Add(this.ucCustomer1);
             this.panel3.Controls.Add(this.ucInvoice1);
@@ -135,22 +141,6 @@
             this.ucFormStateComputer1.Size = new System.Drawing.Size(2063, 1193);
             this.ucFormStateComputer1.TabIndex = 0;
             // 
-            // ucSideLeft1
-            // 
-            this.ucSideLeft1.Location = new System.Drawing.Point(5, 4);
-            this.ucSideLeft1.Margin = new System.Windows.Forms.Padding(9, 5, 9, 5);
-            this.ucSideLeft1.Name = "ucSideLeft1";
-            this.ucSideLeft1.Size = new System.Drawing.Size(338, 1030);
-            this.ucSideLeft1.TabIndex = 0;
-            // 
-            // ucPayment1
-            // 
-            this.ucPayment1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPayment1.Location = new System.Drawing.Point(0, 0);
-            this.ucPayment1.Name = "ucPayment1";
-            this.ucPayment1.Size = new System.Drawing.Size(2075, 1107);
-            this.ucPayment1.TabIndex = 5;
-            // 
             // StateComputer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -182,6 +172,5 @@
         private ComputerMaintaince.UCCompMaintainaceForm ucCompMaintainaceForm1;
         private Customer.UCCustomer ucCustomer1;
         private FormMenu.UCMenu ucMenu1;
-        private UCPayment ucPayment1;
     }
 }

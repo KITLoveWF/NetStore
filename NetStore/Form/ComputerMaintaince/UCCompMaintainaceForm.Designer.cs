@@ -295,14 +295,13 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(0, 236);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(0, 336);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 92;
             this.guna2DataGridView1.RowTemplate.Height = 37;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1556, 957);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1556, 436);
             this.guna2DataGridView1.TabIndex = 47;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -465,6 +464,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCCompMaintainaceForm";
             this.Size = new System.Drawing.Size(2063, 1193);
+            this.Load += new System.EventHandler(this.UCCompMaintainaceForm_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
