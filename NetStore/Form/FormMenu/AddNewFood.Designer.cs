@@ -28,113 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtprice = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.btnupload = new Guna.UI2.WinForms.Guna2Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblImage = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.txtPrice = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btncancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnsave = new Guna.UI2.WinForms.Guna2Button();
-            this.combocategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.picupload = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.txtprice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picupload)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cbxCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ptxImage = new System.Windows.Forms.PictureBox();
+            this.cbxName = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnUpload = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tên";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(101, 311);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(54, 32);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Tên";
             // 
-            // label2
+            // lblPrice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(90, 316);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Giá";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(101, 395);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(51, 32);
+            this.lblPrice.TabIndex = 2;
+            this.lblPrice.Text = "Giá";
+            this.lblPrice.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // lblImage
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(78, 520);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ảnh ";
+            this.lblImage.AutoSize = true;
+            this.lblImage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImage.Location = new System.Drawing.Point(89, 566);
+            this.lblImage.Name = "lblImage";
+            this.lblImage.Size = new System.Drawing.Size(67, 32);
+            this.lblImage.TabIndex = 4;
+            this.lblImage.Text = "Ảnh ";
             // 
-            // label4
+            // lblType
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 379);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 28);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Phân loại";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.Location = new System.Drawing.Point(44, 474);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(120, 32);
+            this.lblType.TabIndex = 5;
+            this.lblType.Text = "Phân loại";
+            this.lblType.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtname
+            // txtPrice
             // 
-            this.txtname.AutoRoundedCorners = true;
-            this.txtname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtname.DefaultText = "";
-            this.txtname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtname.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtname.Location = new System.Drawing.Point(155, 249);
-            this.txtname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtname.Name = "txtname";
-            this.txtname.PlaceholderText = "";
-            this.txtname.SelectedText = "";
-            this.txtname.Size = new System.Drawing.Size(299, 31);
-            this.txtname.TabIndex = 6;
-            // 
-            // txtprice
-            // 
-            this.txtprice.AutoRoundedCorners = true;
-            this.txtprice.BackColor = System.Drawing.Color.Transparent;
-            this.txtprice.BorderRadius = 13;
-            this.txtprice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtprice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtprice.Location = new System.Drawing.Point(155, 316);
-            this.txtprice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtprice.Name = "txtprice";
-            this.txtprice.Size = new System.Drawing.Size(299, 28);
-            this.txtprice.TabIndex = 7;
-            // 
-            // btnupload
-            // 
-            this.btnupload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnupload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnupload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnupload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnupload.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnupload.ForeColor = System.Drawing.Color.White;
-            this.btnupload.Location = new System.Drawing.Point(155, 631);
-            this.btnupload.Name = "btnupload";
-            this.btnupload.Size = new System.Drawing.Size(299, 26);
-            this.btnupload.TabIndex = 9;
-            this.btnupload.Text = "Upload ";
+            this.txtPrice.AutoRoundedCorners = true;
+            this.txtPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtPrice.BorderRadius = 16;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPrice.Location = new System.Drawing.Point(174, 395);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(336, 35);
+            this.txtPrice.TabIndex = 7;
             // 
             // btncancel
             // 
@@ -144,11 +106,12 @@
             this.btncancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btncancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btncancel.FillColor = System.Drawing.Color.Red;
-            this.btncancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btncancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel.ForeColor = System.Drawing.Color.White;
-            this.btncancel.Location = new System.Drawing.Point(115, 689);
+            this.btncancel.Location = new System.Drawing.Point(114, 657);
+            this.btncancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(159, 45);
+            this.btncancel.Size = new System.Drawing.Size(179, 56);
             this.btncancel.TabIndex = 10;
             this.btncancel.Text = "Cancel";
             // 
@@ -160,107 +123,102 @@
             this.btnsave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnsave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnsave.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnsave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnsave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.ForeColor = System.Drawing.Color.White;
-            this.btnsave.Location = new System.Drawing.Point(338, 689);
+            this.btnsave.Location = new System.Drawing.Point(365, 657);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(159, 45);
+            this.btnsave.Size = new System.Drawing.Size(179, 56);
             this.btnsave.TabIndex = 11;
             this.btnsave.Text = "Save";
             // 
-            // combocategory
+            // cbxCategory
             // 
-            this.combocategory.AutoRoundedCorners = true;
-            this.combocategory.BackColor = System.Drawing.Color.Transparent;
-            this.combocategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combocategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combocategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combocategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combocategory.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.combocategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.combocategory.ItemHeight = 30;
-            this.combocategory.Items.AddRange(new object[] {
+            this.cbxCategory.AutoRoundedCorners = true;
+            this.cbxCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbxCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbxCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbxCategory.ItemHeight = 30;
+            this.cbxCategory.Items.AddRange(new object[] {
             "Cơm",
             "Nước",
             "Mỳ",
             "Thẻ cào"});
-            this.combocategory.Location = new System.Drawing.Point(155, 379);
-            this.combocategory.Name = "combocategory";
-            this.combocategory.Size = new System.Drawing.Size(301, 36);
-            this.combocategory.TabIndex = 13;
+            this.cbxCategory.Location = new System.Drawing.Point(174, 474);
+            this.cbxCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(338, 36);
+            this.cbxCategory.TabIndex = 13;
             // 
-            // picupload
+            // ptxImage
             // 
-            this.picupload.Location = new System.Drawing.Point(154, 520);
-            this.picupload.Name = "picupload";
-            this.picupload.Size = new System.Drawing.Size(299, 109);
-            this.picupload.TabIndex = 8;
-            this.picupload.TabStop = false;
+            this.ptxImage.Image = global::NetStore.Properties.Resources.image_5;
+            this.ptxImage.Location = new System.Drawing.Point(199, 15);
+            this.ptxImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ptxImage.Name = "ptxImage";
+            this.ptxImage.Size = new System.Drawing.Size(264, 241);
+            this.ptxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptxImage.TabIndex = 3;
+            this.ptxImage.TabStop = false;
             // 
-            // pictureBox1
+            // cbxName
             // 
-            this.pictureBox1.Image = global::NetStore.Properties.Resources.image_5;
-            this.pictureBox1.Location = new System.Drawing.Point(177, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 193);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.cbxName.BackColor = System.Drawing.Color.Transparent;
+            this.cbxName.BorderRadius = 17;
+            this.cbxName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbxName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbxName.ItemHeight = 30;
+            this.cbxName.Location = new System.Drawing.Point(177, 307);
+            this.cbxName.Name = "cbxName";
+            this.cbxName.Size = new System.Drawing.Size(336, 36);
+            this.cbxName.TabIndex = 16;
             // 
-            // guna2TextBox1
+            // btnUpload
             // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(157, 448);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(299, 35);
-            this.guna2TextBox1.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 455);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 28);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Số lượng";
+            this.btnUpload.BorderRadius = 5;
+            this.btnUpload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpload.FillColor = System.Drawing.Color.Cyan;
+            this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.Location = new System.Drawing.Point(177, 566);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(336, 46);
+            this.btnUpload.TabIndex = 9;
+            this.btnUpload.Text = "Upload ";
             // 
             // AddNewFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 761);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.combocategory);
+            this.ClientSize = new System.Drawing.Size(663, 781);
+            this.Controls.Add(this.cbxName);
+            this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btncancel);
-            this.Controls.Add(this.btnupload);
-            this.Controls.Add(this.picupload);
-            this.Controls.Add(this.txtprice);
-            this.Controls.Add(this.txtname);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnUpload);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.lblImage);
+            this.Controls.Add(this.ptxImage);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblName);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddNewFood";
             this.Text = "AddNewFood";
-            ((System.ComponentModel.ISupportInitialize)(this.txtprice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picupload)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,19 +226,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtname;
-        private Guna.UI2.WinForms.Guna2NumericUpDown txtprice;
-        private System.Windows.Forms.PictureBox picupload;
-        private Guna.UI2.WinForms.Guna2Button btnupload;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.PictureBox ptxImage;
+        private System.Windows.Forms.Label lblImage;
+        private System.Windows.Forms.Label lblType;
+        private Guna.UI2.WinForms.Guna2NumericUpDown txtPrice;
         private Guna.UI2.WinForms.Guna2Button btncancel;
         private Guna.UI2.WinForms.Guna2Button btnsave;
-        private Guna.UI2.WinForms.Guna2ComboBox combocategory;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxCategory;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxName;
+        private Guna.UI2.WinForms.Guna2Button btnUpload;
     }
 }
