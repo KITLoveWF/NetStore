@@ -43,7 +43,6 @@
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btndelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnadd = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -55,8 +54,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1179, 100);
+            this.panel1.Size = new System.Drawing.Size(1326, 125);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -66,17 +66,18 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1179, 100);
+            this.panel2.Size = new System.Drawing.Size(1326, 125);
             this.panel2.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(956, 27);
+            this.label2.Location = new System.Drawing.Point(1076, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 38);
+            this.label2.Size = new System.Drawing.Size(159, 45);
             this.label2.TabIndex = 1;
             this.label2.Text = "Đức Kiên";
             // 
@@ -84,9 +85,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 27);
+            this.label1.Location = new System.Drawing.Point(74, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 38);
+            this.label1.Size = new System.Drawing.Size(202, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Khách hàng";
             // 
@@ -95,11 +96,11 @@
             this.panel3.Controls.Add(this.gridviewcustomer);
             this.panel3.Controls.Add(this.btndelete);
             this.panel3.Controls.Add(this.btnadd);
-            this.panel3.Controls.Add(this.guna2TextBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 100);
+            this.panel3.Location = new System.Drawing.Point(0, 125);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1179, 558);
+            this.panel3.Size = new System.Drawing.Size(1326, 697);
             this.panel3.TabIndex = 1;
             // 
             // gridviewcustomer
@@ -130,12 +131,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewcustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewcustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewcustomer.Location = new System.Drawing.Point(92, 120);
+            this.gridviewcustomer.Location = new System.Drawing.Point(104, 150);
+            this.gridviewcustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridviewcustomer.Name = "gridviewcustomer";
             this.gridviewcustomer.RowHeadersVisible = false;
             this.gridviewcustomer.RowHeadersWidth = 51;
             this.gridviewcustomer.RowTemplate.Height = 24;
-            this.gridviewcustomer.Size = new System.Drawing.Size(1000, 395);
+            this.gridviewcustomer.Size = new System.Drawing.Size(1125, 494);
             this.gridviewcustomer.TabIndex = 15;
             this.gridviewcustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewcustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -193,9 +195,10 @@
             this.btndelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btndelete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.White;
-            this.btndelete.Location = new System.Drawing.Point(954, 43);
+            this.btndelete.Location = new System.Drawing.Point(1073, 54);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(138, 45);
+            this.btndelete.Size = new System.Drawing.Size(155, 56);
             this.btndelete.TabIndex = 14;
             this.btndelete.Text = "Xoá";
             // 
@@ -209,40 +212,22 @@
             this.btnadd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnadd.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnadd.ForeColor = System.Drawing.Color.White;
-            this.btnadd.Location = new System.Drawing.Point(779, 43);
+            this.btnadd.Location = new System.Drawing.Point(876, 54);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(138, 45);
+            this.btnadd.Size = new System.Drawing.Size(155, 56);
             this.btnadd.TabIndex = 13;
             this.btnadd.Text = "Thêm";
             // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(89, 40);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "Tìm kiếm theo Tên, SĐT";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(659, 48);
-            this.guna2TextBox1.TabIndex = 12;
-            // 
             // UCCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UCCustomer";
-            this.Size = new System.Drawing.Size(1179, 658);
+            this.Size = new System.Drawing.Size(1326, 822);
             this.Load += new System.EventHandler(this.UCCustomer_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -267,6 +252,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private Guna.UI2.WinForms.Guna2Button btndelete;
         private Guna.UI2.WinForms.Guna2Button btnadd;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }
