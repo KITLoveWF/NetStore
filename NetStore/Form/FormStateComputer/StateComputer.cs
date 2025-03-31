@@ -18,7 +18,7 @@ namespace NetStore.Form.FormStateComputer
             this.ucImport1.Hide();
             this.ucInvoice1.Hide();
             this.ucCompMaintainaceForm1.Hide();
-            this.ucFormStateComputer1.Show();
+            this.ucFormStateComputer1.Hide();
             this.ucCompMaintainaceForm1.Hide();
             this.ucMenu1.Hide();
             this.ucCustomer1.Hide();
