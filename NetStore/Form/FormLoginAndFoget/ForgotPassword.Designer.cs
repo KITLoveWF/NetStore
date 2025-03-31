@@ -44,12 +44,12 @@
             // lblOldpassword
             // 
             this.lblOldpassword.AutoSize = true;
-            this.lblOldpassword.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOldpassword.Location = new System.Drawing.Point(136, 236);
+            this.lblOldpassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOldpassword.Location = new System.Drawing.Point(135, 232);
             this.lblOldpassword.Name = "lblOldpassword";
-            this.lblOldpassword.Size = new System.Drawing.Size(181, 27);
+            this.lblOldpassword.Size = new System.Drawing.Size(155, 32);
             this.lblOldpassword.TabIndex = 9;
-            this.lblOldpassword.Text = "Old Password";
+            this.lblOldpassword.Text = "Mật khẩu cũ";
             // 
             // txtOldpassword
             // 
@@ -73,12 +73,12 @@
             // lblNewpassword
             // 
             this.lblNewpassword.AutoSize = true;
-            this.lblNewpassword.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewpassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewpassword.Location = new System.Drawing.Point(135, 360);
             this.lblNewpassword.Name = "lblNewpassword";
-            this.lblNewpassword.Size = new System.Drawing.Size(194, 27);
+            this.lblNewpassword.Size = new System.Drawing.Size(172, 32);
             this.lblNewpassword.TabIndex = 7;
-            this.lblNewpassword.Text = "New Password";
+            this.lblNewpassword.Text = "Mật khẩu mới";
             // 
             // txtNewpassword
             // 
@@ -106,13 +106,13 @@
             this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnBack.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Black;
             this.btnBack.Location = new System.Drawing.Point(141, 630);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(180, 45);
             this.btnBack.TabIndex = 5;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Trở về";
             // 
             // btnSave
             // 
@@ -121,13 +121,13 @@
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnSave.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(457, 630);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(180, 45);
             this.btnSave.TabIndex = 10;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Lưu";
             // 
             // lblCyphergaming
             // 
@@ -152,12 +152,12 @@
             // lblRenewpassword
             // 
             this.lblRenewpassword.AutoSize = true;
-            this.lblRenewpassword.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRenewpassword.Location = new System.Drawing.Point(136, 470);
+            this.lblRenewpassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRenewpassword.Location = new System.Drawing.Point(136, 487);
             this.lblRenewpassword.Name = "lblRenewpassword";
-            this.lblRenewpassword.Size = new System.Drawing.Size(229, 27);
+            this.lblRenewpassword.Size = new System.Drawing.Size(273, 32);
             this.lblRenewpassword.TabIndex = 14;
-            this.lblRenewpassword.Text = "Re-new Password";
+            this.lblRenewpassword.Text = "Nhập lại mật khẩu mới";
             // 
             // txtRenewpassword
             // 
@@ -170,7 +170,7 @@
             this.txtRenewpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRenewpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRenewpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRenewpassword.Location = new System.Drawing.Point(141, 512);
+            this.txtRenewpassword.Location = new System.Drawing.Point(141, 529);
             this.txtRenewpassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRenewpassword.Name = "txtRenewpassword";
             this.txtRenewpassword.PlaceholderText = "";

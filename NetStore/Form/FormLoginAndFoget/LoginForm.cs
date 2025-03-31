@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetStore.Form.FormStateComputer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace NetStore.Form.FormLoginAndFoget
         private void Login_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StateComputer stateComputer = new StateComputer();
+            stateComputer.Show();
         }
     }
 }
