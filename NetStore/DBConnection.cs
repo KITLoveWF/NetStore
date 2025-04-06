@@ -12,63 +12,49 @@ namespace NetStore
 {
     internal class DBConnection
     {
-        private string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
+        private string sqlCon = "Data Source=DESKTOP-AQBQ14F\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
         SqlConnection conn = null;
-        public bool Excute(string sqlStr)
-        {
-            try
-            {
 
-                // Ket noi
-                conn = new SqlConnection(sqlCon);
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
+        public SqlConnection GetConnection()
+        {
+            return new SqlConnection(sqlCon);
+        }
+
+        public bool Execute(string sqlStr)
+        {
+            using (conn = GetConnection())
+            {
+                try
                 {
-                    conn.Close();
-                    return true;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    return cmd.ExecuteNonQuery() > 0;
                 }
-                return false;
-
-
-            }
-            catch (Exception ex)
-            {
-                conn.Close();
-                return false;
-
-            }
-            finally
-            {
-                conn.Close();
+                catch
+                {
+                    return false;
+                }
             }
         }
-        public DataTable LoadData()
+        public DataTable ExecuteQuery(string sqlStr)
         {
-            DataTable dt = new DataTable();
-            try
+            using (conn = GetConnection())
             {
-                conn = new SqlConnection(sqlCon);
-                Console.WriteLine(sqlCon);
-                conn.Open();
-                string sqlStr = string.Format("SELECT * FROM Computer");
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dtNhanVien = new DataTable();
-                adapter.Fill(dtNhanVien);
-                dt = dtNhanVien;
+                DataTable dt = new DataTable();
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                    adapter.Fill(dt);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error: " + e.Message);
+                }
+                return dt;
             }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-                //how(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return dt;
         }
-        
+
 
 
     }

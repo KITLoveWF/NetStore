@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.itemprice = new System.Windows.Forms.Label();
-            this.itemname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -47,38 +47,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(520, 279);
             this.guna2Panel1.TabIndex = 6;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.itemprice);
-            this.guna2Panel2.Controls.Add(this.itemname);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel2.Location = new System.Drawing.Point(307, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(213, 279);
-            this.guna2Panel2.TabIndex = 0;
-            // 
-            // itemprice
-            // 
-            this.itemprice.AutoSize = true;
-            this.itemprice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemprice.Location = new System.Drawing.Point(19, 168);
-            this.itemprice.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.itemprice.Name = "itemprice";
-            this.itemprice.Size = new System.Drawing.Size(57, 37);
-            this.itemprice.TabIndex = 4;
-            this.itemprice.Text = "Giá";
-            // 
-            // itemname
-            // 
-            this.itemname.AutoSize = true;
-            this.itemname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemname.Location = new System.Drawing.Point(19, 73);
-            this.itemname.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.itemname.Name = "itemname";
-            this.itemname.Size = new System.Drawing.Size(199, 37);
-            this.itemname.TabIndex = 3;
-            this.itemname.Text = "Tên sản phẩm ";
             // 
             // pictureBox1
             // 
@@ -92,6 +60,38 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.lblPrice);
+            this.guna2Panel2.Controls.Add(this.lblName);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel2.Location = new System.Drawing.Point(307, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(213, 279);
+            this.guna2Panel2.TabIndex = 0;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(19, 168);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(57, 37);
+            this.lblPrice.TabIndex = 4;
+            this.lblPrice.Text = "Giá";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(19, 73);
+            this.lblName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(199, 37);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Tên sản phẩm ";
+            // 
             // UCSingleFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -101,9 +101,9 @@
             this.Name = "UCSingleFood";
             this.Size = new System.Drawing.Size(520, 279);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,8 +112,8 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label itemprice;
-        private System.Windows.Forms.Label itemname;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

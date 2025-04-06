@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\InventoryDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Form\ComputerMaintaince\UCCompMaintainaceForm.cs">
       <SubType>UserControl</SubType>
@@ -391,8 +392,6 @@
   <ItemGroup>
     <None Include="Resources\minus1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

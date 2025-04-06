@@ -50,14 +50,14 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabtablemenu = new System.Windows.Forms.TabControl();
             this.tabcom = new System.Windows.Forms.TabPage();
-            this.flowcom = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelFoods = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucSingleFood1 = new NetStore.Form.UCSingleFood();
             this.tabnuoc = new System.Windows.Forms.TabPage();
             this.flownuoc = new System.Windows.Forms.FlowLayoutPanel();
             this.tabmy = new System.Windows.Forms.TabPage();
             this.flowmy = new System.Windows.Forms.FlowLayoutPanel();
             this.tabthecao = new System.Windows.Forms.TabPage();
             this.flowthecao = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucSingleFood1 = new NetStore.Form.UCSingleFood();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -65,7 +65,7 @@
             this.guna2Panel2.SuspendLayout();
             this.tabtablemenu.SuspendLayout();
             this.tabcom.SuspendLayout();
-            this.flowcom.SuspendLayout();
+            this.flowLayoutPanelFoods.SuspendLayout();
             this.tabnuoc.SuspendLayout();
             this.tabmy.SuspendLayout();
             this.tabthecao.SuspendLayout();
@@ -328,7 +328,7 @@
             // 
             // tabcom
             // 
-            this.tabcom.Controls.Add(this.flowcom);
+            this.tabcom.Controls.Add(this.flowLayoutPanelFoods);
             this.tabcom.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabcom.Location = new System.Drawing.Point(10, 66);
             this.tabcom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -339,16 +339,25 @@
             this.tabcom.Text = "Cơm";
             this.tabcom.UseVisualStyleBackColor = true;
             // 
-            // flowcom
+            // flowLayoutPanelFoods
             // 
-            this.flowcom.AutoScroll = true;
-            this.flowcom.Controls.Add(this.ucSingleFood1);
-            this.flowcom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowcom.Location = new System.Drawing.Point(5, 6);
-            this.flowcom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.flowcom.Name = "flowcom";
-            this.flowcom.Size = new System.Drawing.Size(1126, 859);
-            this.flowcom.TabIndex = 0;
+            this.flowLayoutPanelFoods.AutoScroll = true;
+            this.flowLayoutPanelFoods.Controls.Add(this.ucSingleFood1);
+            this.flowLayoutPanelFoods.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelFoods.Location = new System.Drawing.Point(5, 6);
+            this.flowLayoutPanelFoods.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.flowLayoutPanelFoods.Name = "flowLayoutPanelFoods";
+            this.flowLayoutPanelFoods.Size = new System.Drawing.Size(1126, 859);
+            this.flowLayoutPanelFoods.TabIndex = 0;
+            // 
+            // ucSingleFood1
+            // 
+            this.ucSingleFood1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ucSingleFood1.Location = new System.Drawing.Point(6, 5);
+            this.ucSingleFood1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ucSingleFood1.Name = "ucSingleFood1";
+            this.ucSingleFood1.Size = new System.Drawing.Size(520, 278);
+            this.ucSingleFood1.TabIndex = 0;
             // 
             // tabnuoc
             // 
@@ -417,15 +426,6 @@
             this.flowthecao.Size = new System.Drawing.Size(1126, 859);
             this.flowthecao.TabIndex = 1;
             // 
-            // ucSingleFood1
-            // 
-            this.ucSingleFood1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucSingleFood1.Location = new System.Drawing.Point(6, 5);
-            this.ucSingleFood1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.ucSingleFood1.Name = "ucSingleFood1";
-            this.ucSingleFood1.Size = new System.Drawing.Size(520, 278);
-            this.ucSingleFood1.TabIndex = 0;
-            // 
             // UCCustomerOrderFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -445,7 +445,7 @@
             this.guna2Panel2.ResumeLayout(false);
             this.tabtablemenu.ResumeLayout(false);
             this.tabcom.ResumeLayout(false);
-            this.flowcom.ResumeLayout(false);
+            this.flowLayoutPanelFoods.ResumeLayout(false);
             this.tabnuoc.ResumeLayout(false);
             this.tabmy.ResumeLayout(false);
             this.tabthecao.ResumeLayout(false);
@@ -477,7 +477,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.TabControl tabtablemenu;
         private System.Windows.Forms.TabPage tabcom;
-        private System.Windows.Forms.FlowLayoutPanel flowcom;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFoods;
         private System.Windows.Forms.TabPage tabnuoc;
         private System.Windows.Forms.FlowLayoutPanel flownuoc;
         private System.Windows.Forms.TabPage tabmy;

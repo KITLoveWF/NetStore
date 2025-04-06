@@ -26,5 +26,9 @@ namespace NetStore.Form
         {
 
         }
+        public void SetName(string name)
+        {
+            lblName.Text = name;
+        }
     }
 }
