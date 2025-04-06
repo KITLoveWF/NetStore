@@ -35,34 +35,40 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblTotalmoney = new System.Windows.Forms.Label();
             this.btnReceipt = new Guna.UI2.WinForms.Guna2Button();
             this.lblMoney = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblFood = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.tabtablemenu = new System.Windows.Forms.TabControl();
+            this.tabcom = new System.Windows.Forms.TabPage();
+            this.flowcom = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabnuoc = new System.Windows.Forms.TabPage();
+            this.flownuoc = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabmy = new System.Windows.Forms.TabPage();
+            this.flowmy = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabthecao = new System.Windows.Forms.TabPage();
+            this.flowthecao = new System.Windows.Forms.FlowLayoutPanel();
             this.ucSingleFood1 = new NetStore.Form.UCSingleFood();
-            this.ucSingleFood2 = new NetStore.Form.UCSingleFood();
-            this.ucSingleFood3 = new NetStore.Form.UCSingleFood();
-            this.ucSingleFood4 = new NetStore.Form.UCSingleFood();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
+            this.tabtablemenu.SuspendLayout();
+            this.tabcom.SuspendLayout();
+            this.flowcom.SuspendLayout();
+            this.tabnuoc.SuspendLayout();
+            this.tabmy.SuspendLayout();
+            this.tabthecao.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -148,6 +154,89 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(838, 518);
             this.flowLayoutPanel1.TabIndex = 21;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.guna2ImageButton3);
+            this.panel4.Controls.Add(this.guna2ImageButton4);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(5, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(830, 123);
+            this.panel4.TabIndex = 13;
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Image = global::NetStore.Properties.Resources.plus;
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.Location = new System.Drawing.Point(699, 29);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(24, 37);
+            this.guna2ImageButton3.TabIndex = 47;
+            // 
+            // guna2ImageButton4
+            // 
+            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.Image = global::NetStore.Properties.Resources.minus1;
+            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton4.ImageRotate = 0F;
+            this.guna2ImageButton4.Location = new System.Drawing.Point(746, 29);
+            this.guna2ImageButton4.Name = "guna2ImageButton4";
+            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.Size = new System.Drawing.Size(24, 37);
+            this.guna2ImageButton4.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8F);
+            this.label2.Location = new System.Drawing.Point(9, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 32);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Pepsi";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DimGray;
+            this.panel5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Location = new System.Drawing.Point(23, 87);
+            this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(800, 3);
+            this.panel5.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8F);
+            this.label3.Location = new System.Drawing.Point(249, 29);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 32);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8F);
+            this.label4.Location = new System.Drawing.Point(436, 29);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 32);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "10.000 VND";
+            // 
             // lblTotalmoney
             // 
             this.lblTotalmoney.AutoSize = true;
@@ -209,67 +298,9 @@
             this.lblFood.TabIndex = 15;
             this.lblFood.Text = "Tên món";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.guna2ImageButton3);
-            this.panel4.Controls.Add(this.guna2ImageButton4);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(5, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(830, 123);
-            this.panel4.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label2.Location = new System.Drawing.Point(9, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 32);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Pepsi";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.DimGray;
-            this.panel5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(23, 87);
-            this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(800, 3);
-            this.panel5.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label3.Location = new System.Drawing.Point(249, 29);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 32);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8F);
-            this.label4.Location = new System.Drawing.Point(436, 29);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 32);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "10.000 VND";
-            // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.flowLayoutPanel2);
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
+            this.guna2Panel2.Controls.Add(this.tabtablemenu);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -279,119 +310,121 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1156, 957);
             this.guna2Panel2.TabIndex = 61;
             // 
-            // flowLayoutPanel2
+            // tabtablemenu
             // 
-            this.flowLayoutPanel2.Controls.Add(this.ucSingleFood1);
-            this.flowLayoutPanel2.Controls.Add(this.ucSingleFood2);
-            this.flowLayoutPanel2.Controls.Add(this.ucSingleFood3);
-            this.flowLayoutPanel2.Controls.Add(this.ucSingleFood4);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 163);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1156, 794);
-            this.flowLayoutPanel2.TabIndex = 15;
+            this.tabtablemenu.Controls.Add(this.tabcom);
+            this.tabtablemenu.Controls.Add(this.tabnuoc);
+            this.tabtablemenu.Controls.Add(this.tabmy);
+            this.tabtablemenu.Controls.Add(this.tabthecao);
+            this.tabtablemenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabtablemenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabtablemenu.Location = new System.Drawing.Point(0, 10);
+            this.tabtablemenu.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabtablemenu.Multiline = true;
+            this.tabtablemenu.Name = "tabtablemenu";
+            this.tabtablemenu.SelectedIndex = 0;
+            this.tabtablemenu.Size = new System.Drawing.Size(1156, 947);
+            this.tabtablemenu.TabIndex = 17;
             // 
-            // guna2Panel4
+            // tabcom
             // 
-            this.guna2Panel4.Controls.Add(this.label5);
-            this.guna2Panel4.Controls.Add(this.guna2ComboBox2);
-            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.Black;
-            this.guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 10);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Panel4.Size = new System.Drawing.Size(1156, 153);
-            this.guna2Panel4.TabIndex = 16;
+            this.tabcom.Controls.Add(this.flowcom);
+            this.tabcom.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabcom.Location = new System.Drawing.Point(10, 66);
+            this.tabcom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabcom.Name = "tabcom";
+            this.tabcom.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabcom.Size = new System.Drawing.Size(1136, 871);
+            this.tabcom.TabIndex = 0;
+            this.tabcom.Text = "Cơm";
+            this.tabcom.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // flowcom
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(28, 53);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 41);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Bộ lọc";
+            this.flowcom.AutoScroll = true;
+            this.flowcom.Controls.Add(this.ucSingleFood1);
+            this.flowcom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowcom.Location = new System.Drawing.Point(5, 6);
+            this.flowcom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.flowcom.Name = "flowcom";
+            this.flowcom.Size = new System.Drawing.Size(1126, 859);
+            this.flowcom.TabIndex = 0;
             // 
-            // guna2ComboBox2
+            // tabnuoc
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(183, 58);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(251, 36);
-            this.guna2ComboBox2.TabIndex = 45;
+            this.tabnuoc.AutoScroll = true;
+            this.tabnuoc.Controls.Add(this.flownuoc);
+            this.tabnuoc.Location = new System.Drawing.Point(10, 66);
+            this.tabnuoc.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabnuoc.Name = "tabnuoc";
+            this.tabnuoc.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabnuoc.Size = new System.Drawing.Size(1136, 871);
+            this.tabnuoc.TabIndex = 1;
+            this.tabnuoc.Text = "Nước";
+            this.tabnuoc.UseVisualStyleBackColor = true;
+            // 
+            // flownuoc
+            // 
+            this.flownuoc.AutoScroll = true;
+            this.flownuoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flownuoc.Location = new System.Drawing.Point(5, 6);
+            this.flownuoc.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.flownuoc.Name = "flownuoc";
+            this.flownuoc.Size = new System.Drawing.Size(1126, 859);
+            this.flownuoc.TabIndex = 1;
+            // 
+            // tabmy
+            // 
+            this.tabmy.Controls.Add(this.flowmy);
+            this.tabmy.Location = new System.Drawing.Point(10, 66);
+            this.tabmy.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabmy.Name = "tabmy";
+            this.tabmy.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabmy.Size = new System.Drawing.Size(1136, 871);
+            this.tabmy.TabIndex = 2;
+            this.tabmy.Text = "Mỳ";
+            this.tabmy.UseVisualStyleBackColor = true;
+            // 
+            // flowmy
+            // 
+            this.flowmy.AutoScroll = true;
+            this.flowmy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowmy.Location = new System.Drawing.Point(5, 6);
+            this.flowmy.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.flowmy.Name = "flowmy";
+            this.flowmy.Size = new System.Drawing.Size(1126, 859);
+            this.flowmy.TabIndex = 1;
+            // 
+            // tabthecao
+            // 
+            this.tabthecao.Controls.Add(this.flowthecao);
+            this.tabthecao.Location = new System.Drawing.Point(10, 66);
+            this.tabthecao.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabthecao.Name = "tabthecao";
+            this.tabthecao.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tabthecao.Size = new System.Drawing.Size(1136, 871);
+            this.tabthecao.TabIndex = 3;
+            this.tabthecao.Text = "Thẻ cào";
+            this.tabthecao.UseVisualStyleBackColor = true;
+            // 
+            // flowthecao
+            // 
+            this.flowthecao.AutoScroll = true;
+            this.flowthecao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowthecao.Location = new System.Drawing.Point(5, 6);
+            this.flowthecao.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.flowthecao.Name = "flowthecao";
+            this.flowthecao.Size = new System.Drawing.Size(1126, 859);
+            this.flowthecao.TabIndex = 1;
             // 
             // ucSingleFood1
             // 
             this.ucSingleFood1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucSingleFood1.Location = new System.Drawing.Point(10, 10);
-            this.ucSingleFood1.Margin = new System.Windows.Forms.Padding(10);
+            this.ucSingleFood1.Location = new System.Drawing.Point(6, 5);
+            this.ucSingleFood1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ucSingleFood1.Name = "ucSingleFood1";
-            this.ucSingleFood1.Size = new System.Drawing.Size(257, 285);
+            this.ucSingleFood1.Size = new System.Drawing.Size(520, 278);
             this.ucSingleFood1.TabIndex = 0;
-            // 
-            // ucSingleFood2
-            // 
-            this.ucSingleFood2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucSingleFood2.Location = new System.Drawing.Point(287, 10);
-            this.ucSingleFood2.Margin = new System.Windows.Forms.Padding(10);
-            this.ucSingleFood2.Name = "ucSingleFood2";
-            this.ucSingleFood2.Size = new System.Drawing.Size(257, 285);
-            this.ucSingleFood2.TabIndex = 1;
-            // 
-            // ucSingleFood3
-            // 
-            this.ucSingleFood3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucSingleFood3.Location = new System.Drawing.Point(564, 10);
-            this.ucSingleFood3.Margin = new System.Windows.Forms.Padding(10);
-            this.ucSingleFood3.Name = "ucSingleFood3";
-            this.ucSingleFood3.Size = new System.Drawing.Size(257, 285);
-            this.ucSingleFood3.TabIndex = 2;
-            // 
-            // ucSingleFood4
-            // 
-            this.ucSingleFood4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucSingleFood4.Location = new System.Drawing.Point(841, 10);
-            this.ucSingleFood4.Margin = new System.Windows.Forms.Padding(10);
-            this.ucSingleFood4.Name = "ucSingleFood4";
-            this.ucSingleFood4.Size = new System.Drawing.Size(257, 285);
-            this.ucSingleFood4.TabIndex = 3;
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Image = global::NetStore.Properties.Resources.plus;
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.Location = new System.Drawing.Point(699, 29);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(24, 37);
-            this.guna2ImageButton3.TabIndex = 47;
-            // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Image = global::NetStore.Properties.Resources.minus1;
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.Location = new System.Drawing.Point(746, 29);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(24, 37);
-            this.guna2ImageButton4.TabIndex = 13;
             // 
             // UCCustomerOrderFood
             // 
@@ -410,9 +443,12 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
+            this.tabtablemenu.ResumeLayout(false);
+            this.tabcom.ResumeLayout(false);
+            this.flowcom.ResumeLayout(false);
+            this.tabnuoc.ResumeLayout(false);
+            this.tabmy.ResumeLayout(false);
+            this.tabthecao.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -439,13 +475,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TabControl tabtablemenu;
+        private System.Windows.Forms.TabPage tabcom;
+        private System.Windows.Forms.FlowLayoutPanel flowcom;
+        private System.Windows.Forms.TabPage tabnuoc;
+        private System.Windows.Forms.FlowLayoutPanel flownuoc;
+        private System.Windows.Forms.TabPage tabmy;
+        private System.Windows.Forms.FlowLayoutPanel flowmy;
+        private System.Windows.Forms.TabPage tabthecao;
+        private System.Windows.Forms.FlowLayoutPanel flowthecao;
         private UCSingleFood ucSingleFood1;
-        private UCSingleFood ucSingleFood2;
-        private UCSingleFood ucSingleFood3;
-        private UCSingleFood ucSingleFood4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
     }
 }

@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.ucComputerState2 = new NetStore.Form.ComputerMaintaince.UCComputerState();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbxDeviceName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
@@ -53,29 +52,21 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucComputerState2 = new NetStore.Form.ComputerMaintaince.UCComputerState();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeviceRecord)).BeginInit();
             this.SuspendLayout();
             // 
-            // ucComputerState2
-            // 
-            this.ucComputerState2.Location = new System.Drawing.Point(932, 241);
-            this.ucComputerState2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.ucComputerState2.Name = "ucComputerState2";
-            this.ucComputerState2.Size = new System.Drawing.Size(9, 10);
-            this.ucComputerState2.TabIndex = 9;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.panel2.Controls.Add(this.cbxDeviceName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 163);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 236);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 69);
+            this.panel2.Size = new System.Drawing.Size(1556, 100);
             this.panel2.TabIndex = 46;
             // 
             // cbxDeviceName
@@ -88,10 +79,9 @@
             this.cbxDeviceName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbxDeviceName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbxDeviceName.ItemHeight = 30;
-            this.cbxDeviceName.Location = new System.Drawing.Point(2, 12);
-            this.cbxDeviceName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxDeviceName.Location = new System.Drawing.Point(3, 17);
             this.cbxDeviceName.Name = "cbxDeviceName";
-            this.cbxDeviceName.Size = new System.Drawing.Size(116, 36);
+            this.cbxDeviceName.Size = new System.Drawing.Size(178, 36);
             this.cbxDeviceName.TabIndex = 28;
             // 
             // btnRefresh
@@ -103,11 +93,10 @@
             this.btnRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(40, 583);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(62, 845);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.PressedColor = System.Drawing.SystemColors.WindowText;
-            this.btnRefresh.Size = new System.Drawing.Size(248, 53);
+            this.btnRefresh.Size = new System.Drawing.Size(386, 77);
             this.btnRefresh.TabIndex = 50;
             this.btnRefresh.Text = "Refresh";
             // 
@@ -122,22 +111,21 @@
             this.txtDevicePrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDevicePrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDevicePrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDevicePrice.Location = new System.Drawing.Point(40, 335);
-            this.txtDevicePrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDevicePrice.Location = new System.Drawing.Point(62, 486);
+            this.txtDevicePrice.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtDevicePrice.Name = "txtDevicePrice";
             this.txtDevicePrice.PlaceholderText = "";
             this.txtDevicePrice.SelectedText = "";
-            this.txtDevicePrice.Size = new System.Drawing.Size(248, 43);
+            this.txtDevicePrice.Size = new System.Drawing.Size(386, 62);
             this.txtDevicePrice.TabIndex = 46;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 303);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(58, 439);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 26);
+            this.label3.Size = new System.Drawing.Size(137, 41);
             this.label3.TabIndex = 45;
             this.label3.Text = "Đơn giá";
             // 
@@ -152,22 +140,21 @@
             this.txtDeviceQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeviceQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDeviceQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeviceQuantity.Location = new System.Drawing.Point(40, 233);
-            this.txtDeviceQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDeviceQuantity.Location = new System.Drawing.Point(62, 338);
+            this.txtDeviceQuantity.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtDeviceQuantity.Name = "txtDeviceQuantity";
             this.txtDeviceQuantity.PlaceholderText = "";
             this.txtDeviceQuantity.SelectedText = "";
-            this.txtDeviceQuantity.Size = new System.Drawing.Size(248, 43);
+            this.txtDeviceQuantity.Size = new System.Drawing.Size(386, 62);
             this.txtDeviceQuantity.TabIndex = 44;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 201);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(58, 291);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 26);
+            this.label2.Size = new System.Drawing.Size(153, 41);
             this.label2.TabIndex = 43;
             this.label2.Text = "Số lượng";
             // 
@@ -182,22 +169,21 @@
             this.txtDeviceName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeviceName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDeviceName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeviceName.Location = new System.Drawing.Point(40, 130);
-            this.txtDeviceName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDeviceName.Location = new System.Drawing.Point(62, 188);
+            this.txtDeviceName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtDeviceName.Name = "txtDeviceName";
             this.txtDeviceName.PlaceholderText = "";
             this.txtDeviceName.SelectedText = "";
-            this.txtDeviceName.Size = new System.Drawing.Size(248, 43);
+            this.txtDeviceName.Size = new System.Drawing.Size(386, 62);
             this.txtDeviceName.TabIndex = 42;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(58, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 26);
+            this.label1.Size = new System.Drawing.Size(160, 41);
             this.label1.TabIndex = 41;
             this.label1.Text = "Tên hàng";
             // 
@@ -210,11 +196,10 @@
             this.btnMaintainance.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(241)))), ((int)(((byte)(143)))));
             this.btnMaintainance.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaintainance.ForeColor = System.Drawing.Color.Black;
-            this.btnMaintainance.Location = new System.Drawing.Point(42, 510);
-            this.btnMaintainance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMaintainance.Location = new System.Drawing.Point(65, 740);
             this.btnMaintainance.Name = "btnMaintainance";
             this.btnMaintainance.PressedColor = System.Drawing.SystemColors.WindowText;
-            this.btnMaintainance.Size = new System.Drawing.Size(247, 53);
+            this.btnMaintainance.Size = new System.Drawing.Size(384, 77);
             this.btnMaintainance.TabIndex = 49;
             this.btnMaintainance.Text = "Bảo trì";
             // 
@@ -223,9 +208,10 @@
             this.lblCyphergaming.AutoSize = true;
             this.lblCyphergaming.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
             this.lblCyphergaming.ForeColor = System.Drawing.Color.Black;
-            this.lblCyphergaming.Location = new System.Drawing.Point(32, 60);
+            this.lblCyphergaming.Location = new System.Drawing.Point(50, 87);
+            this.lblCyphergaming.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCyphergaming.Name = "lblCyphergaming";
-            this.lblCyphergaming.Size = new System.Drawing.Size(138, 45);
+            this.lblCyphergaming.Size = new System.Drawing.Size(207, 68);
             this.lblCyphergaming.TabIndex = 12;
             this.lblCyphergaming.Text = "Bảo trì";
             // 
@@ -241,10 +227,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnMaintainance);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1000, 163);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(1556, 236);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 660);
+            this.panel1.Size = new System.Drawing.Size(507, 957);
             this.panel1.TabIndex = 45;
             // 
             // guna2Panel1
@@ -253,9 +238,8 @@
             this.guna2Panel1.Controls.Add(this.lblCyphergaming);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1326, 163);
+            this.guna2Panel1.Size = new System.Drawing.Size(2063, 236);
             this.guna2Panel1.TabIndex = 44;
             // 
             // dgvDeviceRecord
@@ -290,13 +274,12 @@
             this.dgvDeviceRecord.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDeviceRecord.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDeviceRecord.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDeviceRecord.Location = new System.Drawing.Point(0, 232);
-            this.dgvDeviceRecord.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDeviceRecord.Location = new System.Drawing.Point(0, 336);
             this.dgvDeviceRecord.Name = "dgvDeviceRecord";
             this.dgvDeviceRecord.RowHeadersVisible = false;
             this.dgvDeviceRecord.RowHeadersWidth = 92;
             this.dgvDeviceRecord.RowTemplate.Height = 37;
-            this.dgvDeviceRecord.Size = new System.Drawing.Size(1000, 591);
+            this.dgvDeviceRecord.Size = new System.Drawing.Size(1556, 857);
             this.dgvDeviceRecord.TabIndex = 49;
             this.dgvDeviceRecord.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDeviceRecord.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -358,17 +341,26 @@
             this.staffName.MinimumWidth = 11;
             this.staffName.Name = "staffName";
             // 
+            // ucComputerState2
+            // 
+            this.ucComputerState2.Location = new System.Drawing.Point(1450, 349);
+            this.ucComputerState2.Margin = new System.Windows.Forms.Padding(9);
+            this.ucComputerState2.Name = "ucComputerState2";
+            this.ucComputerState2.Size = new System.Drawing.Size(14, 14);
+            this.ucComputerState2.TabIndex = 9;
+            // 
             // UCCompMaintainaceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvDeviceRecord);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.ucComputerState2);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "UCCompMaintainaceForm";
-            this.Size = new System.Drawing.Size(1326, 823);
+            this.Size = new System.Drawing.Size(2063, 1193);
             this.Load += new System.EventHandler(this.UCCompMaintainaceForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

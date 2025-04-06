@@ -156,7 +156,7 @@
             // 
             // ptxImage
             // 
-            this.ptxImage.Image = global::NetStore.Properties.Resources.image_5;
+            this.ptxImage.Image = global::NetStore.Properties.Resources.settings;
             this.ptxImage.Location = new System.Drawing.Point(199, 15);
             this.ptxImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ptxImage.Name = "ptxImage";

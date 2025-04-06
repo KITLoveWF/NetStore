@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ucCustomerSideLeft1 = new NetStore.Form.FormCustomer.UCCustomerSideLeft();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.ucCustomerOrderFood1 = new NetStore.Form.UCCustomerOrderFood();
-            this.ucCustomerSideLeft1 = new NetStore.Form.FormCustomer.UCCustomerSideLeft();
-            this.ucPayment1 = new NetStore.Form.UCPayment();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +48,14 @@
             this.panel1.Size = new System.Drawing.Size(352, 1161);
             this.panel1.TabIndex = 3;
             // 
+            // ucCustomerSideLeft1
+            // 
+            this.ucCustomerSideLeft1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucCustomerSideLeft1.Location = new System.Drawing.Point(0, 0);
+            this.ucCustomerSideLeft1.Name = "ucCustomerSideLeft1";
+            this.ucCustomerSideLeft1.Size = new System.Drawing.Size(352, 1161);
+            this.ucCustomerSideLeft1.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(352, 4);
@@ -59,7 +66,6 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.ucPayment1);
             this.guna2Panel1.Controls.Add(this.ucCustomerOrderFood1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(352, 0);
@@ -74,22 +80,6 @@
             this.ucCustomerOrderFood1.Name = "ucCustomerOrderFood1";
             this.ucCustomerOrderFood1.Size = new System.Drawing.Size(2075, 1161);
             this.ucCustomerOrderFood1.TabIndex = 0;
-            // 
-            // ucCustomerSideLeft1
-            // 
-            this.ucCustomerSideLeft1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucCustomerSideLeft1.Location = new System.Drawing.Point(0, 0);
-            this.ucCustomerSideLeft1.Name = "ucCustomerSideLeft1";
-            this.ucCustomerSideLeft1.Size = new System.Drawing.Size(352, 1161);
-            this.ucCustomerSideLeft1.TabIndex = 0;
-            // 
-            // ucPayment1
-            // 
-            this.ucPayment1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPayment1.Location = new System.Drawing.Point(0, 0);
-            this.ucPayment1.Name = "ucPayment1";
-            this.ucPayment1.Size = new System.Drawing.Size(2075, 1161);
-            this.ucPayment1.TabIndex = 1;
             // 
             // CustomerForm
             // 
@@ -115,6 +105,5 @@
         private UCCustomerSideLeft ucCustomerSideLeft1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private UCCustomerOrderFood ucCustomerOrderFood1;
-        private UCPayment ucPayment1;
     }
 }

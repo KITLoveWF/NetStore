@@ -28,6 +28,8 @@ namespace NetStore.Form.FormStateComputer
             ucSideLeft1.btnError.Click += performError;
             ucSideLeft1.btnFoodandrink.Click += menu;
             ucSideLeft1.btnCustomer.Click += customer;
+            this.Size = new Size(1100, 700); // Đặt kích thước form
+
         }
         private void performStateComputer(object sender, EventArgs e)
         {
