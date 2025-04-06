@@ -12,8 +12,12 @@ namespace NetStore
 {
     internal class DBConnection
     {
-        private string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
+        private string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
         SqlConnection conn = null;
+        public SqlConnection GetConnection()
+        {
+            return new SqlConnection(sqlCon);
+        }
         public bool Excute(string sqlStr)
         {
             try
@@ -68,7 +72,27 @@ namespace NetStore
             }
             return dt;
         }
-        
+
+        public DataTable Execute(string sqlStr)
+        {
+            using (conn = GetConnection())
+            {
+                DataTable dt = new DataTable();
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                    adapter.Fill(dt);
+                    Console.WriteLine(dt);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error: " + e.Message);
+                }
+                return dt;
+            }
+        }
+
 
 
     }

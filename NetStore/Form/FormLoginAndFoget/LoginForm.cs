@@ -1,4 +1,5 @@
-﻿using NetStore.Form.FormStateComputer;
+﻿using NetStore.DAO;
+using NetStore.Form.FormStateComputer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,9 +26,12 @@ namespace NetStore.Form.FormLoginAndFoget
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            StateComputer stateComputer = new StateComputer();
-            stateComputer.Show();
+            StaffDAO staffDAO = new StaffDAO();
+            DataTable dt = staffDAO.FindStaff(txtUsername.Text, txtPassword.Text);
+            Console.WriteLine(dt);
+            //this.Hide();
+            //StateComputer stateComputer = new StateComputer();
+            //stateComputer.Show();
         }
     }
 }
