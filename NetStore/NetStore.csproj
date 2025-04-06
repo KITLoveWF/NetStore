@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="Form\ComputerMaintaince\UCCompMaintainaceForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,6 +224,14 @@
     <Compile Include="Form\FormCustomer\UCSingleFood.Designer.cs">
       <DependentUpon>UCSingleFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Computer.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Device.cs" />
+    <Compile Include="Model\DeviceImportRecord.cs" />
+    <Compile Include="Model\Inventory.cs" />
+    <Compile Include="Model\OrderService.cs" />
+    <Compile Include="Model\Receipt.cs" />
+    <Compile Include="Model\Staff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\ComputerMaintaince\UCCompMaintainaceForm.resx">
@@ -381,6 +390,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
