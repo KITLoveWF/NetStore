@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetStore.Model
 {
-    internal class Device
+    public class Device
     {
         private string nameDevice;
         private int quantity;

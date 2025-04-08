@@ -9,20 +9,15 @@ namespace NetStore.Model
     internal class Inventory
     {
         private string nameInventory;
-        private double priceImport;
-        private double priceSelling;
+        private double sellingPrice;
         private int quantity;
         private string image;
         private string type;
 
-        public Inventory(string nameInventory, double priceImport, double priceSelling, int quantity, string image, string type)
+        public Inventory(string nameInventory, int quantity)
         {
             this.nameInventory = nameInventory;
-            this.priceImport = priceImport;
-            this.priceSelling = priceSelling;
             this.quantity = quantity;
-            this.image = image;
-            this.type = type;
         }
         public string NameInventory 
         { 
@@ -30,15 +25,10 @@ namespace NetStore.Model
             get { return nameInventory; 
             } 
         }
-        public double PriceImport
+        public double SellingPrice
         {
-            set { this.priceImport = value; }
-            get { return priceImport; }
-        }
-        public double PriceSelling
-        {
-            set { this.priceSelling = value; }
-            get { return priceSelling; }
+            set { this.sellingPrice = value; }
+            get { return sellingPrice; }
         }
         public int Quantity
         { 

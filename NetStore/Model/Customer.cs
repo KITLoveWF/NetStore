@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace NetStore.Model
 {
-    internal class Customer
+    public class Customer
     {
+        private int id;
         private string username;
         private string password;
         public Customer(string username, string password) { 
@@ -23,6 +24,11 @@ namespace NetStore.Model
         {
             set { password = value; }
             get { return password; }
+        }
+        public int Id
+        {
+            set { id = value; }
+            get { return id; }
         }
 
     }

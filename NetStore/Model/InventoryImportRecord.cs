@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace NetStore.Model
 {
-    public class DeviceImportRecord
+    internal class InventoryImportRecord
     {
         private int quantityImport;
         private double price;
-        private string deviceName;
-        public DeviceImportRecord(int quantityImport, double price)
+        private string inventoryName;
+        public InventoryImportRecord(int quantityImport, double price)
         {
             this.quantityImport = quantityImport;
             this.price = price;
@@ -22,14 +22,14 @@ namespace NetStore.Model
             get { return quantityImport; }
         }
         public double Price
-        { 
+        {
             set { price = value; }
-            get { return price; } 
+            get { return price; }
         }
-        public string DeviceName
-        { 
-            set { deviceName = value; }
-            get { return deviceName; } 
+        public string InventoryName
+        {
+            set { inventoryName = value; }
+            get { return inventoryName; }
         }
     }
 }
