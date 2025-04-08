@@ -14,11 +14,8 @@ namespace NetStore.DAO
         DBConnection dbconnection = new DBConnection();
         public DataTable FindStaff(string username, string password)
         {
-            Console.WriteLine(username);
-            Console.WriteLine(password);
-            //string sqlStr = string.Format("select * from Staff where username = '{0}' and password = '{1}'",username,password);
-            string sqlStr = "select * from Staff";
-            return dbconnection.Execute(sqlStr);
+            string sqlStr = string.Format("select * from Staff where username = '{0}' and password = '{1}'",username,password);
+            return dbconnection.find(sqlStr);
         }
 
     }
