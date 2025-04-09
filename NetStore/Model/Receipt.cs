@@ -1,48 +1,60 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetStore.Model
 {
-    internal class Receipt
+    public class Receipt
     {
-        private double serviceCost;
-        private double computerCost;
-        private double totalPrice;
-        private DateTime timeBegin;
-        private DateTime timeEnd;
-        public Receipt(double serviceCost, double computerCost, double totalPrice, DateTime timeBegin, DateTime timeEnd)
+        public int ReceiptID { get; set; }
+        public int ComputerID { get; set; }
+        public int CustomerID { get; set; }
+        public decimal ServiceCost { get; set; }
+        public decimal ComputerCost { get; set; }
+        public decimal TotalPrice { get; set; }
+        public DateTime TimeBegin { get; set; }
+        public DateTime? TimeEnd { get; set; }  // Nullable để kiểm tra phiên chưa kết thúc
+
+        // Constructor đầy đủ
+        public Receipt(int receiptID, int computerID, int customerID, decimal serviceCost, decimal computerCost, decimal totalPrice, DateTime timeBegin, DateTime? timeEnd)
         {
-            this.serviceCost = serviceCost;
-            this.computerCost = computerCost;
-            this.totalPrice = totalPrice;
-            this.timeBegin = timeBegin;
-            this.timeEnd = timeEnd;
+            ReceiptID = receiptID;
+            ComputerID = computerID;
+            CustomerID = customerID;
+            ServiceCost = serviceCost;
+            ComputerCost = computerCost;
+            TotalPrice = totalPrice;
+            TimeBegin = timeBegin;
+            TimeEnd = timeEnd;
         }
-        public double ServiceCost { 
-            set { serviceCost = value; }
-            get {  return serviceCost; } }
-        public double ComputerCost
+
+        // Constructor cơ bản khi chỉ có ID + thời gian
+        public Receipt(int receiptID, int computerID, int customerID, DateTime timeBegin, DateTime? timeEnd)
         {
-            set { computerCost = value; }
-            get { return computerCost; }
+            ReceiptID = receiptID;
+            ComputerID = computerID;
+            CustomerID = customerID;
+            TimeBegin = timeBegin;
+            TimeEnd = timeEnd;
         }
-        public double TotalPrice
+
+        // Constructor cơ bản khi vừa add
+        public Receipt(int computerID, int customerID, DateTime timeBegin)
         {
-            set { totalPrice = value; }
-            get { return totalPrice; }
+            ComputerID = computerID;
+            CustomerID = customerID;
+            TimeBegin = timeBegin;
         }
-        public DateTime TimeBegin
-        {
-            set { timeBegin = value; }
-            get { return timeBegin; }
-        }
-        public DateTime TimeEnd
-        {
-            set { timeEnd = value; }
-            get { return timeEnd; }
-        }
+
+        //// Constructor đơn giản nếu chỉ có chi phí
+        //public Receipt(decimal serviceCost, decimal computerCost, decimal totalPrice, DateTime timeBegin, DateTime? timeEnd)
+        //{
+        //    ServiceCost = serviceCost;
+        //    ComputerCost = computerCost;
+        //    TotalPrice = totalPrice;
+        //    TimeBegin = timeBegin;
+        //    TimeEnd = timeEnd;
+        //}
+
+        // Constructor mặc định
+        public Receipt() { }
     }
 }

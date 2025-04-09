@@ -55,7 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\InventoryDAO.cs" />
+    <Compile Include="DAO\OrderServiceDAO.cs" />
+    <Compile Include="DAO\ReceiptDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Form\ComputerMaintaince\UCCompMaintainaceForm.cs">
       <SubType>UserControl</SubType>
@@ -99,11 +102,23 @@
     <Compile Include="Form\FormCustomer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormCustomer\CustomerLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCustomer\CustomerLoginForm.Designer.cs">
+      <DependentUpon>CustomerLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormCustomer\UCCustomerSideLeft.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form\FormCustomer\UCCustomerSideLeft.Designer.cs">
       <DependentUpon>UCCustomerSideLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCustomer\UCSingleOrderFoodBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormCustomer\UCSingleOrderFoodBill.Designer.cs">
+      <DependentUpon>UCSingleOrderFoodBill.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormLoginAndFoget\ForgotPassword.cs">
       <SubType>Form</SubType>
@@ -233,6 +248,11 @@
     <Compile Include="Model\OrderService.cs" />
     <Compile Include="Model\Receipt.cs" />
     <Compile Include="Model\Staff.cs" />
+    <Compile Include="NetDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NetDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\ComputerMaintaince\UCCompMaintainaceForm.resx">
@@ -256,8 +276,14 @@
     <EmbeddedResource Include="Form\FormCustomer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCustomer\CustomerLoginForm.resx">
+      <DependentUpon>CustomerLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCustomer\UCCustomerSideLeft.resx">
       <DependentUpon>UCCustomerSideLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCustomer\UCSingleOrderFoodBill.resx">
+      <DependentUpon>UCSingleOrderFoodBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLoginAndFoget\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
@@ -330,6 +356,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="NetDBDataSet.xsc">
+      <DependentUpon>NetDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NetDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NetDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NetDBDataSet.xss">
+      <DependentUpon>NetDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

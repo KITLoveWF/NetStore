@@ -8,24 +8,27 @@ namespace NetStore.Model
 {
     internal class OrderService
     {
-        private string status;
-        private int quantity;
-        private string nameOrderService;
+        private int inventoryID;
+        private int receiptID;
+        private int quantityOrder;
 
-        public OrderService(string status, int quantity, string nameOrderService)
+        public OrderService(int inventoryID, int receiptID, int quantityOrder)
         {
-            this.status = status;
-            this.quantity = quantity;
-            this.nameOrderService = nameOrderService;
+            this.inventoryID = inventoryID;
+            this.receiptID = receiptID;
+            this.quantityOrder= quantityOrder;
         }
-        public string Status {  
-            set { status = value; }
-            get { return status; } }
-        public int Quantity { 
-            set { quantity = value; }
-            get { return quantity; } }
-        public string NameOrderService { 
-            set { nameOrderService = value; }
-            get {  return nameOrderService; } }
+        public int InventoryID
+        {  
+            set { inventoryID = value; }
+            get { return inventoryID; } }
+        public int QuantityOrder
+        { 
+            set { quantityOrder = value; }
+            get { return quantityOrder; } }
+        public int ReceiptID
+        { 
+            set { receiptID = value; }
+            get {  return receiptID; } }
     }
 }
