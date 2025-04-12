@@ -19,6 +19,19 @@ namespace NetStore.Model
             this.nameInventory = nameInventory;
             this.quantity = quantity;
         }
+        public Inventory(string nameInventory, double sellingPrice, string image, string type)
+        {
+            this.nameInventory = nameInventory;
+            this.sellingPrice = sellingPrice;
+            this.image = image;
+            this.type = type;
+        }
+        public Inventory(double sellingPrice, string image)
+        {
+            this.sellingPrice = sellingPrice;
+            this.image = image;
+        }
+
         public string NameInventory 
         { 
             set { this.nameInventory = value; }
