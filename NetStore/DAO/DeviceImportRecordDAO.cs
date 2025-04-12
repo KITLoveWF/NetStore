@@ -17,8 +17,13 @@ namespace NetStore.DAO
             string username = LoginSave.Username;
             string password = LoginSave.Password;
             DeviceDAO deviceDAO = new DeviceDAO();
-            string findStaff = string.Format("select * from Staff where username = '{0}' and password = '{1}'", username, password);
-            DataTable dtstaff = dbconnection.find(findStaff);
+
+
+            //string findStaff = string.Format("select * from Staff where username = '{0}' and password = '{1}'", username, password);
+            //DataTable dtstaff = dbconnection.find(findStaff);
+            StaffDAO staffDAO = new StaffDAO();
+            DataTable dtstaff = staffDAO.FindStaff(username, password);
+
             //string findDevice = string.Format("select * from Device where nameDevice = '{0}'", log.DeviceName);
             //DataTable dtDevice = dbconnection.find(findDevice);
             DataTable dtDevice = deviceDAO.FindDevice(log.DeviceName);
@@ -29,19 +34,25 @@ namespace NetStore.DAO
                 int devideID = -1;
                 if(dtDevice.Rows.Count == 0)
                 {
-                    Device device = new Device(log.DeviceName, log.QuantityImport);
+                    Device device = new Device(log.DeviceName, 0);
                     deviceDAO.Add(device);
                     DataTable dtDeviceNew = deviceDAO.FindDevice(log.DeviceName);
                     DataRow rowDeviceNew = dtDeviceNew.Rows[0];
                     devideID = Convert.ToInt32(rowDeviceNew["deviceID"]);
                 }
+                //else
+                //{
+                //    DataRow rowDevice = dtDevice.Rows[0];
+                //    devideID = Convert.ToInt32(rowDevice["deviceID"]);
+                //    int totalQuantity = Convert.ToInt32(rowDevice["quantity"]) + log.QuantityImport;
+                //    Device device = new Device(log.DeviceName, totalQuantity);
+                //    deviceDAO.Update(device);
+                //}
                 else
                 {
-                    DataRow rowDevice = dtDevice.Rows[0];
-                    devideID = Convert.ToInt32(rowDevice["deviceID"]);
-                    int totalQuantity = Convert.ToInt32(rowDevice["quantity"]) + log.QuantityImport;
-                    Device device = new Device(log.DeviceName, totalQuantity);
-                    deviceDAO.Update(device);
+                       DataRow rowDevice = dtDevice.Rows[0];
+                       devideID = Convert.ToInt32(rowDevice["deviceID"]);
+
                 }
                 string sqlStr = string.Format("INSERT INTO DeviceImportRecord(deviceID,staffID,quantityImport,price) VALUES ('{0}','{1}','{2}','{3}')", devideID, staffID, log.QuantityImport, log.Price);
                 return dbconnection.Excute(sqlStr);

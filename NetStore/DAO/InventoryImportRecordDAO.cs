@@ -16,8 +16,11 @@ namespace NetStore.DAO
             string username = LoginSave.Username;
             string password = LoginSave.Password;
             InventoryDAO inventoryDAO = new InventoryDAO();
-            string findStaff = string.Format("select * from Staff where username = '{0}' and password = '{1}'", username, password);
-            DataTable dtstaff = dbconnection.find(findStaff);
+            //string findStaff = string.Format("select * from Staff where username = '{0}' and password = '{1}'", username, password);
+            //DataTable dtstaff = dbconnection.find(findStaff);
+
+            StaffDAO staffDAO = new StaffDAO();
+            DataTable dtstaff = staffDAO.FindStaff(username, password);
             //string findDevice = string.Format("select * from Device where nameDevice = '{0}'", log.DeviceName);
             //DataTable dtDevice = dbconnection.find(findDevice);
             DataTable dtInventory = inventoryDAO.FindInventory(log.InventoryName);
@@ -28,22 +31,28 @@ namespace NetStore.DAO
                 int inventoryID = -1;
                 if (dtInventory.Rows.Count == 0)
                 {
-                    Inventory inventory = new Inventory(log.InventoryName, log.QuantityImport);
-                    inventory.Image = "";
-                    inventory.Type = "";
-                    inventory.SellingPrice = 0;
+                    Inventory inventory = new Inventory(log.InventoryName, 0);
+                    //inventory.Image = "";
+                    //inventory.Type = "";
+                    //inventory.SellingPrice = 0;
                     inventoryDAO.Add(inventory);
                     DataTable dtInventoryNew = inventoryDAO.FindInventory(log.InventoryName);
                     DataRow rowInventoryNew = dtInventoryNew.Rows[0];
                     inventoryID = Convert.ToInt32(rowInventoryNew["inventoryID"]);
                 }
+                //else
+                //{
+                //    DataRow rowInventory = dtInventory.Rows[0];
+                //    inventoryID = Convert.ToInt32(rowInventory["inventoryID"]);
+                //    int totalQuantity = Convert.ToInt32(rowInventory["quantity"]) + log.QuantityImport;
+                //    Inventory inventory = new Inventory(log.InventoryName, totalQuantity);
+                //    inventoryDAO.Update(inventory);
+                //}
                 else
                 {
                     DataRow rowInventory = dtInventory.Rows[0];
                     inventoryID = Convert.ToInt32(rowInventory["inventoryID"]);
-                    int totalQuantity = Convert.ToInt32(rowInventory["quantity"]) + log.QuantityImport;
-                    Inventory inventory = new Inventory(log.InventoryName, totalQuantity);
-                    inventoryDAO.Update(inventory);
+
                 }
                 string sqlStr = string.Format("INSERT INTO InventoryImportRecord(inventoryID,staffID,quantityImport,price) VALUES ('{0}','{1}','{2}','{3}')", inventoryID, staffID, log.QuantityImport, log.Price);
                 return dbconnection.Excute(sqlStr);
