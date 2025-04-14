@@ -31,11 +31,11 @@ namespace NetStore.Form
             dgvInvoice.AlternatingRowsDefaultCellStyle.BackColor = cellColor;
 
 
-            dgvInvoice.Rows.Add("2025-03-17", "Nguyen Van A", "Sales", "1,500,000 VND", "200,000 VND", "800,000 VND", "2,100,000 VND");
-            dgvInvoice.Rows.Add("2025-03-16", "Tran Thi B", "Purchase", "2,000,000 VND", "250,000 VND", "900,000 VND", "2,650,000 VND");
-            dgvInvoice.Rows.Add("2025-03-15", "Le Van C", "Sales", "1,800,000 VND", "220,000 VND", "850,000 VND", "2,430,000 VND");
-            dgvInvoice.Rows.Add("2025-03-14", "Pham Thi D", "Refund", "1,200,000 VND", "180,000 VND", "700,000 VND", "1,720,000 VND");
-            dgvInvoice.Rows.Add("2025-03-13", "Hoang Van E", "Sales", "2,500,000 VND", "300,000 VND", "1,200,000 VND", "3,400,000 VND");
+            //dgvInvoice.Rows.Add("2025-03-17", "Nguyen Van A", "Sales", "1,500,000 VND", "200,000 VND", "800,000 VND", "2,100,000 VND");
+            //dgvInvoice.Rows.Add("2025-03-16", "Tran Thi B", "Purchase", "2,000,000 VND", "250,000 VND", "900,000 VND", "2,650,000 VND");
+            //dgvInvoice.Rows.Add("2025-03-15", "Le Van C", "Sales", "1,800,000 VND", "220,000 VND", "850,000 VND", "2,430,000 VND");
+            //dgvInvoice.Rows.Add("2025-03-14", "Pham Thi D", "Refund", "1,200,000 VND", "180,000 VND", "700,000 VND", "1,720,000 VND");
+            //dgvInvoice.Rows.Add("2025-03-13", "Hoang Van E", "Sales", "2,500,000 VND", "300,000 VND", "1,200,000 VND", "3,400,000 VND");
 
         }
     }
