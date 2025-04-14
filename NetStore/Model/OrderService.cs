@@ -8,19 +8,20 @@ namespace NetStore.Model
 {
     internal class OrderService
     {
-        private string status;
-        private int quantity;
+       
         private string nameOrderService;
+        private int quantity;
+        private double price;
 
-        public OrderService(string status, int quantity, string nameOrderService)
+        public OrderService(double price, int quantity, string nameOrderService)
         {
-            this.status = status;
+            this.price = price;
             this.quantity = quantity;
             this.nameOrderService = nameOrderService;
         }
-        public string Status {  
-            set { status = value; }
-            get { return status; } }
+        public double Price {  
+            set { price = value; }
+            get { return price; } }
         public int Quantity { 
             set { quantity = value; }
             get { return quantity; } }
