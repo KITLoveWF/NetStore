@@ -79,7 +79,7 @@ namespace NetStore.DAO
         {
             DBConnection dbconnection = new DBConnection();
             string SQL = string.Format("SELECT * FROM Customer");
-            return dbconnection.find(SQL);
+            return dbconnection.Find(SQL);
         }
     }
 }

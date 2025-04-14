@@ -157,7 +157,7 @@ namespace NetStore.DAO
         {
             DBConnection dbconnection = new DBConnection();
             string sqlStr = string.Format("select * from Inventory");
-            return dbconnection.find(sqlStr);
+            return dbconnection.Find(sqlStr);
         }
     }
 }

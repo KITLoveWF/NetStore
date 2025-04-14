@@ -123,7 +123,7 @@ namespace NetStore.DAO
         {
             DBConnection dbconnection = new DBConnection();
             string sql = string.Format("SELECT \r\n    d.nameDevice,\r\n    d.quantity AS totalQuantity,\r\n    di.quantityImport,\r\n    di.price AS totalPriceImport,\r\n    s.nameStaff AS staffName\r\nFROM \r\n    Device d\r\nJOIN \r\n    DeviceImportRecord di ON d.deviceID = di.deviceID\r\nJOIN \r\n    Staff s ON di.staffID = s.staffID");
-            return dbconnection.find(sql);
+            return dbconnection.Find(sql);
         }
     }
 }
