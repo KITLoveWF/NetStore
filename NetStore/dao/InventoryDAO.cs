@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -7,19 +6,51 @@ namespace NetStore
 {
     internal class InventoryDAO
     {
-        private DBConnection db = new DBConnection();
-
-        // Lấy toàn bộ dữ liệu từ bảng Inventory
         public DataTable GetAllInventories()
         {
-            string query = "SELECT * FROM Inventory";
-            return db.ExecuteQuery(query);
-        }
-        public DataTable GetInventoriesByType(string type)
-        {
-            string query = $"SELECT * FROM Inventory WHERE type = N'{type}'";
-            return db.ExecuteQuery(query);
+            using (SqlConnection conn = new SqlConnection(DBConnection.connectionString))
+            {
+                string query = "SELECT * FROM Inventory";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    DataTable dt = new DataTable();
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(dt);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error getting all inventories: " + ex.Message);
+                    }
+                    return dt;
+                }
+            }
         }
 
+        public DataTable GetInventoriesByType(string type)
+        {
+            using (SqlConnection conn = new SqlConnection(DBConnection.connectionString))
+            {
+                string query = "SELECT * FROM Inventory WHERE type = @type";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@type", type);
+                    DataTable dt = new DataTable();
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(dt);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error getting inventories by type: " + ex.Message);
+                    }
+                    return dt;
+                }
+            }
+        }
     }
 }

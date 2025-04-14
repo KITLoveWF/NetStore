@@ -43,13 +43,13 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabtablemenu = new System.Windows.Forms.TabControl();
             this.tabcom = new System.Windows.Forms.TabPage();
+            this.flpRice = new System.Windows.Forms.FlowLayoutPanel();
             this.tabnuoc = new System.Windows.Forms.TabPage();
+            this.flpDrink = new System.Windows.Forms.FlowLayoutPanel();
             this.tabmy = new System.Windows.Forms.TabPage();
             this.flpNoodle = new System.Windows.Forms.FlowLayoutPanel();
             this.tabthecao = new System.Windows.Forms.TabPage();
-            this.flpDrink = new System.Windows.Forms.FlowLayoutPanel();
             this.flpCard = new System.Windows.Forms.FlowLayoutPanel();
-            this.flpRice = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -168,7 +168,7 @@
             this.btnReceipt.Name = "btnReceipt";
             this.btnReceipt.Size = new System.Drawing.Size(341, 87);
             this.btnReceipt.TabIndex = 18;
-            this.btnReceipt.Text = "Thanh toán";
+            this.btnReceipt.Text = "Đặt món";
             this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
             // 
             // lblMoney
@@ -178,9 +178,9 @@
             this.lblMoney.Location = new System.Drawing.Point(436, 34);
             this.lblMoney.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(180, 35);
+            this.lblMoney.Size = new System.Drawing.Size(120, 35);
             this.lblMoney.TabIndex = 17;
-            this.lblMoney.Text = "Thành tiền";
+            this.lblMoney.Text = "Đơn giá";
             // 
             // lblQuantity
             // 
@@ -245,6 +245,14 @@
             this.tabcom.Text = "Cơm";
             this.tabcom.UseVisualStyleBackColor = true;
             // 
+            // flpRice
+            // 
+            this.flpRice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpRice.Location = new System.Drawing.Point(5, 6);
+            this.flpRice.Name = "flpRice";
+            this.flpRice.Size = new System.Drawing.Size(1126, 859);
+            this.flpRice.TabIndex = 0;
+            // 
             // tabnuoc
             // 
             this.tabnuoc.AutoScroll = true;
@@ -257,6 +265,14 @@
             this.tabnuoc.TabIndex = 1;
             this.tabnuoc.Text = "Nước";
             this.tabnuoc.UseVisualStyleBackColor = true;
+            // 
+            // flpDrink
+            // 
+            this.flpDrink.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpDrink.Location = new System.Drawing.Point(5, 6);
+            this.flpDrink.Name = "flpDrink";
+            this.flpDrink.Size = new System.Drawing.Size(1126, 859);
+            this.flpDrink.TabIndex = 0;
             // 
             // tabmy
             // 
@@ -292,14 +308,6 @@
             this.tabthecao.Text = "Thẻ cào";
             this.tabthecao.UseVisualStyleBackColor = true;
             // 
-            // flpDrink
-            // 
-            this.flpDrink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpDrink.Location = new System.Drawing.Point(5, 6);
-            this.flpDrink.Name = "flpDrink";
-            this.flpDrink.Size = new System.Drawing.Size(1126, 859);
-            this.flpDrink.TabIndex = 0;
-            // 
             // flpCard
             // 
             this.flpCard.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -307,14 +315,6 @@
             this.flpCard.Name = "flpCard";
             this.flpCard.Size = new System.Drawing.Size(1126, 859);
             this.flpCard.TabIndex = 0;
-            // 
-            // flpRice
-            // 
-            this.flpRice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpRice.Location = new System.Drawing.Point(5, 6);
-            this.flpRice.Name = "flpRice";
-            this.flpRice.Size = new System.Drawing.Size(1126, 859);
-            this.flpRice.TabIndex = 0;
             // 
             // UCCustomerOrderFood
             // 
