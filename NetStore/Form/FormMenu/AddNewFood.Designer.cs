@@ -32,14 +32,13 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblImage = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
-            this.txtPrice = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btncancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnsave = new Guna.UI2.WinForms.Guna2Button();
             this.cbxCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ptxImage = new System.Windows.Forms.PictureBox();
             this.cbxName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnUpload = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
+            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptxImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,19 +84,6 @@
             this.lblType.Text = "Phân loại";
             this.lblType.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtPrice
-            // 
-            this.txtPrice.AutoRoundedCorners = true;
-            this.txtPrice.BackColor = System.Drawing.Color.Transparent;
-            this.txtPrice.BorderRadius = 16;
-            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPrice.Location = new System.Drawing.Point(174, 395);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(336, 35);
-            this.txtPrice.TabIndex = 7;
-            // 
             // btncancel
             // 
             this.btncancel.AutoRoundedCorners = true;
@@ -113,7 +99,8 @@
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(179, 56);
             this.btncancel.TabIndex = 10;
-            this.btncancel.Text = "Cancel";
+            this.btncancel.Text = "Trở về";
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // btnsave
             // 
@@ -130,7 +117,8 @@
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(179, 56);
             this.btnsave.TabIndex = 11;
-            this.btnsave.Text = "Save";
+            this.btnsave.Text = "Thêm ";
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // cbxCategory
             // 
@@ -143,11 +131,6 @@
             this.cbxCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbxCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbxCategory.ItemHeight = 30;
-            this.cbxCategory.Items.AddRange(new object[] {
-            "Cơm",
-            "Nước",
-            "Mỳ",
-            "Thẻ cào"});
             this.cbxCategory.Location = new System.Drawing.Point(174, 474);
             this.cbxCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxCategory.Name = "cbxCategory";
@@ -197,18 +180,39 @@
             this.btnUpload.Size = new System.Drawing.Size(336, 46);
             this.btnUpload.TabIndex = 9;
             this.btnUpload.Text = "Upload ";
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BorderRadius = 9;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.DefaultText = "";
+            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.Location = new System.Drawing.Point(173, 395);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PlaceholderText = "";
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.Size = new System.Drawing.Size(339, 45);
+            this.txtPrice.TabIndex = 17;
             // 
             // AddNewFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 781);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.cbxName);
             this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnUpload);
-            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.lblImage);
             this.Controls.Add(this.ptxImage);
@@ -217,7 +221,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddNewFood";
             this.Text = "AddNewFood";
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,11 +234,11 @@
         private System.Windows.Forms.PictureBox ptxImage;
         private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Label lblType;
-        private Guna.UI2.WinForms.Guna2NumericUpDown txtPrice;
         private Guna.UI2.WinForms.Guna2Button btncancel;
         private Guna.UI2.WinForms.Guna2Button btnsave;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxCategory;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxName;
+        public Guna.UI2.WinForms.Guna2ComboBox cbxCategory;
+        public Guna.UI2.WinForms.Guna2ComboBox cbxName;
         private Guna.UI2.WinForms.Guna2Button btnUpload;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
     }
 }

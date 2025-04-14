@@ -5,29 +5,21 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace NetStore.Form.FormMenu
 {
-    public partial class AddNewFood : System.Windows.Forms.Form
+    public partial class EditFood : System.Windows.Forms.Form
     {
-        private string path;
-        public AddNewFood()
+        public string path;
+        public EditFood()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btncancel_Click(object sender, EventArgs e)
@@ -37,13 +29,10 @@ namespace NetStore.Form.FormMenu
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            string nameInventory = cbxName.SelectedItem.ToString();
             double sellingPrice = Convert.ToDouble(txtPrice.Text);
-            string type = cbxCategory.SelectedItem.ToString();
             string image = path;
-            Inventory inventory = new Inventory(nameInventory,sellingPrice,image,type);
             InventoryDAO inventoryDAO = new InventoryDAO();
-            inventoryDAO.UpdateMenu(inventory);
+            inventoryDAO.UpdateMenu2(sellingPrice, image,txtName.Text); 
         }
 
         private void btnUpload_Click(object sender, EventArgs e)

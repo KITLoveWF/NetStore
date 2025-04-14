@@ -29,18 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabtablemenu = new System.Windows.Forms.TabControl();
             this.tabcom = new System.Windows.Forms.TabPage();
             this.flowcom = new System.Windows.Forms.FlowLayoutPanel();
-            this.itemFood1 = new NetStore.Form.FormMenu.ItemFood();
-            this.itemFood2 = new NetStore.Form.FormMenu.ItemFood();
-            this.itemFood3 = new NetStore.Form.FormMenu.ItemFood();
-            this.itemFood4 = new NetStore.Form.FormMenu.ItemFood();
-            this.itemFood5 = new NetStore.Form.FormMenu.ItemFood();
-            this.itemFood6 = new NetStore.Form.FormMenu.ItemFood();
             this.tabnuoc = new System.Windows.Forms.TabPage();
             this.flownuoc = new System.Windows.Forms.FlowLayoutPanel();
             this.tabmy = new System.Windows.Forms.TabPage();
@@ -51,7 +45,6 @@
             this.panel2.SuspendLayout();
             this.tabtablemenu.SuspendLayout();
             this.tabcom.SuspendLayout();
-            this.flowcom.SuspendLayout();
             this.tabnuoc.SuspendLayout();
             this.tabmy.SuspendLayout();
             this.tabthecao.SuspendLayout();
@@ -67,27 +60,28 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Menu";
             // 
-            // guna2Button1
+            // btnAdd
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 27;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1060, 35);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(202, 56);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "+ Add New Food";
+            this.btnAdd.AutoRoundedCorners = true;
+            this.btnAdd.BorderRadius = 27;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(1060, 35);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(202, 56);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Thêm món ăn";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -138,90 +132,12 @@
             // flowcom
             // 
             this.flowcom.AutoScroll = true;
-            this.flowcom.Controls.Add(this.itemFood1);
-            this.flowcom.Controls.Add(this.itemFood2);
-            this.flowcom.Controls.Add(this.itemFood3);
-            this.flowcom.Controls.Add(this.itemFood4);
-            this.flowcom.Controls.Add(this.itemFood5);
-            this.flowcom.Controls.Add(this.itemFood6);
             this.flowcom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowcom.Location = new System.Drawing.Point(3, 4);
             this.flowcom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowcom.Name = "flowcom";
             this.flowcom.Size = new System.Drawing.Size(1312, 644);
             this.flowcom.TabIndex = 0;
-            // 
-            // itemFood1
-            // 
-            this.itemFood1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.itemFood1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.itemFood1.Location = new System.Drawing.Point(7, 6);
-            this.itemFood1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.itemFood1.MaximumSize = new System.Drawing.Size(583, 238);
-            this.itemFood1.MinimumSize = new System.Drawing.Size(583, 238);
-            this.itemFood1.Name = "itemFood1";
-            this.itemFood1.Size = new System.Drawing.Size(583, 238);
-            this.itemFood1.TabIndex = 0;
-            // 
-            // itemFood2
-            // 
-            this.itemFood2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.itemFood2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.itemFood2.Location = new System.Drawing.Point(604, 6);
-            this.itemFood2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.itemFood2.MaximumSize = new System.Drawing.Size(583, 238);
-            this.itemFood2.MinimumSize = new System.Drawing.Size(583, 238);
-            this.itemFood2.Name = "itemFood2";
-            this.itemFood2.Size = new System.Drawing.Size(583, 238);
-            this.itemFood2.TabIndex = 1;
-            // 
-            // itemFood3
-            // 
-            this.itemFood3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.itemFood3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.itemFood3.Location = new System.Drawing.Point(7, 256);
-            this.itemFood3.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.itemFood3.MaximumSize = new System.Drawing.Size(583, 238);
-            this.itemFood3.MinimumSize = new System.Drawing.Size(583, 238);
-            this.itemFood3.Name = "itemFood3";
-            this.itemFood3.Size = new System.Drawing.Size(583, 238);
-            this.itemFood3.TabIndex = 2;
-            // 
-            // itemFood4
-            // 
-            this.itemFood4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.itemFood4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.itemFood4.Location = new System.Drawing.Point(604, 256);
-            this.itemFood4.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.itemFood4.MaximumSize = new System.Drawing.Size(583, 238);
-            this.itemFood4.MinimumSize = new System.Drawing.Size(583, 238);
-            this.itemFood4.Name = "itemFood4";
-            this.itemFood4.Size = new System.Drawing.Size(583, 238);
-            this.itemFood4.TabIndex = 3;
-            // 
-            // itemFood5
-            // 
-            this.itemFood5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.itemFood5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.itemFood5.Location = new System.Drawing.Point(7, 506);
-            this.itemFood5.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.itemFood5.MaximumSize = new System.Drawing.Size(583, 238);
-            this.itemFood5.MinimumSize = new System.Drawing.Size(583, 238);
-            this.itemFood5.Name = "itemFood5";
-            this.itemFood5.Size = new System.Drawing.Size(583, 238);
-            this.itemFood5.TabIndex = 4;
-            // 
-            // itemFood6
-            // 
-            this.itemFood6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.itemFood6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.itemFood6.Location = new System.Drawing.Point(604, 506);
-            this.itemFood6.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.itemFood6.MaximumSize = new System.Drawing.Size(583, 238);
-            this.itemFood6.MinimumSize = new System.Drawing.Size(583, 238);
-            this.itemFood6.Name = "itemFood6";
-            this.itemFood6.Size = new System.Drawing.Size(583, 238);
-            this.itemFood6.TabIndex = 5;
             // 
             // tabnuoc
             // 
@@ -231,7 +147,7 @@
             this.tabnuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabnuoc.Name = "tabnuoc";
             this.tabnuoc.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabnuoc.Size = new System.Drawing.Size(1318, 653);
+            this.tabnuoc.Size = new System.Drawing.Size(1318, 652);
             this.tabnuoc.TabIndex = 1;
             this.tabnuoc.Text = "Nước";
             this.tabnuoc.UseVisualStyleBackColor = true;
@@ -243,7 +159,7 @@
             this.flownuoc.Location = new System.Drawing.Point(3, 4);
             this.flownuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flownuoc.Name = "flownuoc";
-            this.flownuoc.Size = new System.Drawing.Size(1312, 645);
+            this.flownuoc.Size = new System.Drawing.Size(1312, 644);
             this.flownuoc.TabIndex = 1;
             // 
             // tabmy
@@ -253,7 +169,7 @@
             this.tabmy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabmy.Name = "tabmy";
             this.tabmy.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabmy.Size = new System.Drawing.Size(1318, 653);
+            this.tabmy.Size = new System.Drawing.Size(1318, 652);
             this.tabmy.TabIndex = 2;
             this.tabmy.Text = "Mỳ";
             this.tabmy.UseVisualStyleBackColor = true;
@@ -265,7 +181,7 @@
             this.flowmy.Location = new System.Drawing.Point(3, 4);
             this.flowmy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowmy.Name = "flowmy";
-            this.flowmy.Size = new System.Drawing.Size(1312, 645);
+            this.flowmy.Size = new System.Drawing.Size(1312, 644);
             this.flowmy.TabIndex = 1;
             // 
             // tabthecao
@@ -275,7 +191,7 @@
             this.tabthecao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabthecao.Name = "tabthecao";
             this.tabthecao.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabthecao.Size = new System.Drawing.Size(1318, 653);
+            this.tabthecao.Size = new System.Drawing.Size(1318, 652);
             this.tabthecao.TabIndex = 3;
             this.tabthecao.Text = "Thẻ cào";
             this.tabthecao.UseVisualStyleBackColor = true;
@@ -287,7 +203,7 @@
             this.flowthecao.Location = new System.Drawing.Point(3, 4);
             this.flowthecao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowthecao.Name = "flowthecao";
-            this.flowthecao.Size = new System.Drawing.Size(1312, 645);
+            this.flowthecao.Size = new System.Drawing.Size(1312, 644);
             this.flowthecao.TabIndex = 1;
             // 
             // UCMenu
@@ -305,7 +221,6 @@
             this.panel2.ResumeLayout(false);
             this.tabtablemenu.ResumeLayout(false);
             this.tabcom.ResumeLayout(false);
-            this.flowcom.ResumeLayout(false);
             this.tabnuoc.ResumeLayout(false);
             this.tabmy.ResumeLayout(false);
             this.tabthecao.ResumeLayout(false);
@@ -316,23 +231,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public Guna.UI2.WinForms.Guna2Button btnAdd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabtablemenu;
-        private System.Windows.Forms.TabPage tabcom;
-        private System.Windows.Forms.FlowLayoutPanel flowcom;
-        private System.Windows.Forms.TabPage tabnuoc;
-        private System.Windows.Forms.FlowLayoutPanel flownuoc;
-        private System.Windows.Forms.TabPage tabmy;
-        private System.Windows.Forms.FlowLayoutPanel flowmy;
-        private System.Windows.Forms.TabPage tabthecao;
-        private System.Windows.Forms.FlowLayoutPanel flowthecao;
-        private ItemFood itemFood1;
-        private ItemFood itemFood2;
-        private ItemFood itemFood3;
-        private ItemFood itemFood4;
-        private ItemFood itemFood5;
-        private ItemFood itemFood6;
+        public System.Windows.Forms.TabPage tabcom;
+        public System.Windows.Forms.FlowLayoutPanel flowcom;
+        public System.Windows.Forms.TabPage tabnuoc;
+        public System.Windows.Forms.FlowLayoutPanel flownuoc;
+        public System.Windows.Forms.TabPage tabmy;
+        public System.Windows.Forms.FlowLayoutPanel flowmy;
+        public System.Windows.Forms.TabPage tabthecao;
+        public System.Windows.Forms.FlowLayoutPanel flowthecao;
     }
 }

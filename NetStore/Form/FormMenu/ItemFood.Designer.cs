@@ -30,17 +30,17 @@
         {
             this.itemname = new System.Windows.Forms.Label();
             this.itemprice = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ptxBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxBox)).BeginInit();
             this.SuspendLayout();
             // 
             // itemname
             // 
             this.itemname.AutoSize = true;
             this.itemname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemname.Location = new System.Drawing.Point(185, 25);
+            this.itemname.Location = new System.Drawing.Point(208, 31);
             this.itemname.Name = "itemname";
-            this.itemname.Size = new System.Drawing.Size(110, 20);
+            this.itemname.Size = new System.Drawing.Size(134, 25);
             this.itemname.TabIndex = 1;
             this.itemname.Text = "Tên sản phẩm ";
             // 
@@ -48,34 +48,36 @@
             // 
             this.itemprice.AutoSize = true;
             this.itemprice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemprice.Location = new System.Drawing.Point(185, 77);
+            this.itemprice.Location = new System.Drawing.Point(208, 96);
             this.itemprice.Name = "itemprice";
-            this.itemprice.Size = new System.Drawing.Size(31, 20);
+            this.itemprice.Size = new System.Drawing.Size(37, 25);
             this.itemprice.TabIndex = 2;
             this.itemprice.Text = "Giá";
             // 
-            // pictureBox1
+            // ptxBox
             // 
-            this.pictureBox1.Image = global::NetStore.Properties.Resources.image_5__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 154);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptxBox.Image = global::NetStore.Properties.Resources.image_5__1_;
+            this.ptxBox.Location = new System.Drawing.Point(0, 0);
+            this.ptxBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ptxBox.Name = "ptxBox";
+            this.ptxBox.Size = new System.Drawing.Size(198, 192);
+            this.ptxBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptxBox.TabIndex = 0;
+            this.ptxBox.TabStop = false;
             // 
             // ItemFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.itemprice);
             this.Controls.Add(this.itemname);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptxBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItemFood";
-            this.Size = new System.Drawing.Size(462, 154);
+            this.Size = new System.Drawing.Size(520, 192);
             this.Load += new System.EventHandler(this.ItemFood_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,8 +85,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label itemname;
-        private System.Windows.Forms.Label itemprice;
+        public System.Windows.Forms.PictureBox ptxBox;
+        public System.Windows.Forms.Label itemname;
+        public System.Windows.Forms.Label itemprice;
     }
 }

@@ -20,19 +20,19 @@ namespace NetStore.Form.FormMenu
 
         private void ConfigureFlowPanel()
         {
-            flowcom.AutoSize = false; // Ngăn flowcom thay đổi kích thước
-            flowcom.Padding = new Padding(5); // Khoảng cách giữa các ItemFood
-            flowcom.AutoScroll = true; // Bật cuộn nếu có quá nhiều item
+            //flowcom.AutoSize = false; // Ngăn flowcom thay đổi kích thước
+            //flowcom.Padding = new Padding(5); // Khoảng cách giữa các ItemFood
+            //flowcom.AutoScroll = true; // Bật cuộn nếu có quá nhiều item
         }
 
         public void AddItem(ItemFood item)
         {
-            item.Size = new Size(385, 154); // Giữ kích thước cố định
-            item.MinimumSize = new Size(385, 154);
-            item.MaximumSize = new Size(385, 154);
-            item.Margin = new Padding(5); // Khoảng cách giữa các ItemFood
+            //item.Size = new Size(385, 154); // Giữ kích thước cố định
+            //item.MinimumSize = new Size(385, 154);
+            //item.MaximumSize = new Size(385, 154);
+            //item.Margin = new Padding(5); // Khoảng cách giữa các ItemFood
 
-            flowcom.Controls.Add(item);
+            //flowcom.Controls.Add(item);
         }
     }
 }
