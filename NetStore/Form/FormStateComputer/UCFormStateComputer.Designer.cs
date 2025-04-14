@@ -117,9 +117,9 @@
 
         private UCSideBarTop ucSideBarTop1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private UCReceiptComputer ucReceiptComputer1;
-        private UCTopReceipt ucTopReceipt1;
+        public UCReceiptComputer ucReceiptComputer1;
+        public UCTopReceipt ucTopReceipt1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private UCTypeComputer ucTypeComputer1;
+        public UCTypeComputer ucTypeComputer1;
     }
 }

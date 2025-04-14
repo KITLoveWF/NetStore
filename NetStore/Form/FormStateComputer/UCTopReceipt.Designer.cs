@@ -111,10 +111,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNamecomputer;
+        public System.Windows.Forms.Label lblNamecomputer;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblMoney;
-        private System.Windows.Forms.Label lblTimereal;
-        private System.Windows.Forms.Label lblMoneyreal;
+        public System.Windows.Forms.Label lblTimereal;
+        public System.Windows.Forms.Label lblMoneyreal;
     }
 }
