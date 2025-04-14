@@ -11,35 +11,29 @@ namespace NetStore
 
         public Customer Login(string username, string password)
         {
-            using (SqlConnection conn = new SqlConnection(DBConnection.connectionString))
+            string query = "SELECT * FROM Customer WHERE username = @username AND password = @password";
+
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                string query = "SELECT * FROM Customer WHERE username = @username AND password = @password";
+                new SqlParameter("@username", username),
+                new SqlParameter("@password", password)
+            };
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
+            DataTable dt = db.Find(query, parameters);
 
-                    conn.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-
-                    if (dt.Rows.Count > 0)
-                    {
-                        DataRow row = dt.Rows[0];
-                        Customer customer = new Customer(
-                            row["username"].ToString(),
-                            row["password"].ToString(),
-                            Convert.ToInt32(row["customerID"])
-                        );
-                        customer.Id = Convert.ToInt32(row["customerID"]);
-                        return customer;
-                    }
-
-                    return null; // Sai tài khoản/mật khẩu
-                }
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                Customer customer = new Customer(
+                    row["username"].ToString(),
+                    row["password"].ToString(),
+                    Convert.ToInt32(row["customerID"])
+                );
+                customer.Id = Convert.ToInt32(row["customerID"]);
+                return customer;
             }
+
+            return null; // Sai tài khoản/mật khẩu
         }
     }
 }

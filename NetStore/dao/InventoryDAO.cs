@@ -6,51 +6,24 @@ namespace NetStore
 {
     internal class InventoryDAO
     {
+        private DBConnection db = new DBConnection();
+
         public DataTable GetAllInventories()
         {
-            using (SqlConnection conn = new SqlConnection(DBConnection.connectionString))
-            {
-                string query = "SELECT * FROM Inventory";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    DataTable dt = new DataTable();
-                    try
-                    {
-                        conn.Open();
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        adapter.Fill(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error getting all inventories: " + ex.Message);
-                    }
-                    return dt;
-                }
-            }
+            string query = "SELECT * FROM Inventory";
+            return db.Find(query); // sử dụng hàm Find không có parameters
         }
 
         public DataTable GetInventoriesByType(string type)
         {
-            using (SqlConnection conn = new SqlConnection(DBConnection.connectionString))
+            string query = "SELECT * FROM Inventory WHERE type = @type";
+
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                string query = "SELECT * FROM Inventory WHERE type = @type";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@type", type);
-                    DataTable dt = new DataTable();
-                    try
-                    {
-                        conn.Open();
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        adapter.Fill(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error getting inventories by type: " + ex.Message);
-                    }
-                    return dt;
-                }
-            }
+                new SqlParameter("@type", type)
+            };
+
+            return db.Find(query, parameters);
         }
     }
 }

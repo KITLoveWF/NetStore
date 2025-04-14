@@ -1,62 +1,111 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace NetStore
 {
     internal class DBConnection
     {
         // Public static connection string để dùng ở nơi khác
-        public static string connectionString =
+        public static string sqlCon =
             "Data Source=DESKTOP-AQBQ14F\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
 
-        // Trả về một SqlConnection mới
-        public SqlConnection GetConnection()
+        SqlConnection conn = null;
+        public DataTable Find(string sqlStr)
         {
-            return new SqlConnection(connectionString);
+            DataTable dt = new DataTable();
+            try
+            {
+                conn = new SqlConnection(sqlCon);
+                Console.WriteLine(sqlCon);
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dtObject = new DataTable();
+                adapter.Fill(dtObject);
+                dt = dtObject;
+                Console.WriteLine(dt);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                //how(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
         }
 
-        // Dùng để thực hiện các truy vấn không trả dữ liệu (INSERT, UPDATE, DELETE)
-        public bool Execute(string sqlStr)
+
+
+        public bool Execute(string sqlStr, SqlParameter[] parameters)
         {
-            using (SqlConnection conn = GetConnection())
+            try
             {
-                try
+                conn = new SqlConnection(sqlCon);
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                    if (parameters != null)
                     {
-                        return cmd.ExecuteNonQuery() > 0;
+                        cmd.Parameters.AddRange(parameters);
                     }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Execution error: " + ex.Message);
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        return true;
+                    }
                     return false;
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
-        // Dùng để thực hiện truy vấn và trả về bảng dữ liệu (SELECT)
-        public DataTable ExecuteQuery(string sqlStr)
+
+
+        public DataTable Find(string sqlStr, SqlParameter[] parameters)
         {
-            using (SqlConnection conn = GetConnection())
+            DataTable dt = new DataTable();
+            try
             {
-                DataTable dt = new DataTable();
-                try
+                conn = new SqlConnection(sqlCon);
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
                 {
-                    conn.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn))
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
                         adapter.Fill(dt);
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Query error: " + ex.Message);
-                }
-                return dt;
             }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
         }
+
     }
 }

@@ -7,32 +7,21 @@ namespace NetStore
 {
     internal class OrderServiceDAO
     {
+        private DBConnection db = new DBConnection();
+
         public bool AddOrderService(OrderService orderService)
         {
-            using (SqlConnection conn = new SqlConnection(DBConnection.connectionString))
+            string query = "INSERT INTO OrderService (inventoryID, receiptID, quantityOrder) " +
+                           "VALUES (@inventoryID, @receiptID, @quantityOrder)";
+
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                string query = "INSERT INTO OrderService (inventoryID, receiptID, quantityOrder) " +
-                               "VALUES (@inventoryID, @receiptID, @quantityOrder)";
+                new SqlParameter("@inventoryID", orderService.InventoryID),
+                new SqlParameter("@receiptID", orderService.ReceiptID),
+                new SqlParameter("@quantityOrder", orderService.QuantityOrder)
+            };
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@inventoryID", orderService.InventoryID);
-                    cmd.Parameters.AddWithValue("@receiptID", orderService.ReceiptID);
-                    cmd.Parameters.AddWithValue("@quantityOrder", orderService.QuantityOrder);
-
-                    try
-                    {
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error adding order service: " + ex.Message);
-                        return false;
-                    }
-                }
-            }
+            return db.Execute(query, parameters);
         }
     }
 }
