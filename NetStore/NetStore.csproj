@@ -33,16 +33,104 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\..\..\..\..\..\..\SECOND\WINDOWPROGRAMING\kryton\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="itext.barcodes, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-adapter, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.bouncy-castle-adapter.9.1.0\lib\net461\itext.bouncy-castle-adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-connector, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.commons, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.commons.9.1.0\lib\net461\itext.commons.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfua, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.pdfua.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,6 +143,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ComputerDAO.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\DeviceDAO.cs" />
+    <Compile Include="DAO\DeviceImportRecordDAO.cs" />
+    <Compile Include="DAO\InventoryDAO.cs" />
+    <Compile Include="DAO\InventoryImportRecordDAO.cs" />
+    <Compile Include="DAO\OrderServiceDAO.cs" />
+    <Compile Include="DAO\ReceiptDAO.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Form\ComputerMaintaince\UCCompMaintainaceForm.cs">
@@ -75,22 +171,22 @@
     <Compile Include="Form\ComputerMaintaince\UCDeviceReceipt.Designer.cs">
       <DependentUpon>UCDeviceReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Customer\AddCustomer.cs">
+    <Compile Include="Form\FormCustomerAdmin\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Customer\AddCustomer.Designer.cs">
+    <Compile Include="Form\FormCustomerAdmin\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Customer\Customer.cs">
+    <Compile Include="Form\FormCustomerAdmin\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Customer\Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="Form\FormCustomerAdmin\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Customer\UCCustomer.cs">
+    <Compile Include="Form\FormCustomerAdmin\UCCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\Customer\UCCustomer.Designer.cs">
+    <Compile Include="Form\FormCustomerAdmin\UCCustomer.Designer.cs">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormCustomer\CustomerForm.cs">
@@ -123,6 +219,12 @@
     <Compile Include="Form\FormMenu\AddNewFood.Designer.cs">
       <DependentUpon>AddNewFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormMenu\EditFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMenu\EditFood.Designer.cs">
+      <DependentUpon>EditFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormMenu\ItemFood.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +254,12 @@
     </Compile>
     <Compile Include="Form\FormStateComputer\EditComputer.Designer.cs">
       <DependentUpon>EditComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\ReceiptComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormStateComputer\ReceiptComputer.Designer.cs">
+      <DependentUpon>ReceiptComputer.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormStateComputer\StateComputer.cs">
       <SubType>Form</SubType>
@@ -230,6 +338,7 @@
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\DeviceImportRecord.cs" />
     <Compile Include="Model\Inventory.cs" />
+    <Compile Include="Model\InventoryImportRecord.cs" />
     <Compile Include="Model\LoginSave.cs" />
     <Compile Include="Model\OrderService.cs" />
     <Compile Include="Model\Receipt.cs" />
@@ -245,13 +354,13 @@
     <EmbeddedResource Include="Form\ComputerMaintaince\UCDeviceReceipt.resx">
       <DependentUpon>UCDeviceReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Customer\AddCustomer.resx">
+    <EmbeddedResource Include="Form\FormCustomerAdmin\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Customer\Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormCustomerAdmin\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Customer\UCCustomer.resx">
+    <EmbeddedResource Include="Form\FormCustomerAdmin\UCCustomer.resx">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCustomer\CustomerForm.resx">
@@ -269,6 +378,9 @@
     <EmbeddedResource Include="Form\FormMenu\AddNewFood.resx">
       <DependentUpon>AddNewFood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMenu\EditFood.resx">
+      <DependentUpon>EditFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormMenu\ItemFood.resx">
       <DependentUpon>ItemFood.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormStateComputer\EditComputer.resx">
       <DependentUpon>EditComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStateComputer\ReceiptComputer.resx">
+      <DependentUpon>ReceiptComputer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormStateComputer\StateComputer.resx">
       <DependentUpon>StateComputer.cs</DependentUpon>

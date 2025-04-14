@@ -12,12 +12,8 @@ namespace NetStore
 {
     internal class DBConnection
     {
-        private string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
+        public static string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn = null;
-        public SqlConnection GetConnection()
-        {
-            return new SqlConnection(sqlCon);
-        }
         public bool Excute(string sqlStr)
         {
             try
@@ -73,25 +69,101 @@ namespace NetStore
             return dt;
         }
 
-        public DataTable Execute(string sqlStr)
+        public DataTable Find(string sqlStr)
         {
-            using (conn = GetConnection())
+            DataTable dt = new DataTable();
+            try
             {
-                DataTable dt = new DataTable();
-                try
+                conn = new SqlConnection(sqlCon);
+                Console.WriteLine(sqlCon);
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dtObject = new DataTable();
+                adapter.Fill(dtObject);
+                dt = dtObject;
+                Console.WriteLine(dt);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                //how(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+
+
+
+        public bool Excute(string sqlStr, SqlParameter[] parameters)
+        {
+            try
+            {
+                conn = new SqlConnection(sqlCon);
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
                 {
-                    conn.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                    adapter.Fill(dt);
-                    Console.WriteLine(dt);
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        return true;
+                    }
+                    return false;
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Error: " + e.Message);
-                }
-                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
             }
         }
+
+
+
+        public DataTable Find(string sqlStr, SqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                conn = new SqlConnection(sqlCon);
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
+        }
+
 
 
 
