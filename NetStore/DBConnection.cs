@@ -7,10 +7,10 @@ namespace NetStore
 {
     internal class DBConnection
     {
-        // Public static connection string để dùng ở nơi khác
         public static string sqlCon =
             "Data Source=DESKTOP-AQBQ14F\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
 
+        // public static string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn = null;
         public DataTable Find(string sqlStr)
         {
@@ -37,9 +37,69 @@ namespace NetStore
             }
             return dt;
         }
+        public bool Excute(string sqlStr, SqlParameter[] parameters)
+        {
+            try
+            {
+                conn = new SqlConnection(sqlCon);
+                conn.Open();
 
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
 
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        //public DataTable Find(string sqlStr, SqlParameter[] parameters)
+        //{
+        //    DataTable dt = new DataTable();
+        //    try
+        //    {
+        //        conn = new SqlConnection(sqlCon);
+        //        conn.Open();
 
+        //        using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+        //        {
+        //            if (parameters != null)
+        //            {
+        //                cmd.Parameters.AddRange(parameters);
+        //            }
+
+        //            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+        //            {
+        //                adapter.Fill(dt);
+        //            }
+        //        }
+        //    }
+        //    catch (Exception exc)
+        //    {
+        //        MessageBox.Show(exc.Message);
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+
+        //    return dt;
+        //}
         public bool Execute(string sqlStr, SqlParameter[] parameters)
         {
             try
@@ -71,9 +131,6 @@ namespace NetStore
                 conn.Close();
             }
         }
-
-
-
         public DataTable Find(string sqlStr, SqlParameter[] parameters)
         {
             DataTable dt = new DataTable();

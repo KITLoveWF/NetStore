@@ -33,7 +33,9 @@
             this.btnEditcomputer = new Guna.UI2.WinForms.Guna2Button();
             this.lblTypecomputer = new System.Windows.Forms.Label();
             this.lblNamecomputer = new System.Windows.Forms.Label();
-            this.cbbTypecomputer = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbxTypecomputer = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtMoney = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblMoney = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNamecomputer
@@ -45,11 +47,10 @@
             this.txtNamecomputer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNamecomputer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNamecomputer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNamecomputer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtNamecomputer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamecomputer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNamecomputer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNamecomputer.Location = new System.Drawing.Point(243, 55);
+            this.txtNamecomputer.Location = new System.Drawing.Point(243, 39);
             this.txtNamecomputer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNamecomputer.Name = "txtNamecomputer";
             this.txtNamecomputer.PlaceholderText = "";
@@ -67,11 +68,12 @@
             this.btnBack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(108)))), ((int)(((byte)(99)))));
             this.btnBack.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(563, 260);
+            this.btnBack.Location = new System.Drawing.Point(564, 304);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(180, 55);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Trở lại";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnEditcomputer
             // 
@@ -83,17 +85,18 @@
             this.btnEditcomputer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(175)))), ((int)(((byte)(250)))));
             this.btnEditcomputer.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditcomputer.ForeColor = System.Drawing.Color.White;
-            this.btnEditcomputer.Location = new System.Drawing.Point(293, 260);
+            this.btnEditcomputer.Location = new System.Drawing.Point(294, 304);
             this.btnEditcomputer.Name = "btnEditcomputer";
             this.btnEditcomputer.Size = new System.Drawing.Size(180, 55);
             this.btnEditcomputer.TabIndex = 8;
             this.btnEditcomputer.Text = "Chỉnh sửa";
+            this.btnEditcomputer.Click += new System.EventHandler(this.btnEditcomputer_Click);
             // 
             // lblTypecomputer
             // 
             this.lblTypecomputer.AutoSize = true;
             this.lblTypecomputer.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypecomputer.Location = new System.Drawing.Point(56, 165);
+            this.lblTypecomputer.Location = new System.Drawing.Point(56, 221);
             this.lblTypecomputer.Name = "lblTypecomputer";
             this.lblTypecomputer.Size = new System.Drawing.Size(142, 32);
             this.lblTypecomputer.TabIndex = 7;
@@ -103,33 +106,69 @@
             // 
             this.lblNamecomputer.AutoSize = true;
             this.lblNamecomputer.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamecomputer.Location = new System.Drawing.Point(56, 73);
+            this.lblNamecomputer.Location = new System.Drawing.Point(56, 57);
             this.lblNamecomputer.Name = "lblNamecomputer";
             this.lblNamecomputer.Size = new System.Drawing.Size(135, 32);
             this.lblNamecomputer.TabIndex = 6;
             this.lblNamecomputer.Text = "Tên máy";
             // 
-            // cbbTypecomputer
+            // cbxTypecomputer
             // 
-            this.cbbTypecomputer.BackColor = System.Drawing.Color.Transparent;
-            this.cbbTypecomputer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbTypecomputer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTypecomputer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbTypecomputer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbTypecomputer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTypecomputer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbTypecomputer.ItemHeight = 30;
-            this.cbbTypecomputer.Location = new System.Drawing.Point(243, 161);
-            this.cbbTypecomputer.Name = "cbbTypecomputer";
-            this.cbbTypecomputer.Size = new System.Drawing.Size(466, 36);
-            this.cbbTypecomputer.TabIndex = 11;
+            this.cbxTypecomputer.BackColor = System.Drawing.Color.Transparent;
+            this.cbxTypecomputer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxTypecomputer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTypecomputer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxTypecomputer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxTypecomputer.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cbxTypecomputer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbxTypecomputer.ItemHeight = 30;
+            this.cbxTypecomputer.Items.AddRange(new object[] {
+            "Online",
+            "Offline",
+            "Error"});
+            this.cbxTypecomputer.Location = new System.Drawing.Point(243, 217);
+            this.cbxTypecomputer.Name = "cbxTypecomputer";
+            this.cbxTypecomputer.Size = new System.Drawing.Size(466, 36);
+            this.cbxTypecomputer.TabIndex = 11;
+            // 
+            // txtMoney
+            // 
+            this.txtMoney.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtMoney.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMoney.DefaultText = "";
+            this.txtMoney.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMoney.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMoney.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMoney.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMoney.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMoney.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMoney.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMoney.Location = new System.Drawing.Point(243, 132);
+            this.txtMoney.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMoney.Name = "txtMoney";
+            this.txtMoney.PlaceholderText = "";
+            this.txtMoney.SelectedText = "";
+            this.txtMoney.Size = new System.Drawing.Size(466, 50);
+            this.txtMoney.TabIndex = 13;
+            // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoney.Location = new System.Drawing.Point(56, 141);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(127, 32);
+            this.lblMoney.TabIndex = 12;
+            this.lblMoney.Text = "Giá tiền";
             // 
             // EditComputer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 343);
-            this.Controls.Add(this.cbbTypecomputer);
+            this.ClientSize = new System.Drawing.Size(800, 382);
+            this.Controls.Add(this.txtMoney);
+            this.Controls.Add(this.lblMoney);
+            this.Controls.Add(this.cbxTypecomputer);
             this.Controls.Add(this.txtNamecomputer);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEditcomputer);
@@ -143,11 +182,13 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox txtNamecomputer;
+        public Guna.UI2.WinForms.Guna2TextBox txtNamecomputer;
         private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2Button btnEditcomputer;
         private System.Windows.Forms.Label lblTypecomputer;
         private System.Windows.Forms.Label lblNamecomputer;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbTypecomputer;
+        public Guna.UI2.WinForms.Guna2ComboBox cbxTypecomputer;
+        public Guna.UI2.WinForms.Guna2TextBox txtMoney;
+        private System.Windows.Forms.Label lblMoney;
     }
 }

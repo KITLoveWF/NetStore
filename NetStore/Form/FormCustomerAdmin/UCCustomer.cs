@@ -33,11 +33,11 @@ namespace NetStore.Form.Customer
             dgvCustomer.DefaultCellStyle.ForeColor = Color.Black;
 
             // Thêm dữ liệu vào DataGridView
-            dgvCustomer.Rows.Add("Nguyen Van A", "0932466340", "van123", "abc123123");
-            dgvCustomer.Rows.Add("Tran Thi B", "0987654321", "tranb456", "xyz789456");
-            dgvCustomer.Rows.Add("Le Van C", "0911223344", "levc789", "pass123456");
-            dgvCustomer.Rows.Add("Pham Thi D", "0909456123", "phamtd321", "qwe456789");
-            dgvCustomer.Rows.Add("Hoang Van E", "0978543210", "hoange999", "asd987654");
+            //dgvCustomer.Rows.Add("Nguyen Van A", "0932466340", "van123", "abc123123");
+            //dgvCustomer.Rows.Add("Tran Thi B", "0987654321", "tranb456", "xyz789456");
+            //dgvCustomer.Rows.Add("Le Van C", "0911223344", "levc789", "pass123456");
+            //dgvCustomer.Rows.Add("Pham Thi D", "0909456123", "phamtd321", "qwe456789");
+            //dgvCustomer.Rows.Add("Hoang Van E", "0978543210", "hoange999", "asd987654");
 
         }
     }

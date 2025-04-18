@@ -1,4 +1,4 @@
-﻿namespace NetStore.Form.Customer
+﻿namespace NetStore.Form.FormCustomerAdmin
 {
     partial class AddCustomer
     {
@@ -113,6 +113,7 @@
             this.btnBack.Size = new System.Drawing.Size(202, 56);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Trở về";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSave
             // 
@@ -129,7 +130,8 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(202, 56);
             this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Lưu";
+            this.btnSave.Text = "Thêm";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lblInformation
             // 

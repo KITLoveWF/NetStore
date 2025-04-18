@@ -1,7 +1,11 @@
-﻿using NetStore.Model;
-using System;
-using System.Data;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using NetStore.Model;
 
 namespace NetStore
 {
@@ -22,6 +26,17 @@ namespace NetStore
             };
 
             return db.Execute(query, parameters);
+        }
+
+        public DataTable FindOrder(int id)
+        {
+            DBConnection dbconnection = new DBConnection();
+            string sql = "SELECT * FROM OrderService WHERE receiptID = @id";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@id", id)
+            };
+            return dbconnection.Find(sql, parameters);
         }
     }
 }

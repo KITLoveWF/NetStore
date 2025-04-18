@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace NetStore.Model
 {
-    internal class Computer
+    public class Computer
     {
+        private int id;
         private string status;
         private double price;
-        private int quantity;
-        public Computer(string status, double price, int quantity)
+        private string nameComputer;
+        public Computer(string status, double price, string name)
         {
             this.status = status;
             this.price = price;
-            this.quantity = quantity;
+            this.nameComputer = name;
         }
         public string Status
         { 
@@ -27,10 +28,15 @@ namespace NetStore.Model
             set { price = value; }
             get { return price; } 
         }
-        public int Quantity
+        public string NameComputer
         { 
-            set { quantity = value; }
-            get { return quantity; } 
+            set { nameComputer = value; }
+            get { return nameComputer; } 
+        }
+        public int Id
+        {
+            set { id = value; }
+            get { return id; }
         }
     }
 }

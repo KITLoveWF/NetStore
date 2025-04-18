@@ -30,5 +30,25 @@ namespace NetStore.Model
         { 
             set { receiptID = value; }
             get {  return receiptID; } }
+       
+        private string nameOrderService;
+        private int quantity;
+        private double price;
+
+        public OrderService(double price, int quantity, string nameOrderService)
+        {
+            this.price = price;
+            this.quantity = quantity;
+            this.nameOrderService = nameOrderService;
+        }
+        public double Price {  
+            set { price = value; }
+            get { return price; } }
+        public int Quantity { 
+            set { quantity = value; }
+            get { return quantity; } }
+        public string NameOrderService { 
+            set { nameOrderService = value; }
+            get {  return nameOrderService; } }
     }
 }

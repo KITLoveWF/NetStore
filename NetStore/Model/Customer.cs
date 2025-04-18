@@ -9,13 +9,18 @@ namespace NetStore.Model
 {
     public class Customer
     {
+        private int id;
         private string username;
         private string password;
-        private int id;
         public Customer(string username, string password, int id) { 
             this.username = username;
             this.password = password;
             this.id = id;
+        }
+        public Customer(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
         }
         public string Username 
         { 
