@@ -195,12 +195,6 @@
     <Compile Include="Form\FormCustomer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormCustomer\CustomerLoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormCustomer\CustomerLoginForm.Designer.cs">
-      <DependentUpon>CustomerLoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FormCustomer\UCCustomerSideLeft.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -382,9 +376,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCustomer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormCustomer\CustomerLoginForm.resx">
-      <DependentUpon>CustomerLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCustomer\UCCustomerSideLeft.resx">
       <DependentUpon>UCCustomerSideLeft.cs</DependentUpon>

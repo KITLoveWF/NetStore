@@ -36,6 +36,8 @@
             this.lblCyphergaming = new System.Windows.Forms.Label();
             this.lblForgot = new System.Windows.Forms.Label();
             this.ptbComputer = new System.Windows.Forms.PictureBox();
+            this.cbCustomer = new System.Windows.Forms.CheckBox();
+            this.cbAdmin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbComputer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(300, 489);
+            this.btnLogin.Location = new System.Drawing.Point(300, 556);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(180, 45);
@@ -131,7 +133,7 @@
             // 
             this.lblForgot.AutoSize = true;
             this.lblForgot.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgot.Location = new System.Drawing.Point(267, 552);
+            this.lblForgot.Location = new System.Drawing.Point(267, 619);
             this.lblForgot.Name = "lblForgot";
             this.lblForgot.Size = new System.Drawing.Size(248, 34);
             this.lblForgot.TabIndex = 6;
@@ -148,12 +150,34 @@
             this.ptbComputer.TabIndex = 7;
             this.ptbComputer.TabStop = false;
             // 
+            // cbCustomer
+            // 
+            this.cbCustomer.AutoSize = true;
+            this.cbCustomer.Location = new System.Drawing.Point(211, 497);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(116, 24);
+            this.cbCustomer.TabIndex = 8;
+            this.cbCustomer.Text = "Người dùng";
+            this.cbCustomer.UseVisualStyleBackColor = true;
+            // 
+            // cbAdmin
+            // 
+            this.cbAdmin.AutoSize = true;
+            this.cbAdmin.Location = new System.Drawing.Point(456, 497);
+            this.cbAdmin.Name = "cbAdmin";
+            this.cbAdmin.Size = new System.Drawing.Size(80, 24);
+            this.cbAdmin.TabIndex = 9;
+            this.cbAdmin.Text = "Admin";
+            this.cbAdmin.UseVisualStyleBackColor = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(778, 614);
+            this.ClientSize = new System.Drawing.Size(778, 686);
+            this.Controls.Add(this.cbAdmin);
+            this.Controls.Add(this.cbCustomer);
             this.Controls.Add(this.ptbComputer);
             this.Controls.Add(this.lblForgot);
             this.Controls.Add(this.lblCyphergaming);
@@ -182,5 +206,7 @@
         private System.Windows.Forms.Label lblCyphergaming;
         private System.Windows.Forms.Label lblForgot;
         private System.Windows.Forms.PictureBox ptbComputer;
+        private System.Windows.Forms.CheckBox cbCustomer;
+        private System.Windows.Forms.CheckBox cbAdmin;
     }
 }

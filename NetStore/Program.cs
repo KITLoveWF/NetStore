@@ -23,7 +23,7 @@ namespace NetStore
             Console.Write("xin chào");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerLoginForm());
+            Application.Run(new LoginForm());
         }
     }
 }
