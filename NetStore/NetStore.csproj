@@ -78,22 +78,22 @@
     <Compile Include="Form\ComputerMaintaince\UCDeviceReceipt.Designer.cs">
       <DependentUpon>UCDeviceReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Customer\AddCustomer.cs">
+    <Compile Include="Form\FormCustomerAdmin\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Customer\AddCustomer.Designer.cs">
+    <Compile Include="Form\FormCustomerAdmin\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Customer\Customer.cs">
+    <Compile Include="Form\FormCustomerAdmin\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Customer\Customer.Designer.cs">
+    <Compile Include="Form\FormCustomerAdmin\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Customer\UCCustomer.cs">
+    <Compile Include="Form\FormCustomerAdmin\UCCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\Customer\UCCustomer.Designer.cs">
+    <Compile Include="Form\FormCustomerAdmin\UCCustomer.Designer.cs">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormCustomer\CustomerForm.cs">
@@ -264,13 +264,13 @@
     <EmbeddedResource Include="Form\ComputerMaintaince\UCDeviceReceipt.resx">
       <DependentUpon>UCDeviceReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Customer\AddCustomer.resx">
+    <EmbeddedResource Include="Form\FormCustomerAdmin\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Customer\Customer.resx">
+    <EmbeddedResource Include="Form\FormCustomerAdmin\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Customer\UCCustomer.resx">
+    <EmbeddedResource Include="Form\FormCustomerAdmin\UCCustomer.resx">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCustomer\CustomerForm.resx">
