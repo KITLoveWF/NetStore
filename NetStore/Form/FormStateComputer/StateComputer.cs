@@ -113,7 +113,11 @@ namespace NetStore.Form.FormStateComputer
         private void BtnAddcomputer_Click(object sender, EventArgs e)
         {
             AddComputer addComputer = new AddComputer();
-            addComputer.Show();
+            //addComputer.Show();
+            if(addComputer.ShowDialog() == DialogResult.OK)
+            {
+                LoadComputer();
+            }    
         }
         private void Edit_Click(object sender, EventArgs e)
         {
@@ -137,7 +141,11 @@ namespace NetStore.Form.FormStateComputer
                 editComputer.cbxTypecomputer.SelectedItem = "Error";
             }
             editComputer.id = Convert.ToInt32(dataRow["computerID"]);
-            editComputer.Show();
+            //editComputer.Show();
+            if (editComputer.ShowDialog() == DialogResult.OK)
+            {
+                LoadComputer();
+            }
         }
 
         private void ChooseComputer(object sender,EventArgs e)
@@ -229,6 +237,38 @@ namespace NetStore.Form.FormStateComputer
             }
         }
 
+
+        private void LoadComputer()
+        {
+            ComputerDAO computerDAO = new ComputerDAO();
+
+            DataTable dataTable = computerDAO.LoadDB();
+            foreach (DataRow dt in dataTable.Rows)
+            {
+                Guna2Button Computer = new Guna2Button();
+                Computer.Text = dt["nameComputer"].ToString();
+                Computer.BorderRadius = 5;
+                Computer.Size = new Size(180, 130);
+                Computer.Font = new Font("Cooper Black", 16F);
+                Computer.Margin = new Padding(3, 3, 20, 20);
+
+                if (dt["status"].ToString() == "1")
+                {
+                    Computer.FillColor = Color.FromArgb(137, 226, 105);
+                }
+                else if (dt["status"].ToString() == "2")
+                {
+                    Computer.FillColor = Color.FromArgb(69, 175, 250);
+
+                }
+                else if (dt["status"].ToString() == "3")
+                {
+                    Computer.FillColor = Color.FromArgb(255, 108, 99);
+                }
+                Computer.Click += Edit_Click;
+                this.ucFormStateComputer1.ucTypeComputer1.flpComputer.Controls.Add(Computer);
+            }
+        }
 
 
         private void AnInvoice(object sender, EventArgs e)
@@ -375,13 +415,28 @@ namespace NetStore.Form.FormStateComputer
         }
         private void AddInventoryImportRecord(object sender, EventArgs e)
         {
-            string InventoryName = this.ucImport1.txtInventoryName.Text;
-            int quantity = Convert.ToInt32(this.ucImport1.txtInventoryQuantity.Text);
-            double price = Convert.ToDouble(this.ucImport1.txtInventoryPrice.Text);
-            InventoryImportRecord inventoryImportRecord = new InventoryImportRecord(quantity, price * quantity);
-            inventoryImportRecord.InventoryName = InventoryName;
-            InventoryImportRecordDAO inventoryImportRecordDAO = new InventoryImportRecordDAO();
-            inventoryImportRecordDAO.Add(inventoryImportRecord);
+            if (this.ucImport1.txtInventoryName.Text == "" || this.ucImport1.txtInventoryQuantity.Text == "" || this.ucImport1.txtInventoryPrice.Text == "")
+            {
+                MessageBox.Show("Nhập sai thông tin món ăn hoặc thẻ cào", "Nhập món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (this.ucImport1.txtInventoryQuantity.Text != "" && !int.TryParse(this.ucImport1.txtInventoryQuantity.Text, out int result))
+            {
+                MessageBox.Show("Nhập sai số lượng món ăn hoặc thẻ cào", "Nhập món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (this.ucImport1.txtInventoryPrice.Text != "" && !double.TryParse(this.ucImport1.txtInventoryPrice.Text, out double Price))
+            {
+                MessageBox.Show("Nhập sai giá món ăn hoặc thẻ cào", "Nhập món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (this.ucImport1.txtInventoryName.Text != "" && this.ucImport1.txtInventoryQuantity.Text != "" && this.ucImport1.txtInventoryPrice.Text != "")
+            {
+                string InventoryName = this.ucImport1.txtInventoryName.Text;
+                int quantity = Convert.ToInt32(this.ucImport1.txtInventoryQuantity.Text);
+                double price = Convert.ToDouble(this.ucImport1.txtInventoryPrice.Text);
+                InventoryImportRecord inventoryImportRecord = new InventoryImportRecord(quantity, price * quantity);
+                inventoryImportRecord.InventoryName = InventoryName;
+                InventoryImportRecordDAO inventoryImportRecordDAO = new InventoryImportRecordDAO();
+                inventoryImportRecordDAO.Add(inventoryImportRecord);
+            }
         }
 
 
@@ -475,13 +530,29 @@ namespace NetStore.Form.FormStateComputer
         }
         private void AddDeviceImportRecord(object sender, EventArgs e)
         {
-            string DeviceName = this.ucCompMaintainaceForm1.txtDeviceName.Text;
-            int quantity = Convert.ToInt32(this.ucCompMaintainaceForm1.txtDeviceQuantity.Text);
-            double price = Convert.ToDouble(this.ucCompMaintainaceForm1.txtDevicePrice.Text);
-            DeviceImportRecord deviceImportRecord = new DeviceImportRecord(quantity, price * quantity);
-            deviceImportRecord.DeviceName = DeviceName;
-            DeviceImportRecordDAO deviceImportRecordDAO = new DeviceImportRecordDAO();
-            deviceImportRecordDAO.Add(deviceImportRecord);
+            if(this.ucCompMaintainaceForm1.txtDeviceName.Text == "" || this.ucCompMaintainaceForm1.txtDeviceQuantity.Text == "" || this.ucCompMaintainaceForm1.txtDevicePrice.Text == "")
+            {
+                MessageBox.Show("Nhập sai thông tin thiết bị","Nhập thiết bị",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(this.ucCompMaintainaceForm1.txtDeviceQuantity.Text != "" && !int.TryParse(this.ucCompMaintainaceForm1.txtDeviceQuantity.Text,out int result))
+            {
+                MessageBox.Show("Nhập sai số lượng thiết bị", "Nhập thiết bị", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(this.ucCompMaintainaceForm1.txtDevicePrice.Text != "" && !double.TryParse(this.ucCompMaintainaceForm1.txtDevicePrice.Text,out double Price))
+            {
+                MessageBox.Show("Nhập sai giá thiết bị", "Nhập thiết bị", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+            else if(this.ucCompMaintainaceForm1.txtDeviceName.Text!= "" && this.ucCompMaintainaceForm1.txtDeviceQuantity.Text!="" && this.ucCompMaintainaceForm1.txtDevicePrice.Text!="")
+            {
+                string DeviceName = this.ucCompMaintainaceForm1.txtDeviceName.Text;
+                int quantity = Convert.ToInt32(this.ucCompMaintainaceForm1.txtDeviceQuantity.Text);
+                double price = Convert.ToDouble(this.ucCompMaintainaceForm1.txtDevicePrice.Text);
+                DeviceImportRecord deviceImportRecord = new DeviceImportRecord(quantity, price * quantity);
+                deviceImportRecord.DeviceName = DeviceName;
+                DeviceImportRecordDAO deviceImportRecordDAO = new DeviceImportRecordDAO();
+                deviceImportRecordDAO.Add(deviceImportRecord);
+            }    
+           
         }
 
 
@@ -545,8 +616,15 @@ namespace NetStore.Form.FormStateComputer
                 ItemFood itemFood = new ItemFood();
                 itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 itemFood.Size = new Size(265, 125);
+
+
+
                 itemFood.itemname.Text = dr["nameInventory"].ToString();
-                itemFood.itemprice.Text = dr["sellingPrice"].ToString();
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+
                 itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
                 itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 itemFood.path = dr["image"].ToString();
@@ -564,7 +642,12 @@ namespace NetStore.Form.FormStateComputer
                 itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 itemFood.Size = new Size(265, 125);
                 itemFood.itemname.Text = dr["nameInventory"].ToString();
-                itemFood.itemprice.Text = dr["sellingPrice"].ToString();
+
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+
                 itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
                 itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 itemFood.path = dr["image"].ToString();
@@ -580,7 +663,12 @@ namespace NetStore.Form.FormStateComputer
                 itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 itemFood.Size = new Size(265, 125);
                 itemFood.itemname.Text = dr["nameInventory"].ToString();
-                itemFood.itemprice.Text = dr["sellingPrice"].ToString();
+
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+
                 itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
                 itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 itemFood.path = dr["image"].ToString();
@@ -598,14 +686,18 @@ namespace NetStore.Form.FormStateComputer
                 
                 //itemFood.Size = new Size(300, 200);
                 itemFood.itemname.Text = dr["nameInventory"].ToString();
-                itemFood.itemprice.Text = dr["sellingPrice"].ToString();
+
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+
                 itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
                 itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 itemFood.Size = new Size(265, 125);
                 //MessageBox.Show("Thẻ cào",itemFood.Size.ToString());
                 itemFood.path = dr["image"].ToString();
                 itemFood.Click += Item_Click;
-
                 this.ucMenu1.flowthecao.Controls.Add(itemFood);
             }
         }
@@ -613,7 +705,7 @@ namespace NetStore.Form.FormStateComputer
         private void AddFoodMenu(object sender, EventArgs e)
         {
             AddNewFood addNewFood = new AddNewFood();   
-            addNewFood.Show();
+            //addNewFood.Show();
             InventoryDAO inventoryDAO   = new InventoryDAO();
             DataTable dt = inventoryDAO.LoadDB();
             foreach(DataRow dr in dt.Rows)
@@ -624,6 +716,10 @@ namespace NetStore.Form.FormStateComputer
             addNewFood.cbxCategory.Items.Add("Drink");
             addNewFood.cbxCategory.Items.Add("Noodles");
             addNewFood.cbxCategory.Items.Add("Card");
+            if (addNewFood.ShowDialog() == DialogResult.OK)
+            {
+                LoadMenu();
+            }
 
         }
         private void Item_Click(object sender, EventArgs e)
@@ -631,14 +727,131 @@ namespace NetStore.Form.FormStateComputer
             ItemFood itemFood = sender as ItemFood;
             EditFood editFood = new EditFood();
             editFood.txtName.Text = itemFood.itemname.Text;
-            editFood.txtPrice.Text = itemFood.itemprice.Text;
+            string price = itemFood.itemprice.Text.Replace("VND","").Trim();
+            editFood.txtPrice.Text = price;
             editFood.ptxImage.Image = itemFood.ptxBox.Image;
             editFood.ptxImage.SizeMode = PictureBoxSizeMode.StretchImage;
             editFood.path = itemFood.path;
-            editFood.Show();
+            //editFood.Show();
+            if (editFood.ShowDialog() == DialogResult.OK)
+            {
+                LoadMenu();
+            }
         }
 
+        private void LoadMenu()
+        {
+            this.ucMenu1.flowcom.FlowDirection = FlowDirection.LeftToRight;
+            this.ucMenu1.flowcom.WrapContents = true;
+            this.ucMenu1.flowcom.AutoScroll = true;
 
+
+
+            this.ucMenu1.flowmy.FlowDirection = FlowDirection.LeftToRight;
+            this.ucMenu1.flowmy.WrapContents = true;
+            this.ucMenu1.flowmy.AutoScroll = true;
+
+
+
+            this.ucMenu1.flownuoc.FlowDirection = FlowDirection.LeftToRight;
+            this.ucMenu1.flownuoc.WrapContents = true;
+            this.ucMenu1.flownuoc.AutoScroll = true;
+
+            this.ucMenu1.flowthecao.FlowDirection = FlowDirection.LeftToRight;
+            this.ucMenu1.flowthecao.WrapContents = true;
+            this.ucMenu1.flowthecao.AutoScroll = true;
+            //this.ucMenu1.flowthecao.AutoSize = false;
+
+
+
+            InventoryDAO inventoryDAO = new InventoryDAO();
+            DataTable dtCom = inventoryDAO.FindInventoryType("Food");
+            DataTable dtNuoc = inventoryDAO.FindInventoryType("Drink");
+            DataTable dtMy = inventoryDAO.FindInventoryType("Noodles");
+            DataTable dtTheCao = inventoryDAO.FindInventoryType("Card");
+
+            this.ucMenu1.flowcom.Controls.Clear();
+            foreach (DataRow dr in dtCom.Rows)
+            {
+                ItemFood itemFood = new ItemFood();
+                itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                itemFood.Size = new Size(265, 125);
+                itemFood.itemname.Text = dr["nameInventory"].ToString();
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+                itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
+                itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                itemFood.path = dr["image"].ToString();
+                //MessageBox.Show(itemFood.Size.ToString(), "Cơm");
+
+                itemFood.Click += Item_Click;
+                this.ucMenu1.flowcom.Controls.Add(itemFood);
+            }
+
+
+            this.ucMenu1.flownuoc.Controls.Clear();
+            foreach (DataRow dr in dtNuoc.Rows)
+            {
+                ItemFood itemFood = new ItemFood();
+                itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                itemFood.Size = new Size(265, 125);
+                itemFood.itemname.Text = dr["nameInventory"].ToString();
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+                itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
+                itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                itemFood.path = dr["image"].ToString();
+                itemFood.Click += Item_Click;
+
+                this.ucMenu1.flownuoc.Controls.Add(itemFood);
+            }
+
+            this.ucMenu1.flowmy.Controls.Clear();
+            foreach (DataRow dr in dtMy.Rows)
+            {
+                ItemFood itemFood = new ItemFood();
+                itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                itemFood.Size = new Size(265, 125);
+                itemFood.itemname.Text = dr["nameInventory"].ToString();
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+                itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
+                itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                itemFood.path = dr["image"].ToString();
+                itemFood.Click += Item_Click;
+
+                this.ucMenu1.flowmy.Controls.Add(itemFood);
+            }
+
+            this.ucMenu1.flowthecao.Controls.Clear();
+            foreach (DataRow dr in dtTheCao.Rows)
+            {
+                ItemFood itemFood = new ItemFood();
+                //itemFood.AutoSize = false;
+                itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
+                //itemFood.Size = new Size(300, 200);
+                itemFood.itemname.Text = dr["nameInventory"].ToString();
+                itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
+                itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
+                itemFood.lblQuantity.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+                itemFood.lblQuantity.UseCompatibleTextRendering = true;
+                itemFood.ptxBox.Image = System.Drawing.Image.FromFile(dr["image"].ToString());
+                itemFood.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                itemFood.Size = new Size(265, 125);
+                //MessageBox.Show("Thẻ cào",itemFood.Size.ToString());
+                itemFood.path = dr["image"].ToString();
+                itemFood.Click += Item_Click;
+                this.ucMenu1.flowthecao.Controls.Add(itemFood);
+            }
+
+        }
 
 
 
@@ -688,11 +901,12 @@ namespace NetStore.Form.FormStateComputer
         private void BtnaddCustomer_Click(object sender, EventArgs e)
         {
             AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
-            if(addCustomer.isClick)
+            if(addCustomer.ShowDialog() == DialogResult.OK)
             {
                 LoadCustomerTable();
             }    
+            //addCustomer.Show();
+               
         }
         private void ECustomer(object sender, DataGridViewCellEventArgs e)
         {
@@ -702,9 +916,13 @@ namespace NetStore.Form.FormStateComputer
                 DataGridViewRow dgvrow = this.ucCustomer1.dgvCustomer.Rows[e.RowIndex];
                 EditCustomer editCustomer = new EditCustomer(Convert.ToInt32(dgvrow.Cells[0].Value.ToString()));
                 //MessageBox.Show($"{Convert.ToInt32(dgvrow.Cells[0].Value.ToString())}");
-                editCustomer.Show();
+                //editCustomer.Show();
                 editCustomer.txtUsername.Text = dgvrow.Cells[1].Value.ToString();
                 editCustomer.txtPassword.Text = dgvrow.Cells[2].Value.ToString();
+                if (editCustomer.ShowDialog() == DialogResult.OK)
+                {
+                    LoadCustomerTable();
+                }
                 //foreach (DataGridViewRow row in this.ucCustomer1.dgvCustomer.Rows)
                 //{
                 //    if (!row.IsNewRow)

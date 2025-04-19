@@ -27,21 +27,40 @@ namespace NetStore.Form.FormStateComputer
         private void btnAddcomputer_Click(object sender, EventArgs e)
         {
             string status = "";
-            if(cbxTypecomputer.SelectedItem.ToString() == "Online")
+            
+            if(cbxTypecomputer.SelectedItem == null || txtMoney.Text == "" || txtNamecomputer.Text =="")
             {
-                status = "1";
-            }
-            if (cbxTypecomputer.SelectedItem.ToString() == "Offline")
+                MessageBox.Show("Chưa nhập thông tin máy tính!", "Tạo máy tính",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }    
+            else if(txtMoney.Text != "" && !double.TryParse(txtMoney.Text, out double money))
             {
-                status = "2";
-            }
-            if (cbxTypecomputer.SelectedItem.ToString() == "Error")
+                MessageBox.Show("Sai giá máy tính!", "Tạo máy tính", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  
+            else if(cbxTypecomputer.SelectedItem != null && txtMoney.Text != "" && txtNamecomputer.Text != "")
             {
-                status = "3";
-            }
-            Computer computer =  new Computer(status,Convert.ToDouble(txtMoney.Text),txtNamecomputer.Text);
-            ComputerDAO computerDAO = new ComputerDAO();
-            computerDAO.Add(computer);
+                if (cbxTypecomputer.SelectedItem.ToString() == "Online")
+                {
+                    status = "1";
+                }
+                if (cbxTypecomputer.SelectedItem.ToString() == "Offline")
+                {
+                    status = "2";
+                }
+                if (cbxTypecomputer.SelectedItem.ToString() == "Error")
+                {
+                    status = "3";
+                }
+
+                MessageBox.Show("Tạo máy tính thành công!", "Tạo máy tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Computer computer = new Computer(status, Convert.ToDouble(txtMoney.Text), txtNamecomputer.Text);
+                ComputerDAO computerDAO = new ComputerDAO();
+                computerDAO.Add(computer);
+                this.DialogResult = DialogResult.OK; // Trả về kết quả
+                this.Close(); // Đóng form
+
+            }    
+
+            
         }
     }
 }

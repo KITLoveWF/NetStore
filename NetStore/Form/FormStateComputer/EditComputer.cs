@@ -40,10 +40,27 @@ namespace NetStore.Form.FormStateComputer
             {
                 status = "3";
             }
-            Computer computer = new Computer(status, Convert.ToDouble(txtMoney.Text), txtNamecomputer.Text);
-            computer.Id = id;
-            ComputerDAO computerDAO = new ComputerDAO();
-            computerDAO.Fix(computer);
+            if (cbxTypecomputer.SelectedItem == null || txtMoney.Text == "" || txtNamecomputer.Text == "")
+            {
+                MessageBox.Show("Chưa nhập thông tin máy tính!", "Cập nhật máy tính", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtMoney.Text != "" && !double.TryParse(txtMoney.Text, out double money))
+            {
+                MessageBox.Show("Sai giá máy tính!", "Cập nhật máy tính", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cbxTypecomputer.SelectedItem != null && txtMoney.Text != "" && txtNamecomputer.Text != "")
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn cập nhật máy tính?", "Cập nhật máy tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    Computer computer = new Computer(status, Convert.ToDouble(txtMoney.Text), txtNamecomputer.Text);
+                    computer.Id = id;
+                    ComputerDAO computerDAO = new ComputerDAO();
+                    computerDAO.Fix(computer);
+                    this.DialogResult = DialogResult.OK; // Trả về kết quả
+                    this.Close(); // Đóng form
+                }
+            }
         }
     }
 }
