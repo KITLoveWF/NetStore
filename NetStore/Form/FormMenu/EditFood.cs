@@ -29,10 +29,29 @@ namespace NetStore.Form.FormMenu
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            double sellingPrice = Convert.ToDouble(txtPrice.Text);
-            string image = path;
-            InventoryDAO inventoryDAO = new InventoryDAO();
-            inventoryDAO.UpdateMenu2(sellingPrice, image,txtName.Text); 
+            if (txtPrice.Text == "" ||  path == "")
+            {
+                MessageBox.Show("Chưa nhập hoặc chọn thông tin món ăn và thẻ cào!", "Tạo món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtPrice.Text != "" && !double.TryParse(txtPrice.Text, out double price))
+            {
+                MessageBox.Show("Giá món ăn hoặc thẻ cào sai!", "Tạo món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(txtPrice.Text != "" && path != "")
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn cập nhật món ăn và thẻ cào?", "Tạo món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    double sellingPrice = Convert.ToDouble(txtPrice.Text);
+                    string image = path;
+                    InventoryDAO inventoryDAO = new InventoryDAO();
+                    inventoryDAO.UpdateMenu2(sellingPrice, image, txtName.Text);
+                    this.DialogResult = DialogResult.OK; // Trả về kết quả
+                    this.Close();
+                }
+
+            }    
+            
         }
 
         private void btnUpload_Click(object sender, EventArgs e)

@@ -37,13 +37,28 @@ namespace NetStore.Form.FormMenu
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            string nameInventory = cbxName.SelectedItem.ToString();
-            double sellingPrice = Convert.ToDouble(txtPrice.Text);
-            string type = cbxCategory.SelectedItem.ToString();
-            string image = path;
-            Inventory inventory = new Inventory(nameInventory,sellingPrice,image,type);
-            InventoryDAO inventoryDAO = new InventoryDAO();
-            inventoryDAO.UpdateMenu(inventory);
+            if(cbxName.SelectedItem == null||txtPrice.Text == "" || cbxCategory.SelectedItem == null ||path =="")
+            {
+                MessageBox.Show("Chưa nhập hoặc chọn thông tin món ăn hoặc thẻ cào!", "Tạo món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(txtPrice.Text != "" && !double.TryParse(txtPrice.Text, out double price))
+            {
+                MessageBox.Show("Giá món ăn hoặc thẻ cào sai!", "Tạo món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+            else if(cbxName.SelectedItem!=null && txtPrice.Text != "" && cbxCategory.SelectedItem!=null && path != "")
+            {
+                MessageBox.Show("Tạo món ăn hoặc thẻ cào thành công!", "Tạo món ăn và thẻ cào", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string nameInventory = cbxName.SelectedItem.ToString();
+                double sellingPrice = Convert.ToDouble(txtPrice.Text);
+                string type = cbxCategory.SelectedItem.ToString();
+                string image = path;
+                Inventory inventory = new Inventory(nameInventory, sellingPrice, image, type);
+                InventoryDAO inventoryDAO = new InventoryDAO();
+                inventoryDAO.UpdateMenu(inventory);
+                this.DialogResult = DialogResult.OK; // Trả về kết quả
+                this.Close();
+            }    
+            
         }
 
         private void btnUpload_Click(object sender, EventArgs e)

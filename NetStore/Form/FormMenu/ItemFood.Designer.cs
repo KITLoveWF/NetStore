@@ -31,16 +31,17 @@
             this.itemname = new System.Windows.Forms.Label();
             this.itemprice = new System.Windows.Forms.Label();
             this.ptxBox = new System.Windows.Forms.PictureBox();
+            this.lblQuantity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptxBox)).BeginInit();
             this.SuspendLayout();
             // 
             // itemname
             // 
             this.itemname.AutoSize = true;
-            this.itemname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemname.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemname.Location = new System.Drawing.Point(208, 31);
             this.itemname.Name = "itemname";
-            this.itemname.Size = new System.Drawing.Size(134, 25);
+            this.itemname.Size = new System.Drawing.Size(205, 38);
             this.itemname.TabIndex = 1;
             this.itemname.Text = "Tên sản phẩm ";
             // 
@@ -48,7 +49,7 @@
             // 
             this.itemprice.AutoSize = true;
             this.itemprice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemprice.Location = new System.Drawing.Point(208, 96);
+            this.itemprice.Location = new System.Drawing.Point(208, 125);
             this.itemprice.Name = "itemprice";
             this.itemprice.Size = new System.Drawing.Size(37, 25);
             this.itemprice.TabIndex = 2;
@@ -65,11 +66,21 @@
             this.ptxBox.TabIndex = 0;
             this.ptxBox.TabStop = false;
             // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(209, 81);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(72, 20);
+            this.lblQuantity.TabIndex = 3;
+            this.lblQuantity.Text = "Số lượng";
+            // 
             // ItemFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.itemprice);
             this.Controls.Add(this.itemname);
             this.Controls.Add(this.ptxBox);
@@ -88,5 +99,6 @@
         public System.Windows.Forms.PictureBox ptxBox;
         public System.Windows.Forms.Label itemname;
         public System.Windows.Forms.Label itemprice;
+        public System.Windows.Forms.Label lblQuantity;
     }
 }
