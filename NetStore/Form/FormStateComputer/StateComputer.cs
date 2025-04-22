@@ -241,6 +241,7 @@ namespace NetStore.Form.FormStateComputer
         private void LoadComputer()
         {
             ComputerDAO computerDAO = new ComputerDAO();
+            this.ucFormStateComputer1.ucTypeComputer1.flpComputer.Controls.Clear();
 
             DataTable dataTable = computerDAO.LoadDB();
             foreach (DataRow dt in dataTable.Rows)
@@ -615,7 +616,7 @@ namespace NetStore.Form.FormStateComputer
             {
                 ItemFood itemFood = new ItemFood();
                 itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-                itemFood.Size = new Size(265, 125);
+                itemFood.Size = new Size(205, 110);
 
 
 
@@ -775,7 +776,7 @@ namespace NetStore.Form.FormStateComputer
             {
                 ItemFood itemFood = new ItemFood();
                 itemFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-                itemFood.Size = new Size(265, 125);
+                itemFood.Size = new Size(205, 110);
                 itemFood.itemname.Text = dr["nameInventory"].ToString();
                 itemFood.itemprice.Text = Convert.ToDouble(dr["sellingPrice"]).ToString("N0") + " VND";
                 itemFood.lblQuantity.Text = "Số lượng: " + dr["quantity"].ToString();
