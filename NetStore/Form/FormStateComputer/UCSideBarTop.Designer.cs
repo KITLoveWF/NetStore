@@ -37,10 +37,10 @@
             // lblStatecomputer
             // 
             this.lblStatecomputer.AutoSize = true;
-            this.lblStatecomputer.Font = new System.Drawing.Font("Cooper Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatecomputer.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatecomputer.Location = new System.Drawing.Point(37, 48);
             this.lblStatecomputer.Name = "lblStatecomputer";
-            this.lblStatecomputer.Size = new System.Drawing.Size(264, 36);
+            this.lblStatecomputer.Size = new System.Drawing.Size(285, 45);
             this.lblStatecomputer.TabIndex = 0;
             this.lblStatecomputer.Text = "Tình trạng máy";
             // 
@@ -82,7 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblStatecomputer;
-        private System.Windows.Forms.Label lblNamestaff;
+        public System.Windows.Forms.Label lblNamestaff;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

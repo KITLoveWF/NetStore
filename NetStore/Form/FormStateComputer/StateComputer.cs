@@ -71,6 +71,12 @@ namespace NetStore.Form.FormStateComputer
             this.ucMenu1.Hide();
             this.ucCustomer1.Hide();
             this.ucFormStateComputer1.ucTypeComputer1.btnAddcomputer.Click += BtnAddcomputer_Click;
+
+
+            StaffDAO staffDAO = new StaffDAO();
+            DataTable staff = staffDAO.FindStaff(LoginSave.Username, LoginSave.Password);
+            DataRow staffRow = staff.Rows[0];
+            this.ucFormStateComputer1.ucSideBarTop1.lblNamestaff.Text = staffRow["nameStaff"].ToString();
             ComputerDAO computerDAO = new ComputerDAO();
 
             DataTable dataTable = computerDAO.LoadDB();
@@ -172,7 +178,8 @@ namespace NetStore.Form.FormStateComputer
                         DateTime timeBegin = Convert.ToDateTime(dataRowReceipt["timeBegin"]);
                         DateTime timeEnd = Convert.ToDateTime(dataRowReceipt["timeEnd"]);
                         TimeSpan timeUsed = timeEnd - timeBegin;
-                        this.ucFormStateComputer1.ucTopReceipt1.lblTimereal.Text = timeUsed.ToString();
+                        string formattedTime = $"{(int)timeUsed.TotalHours}h:{timeUsed.Minutes}'";
+                        this.ucFormStateComputer1.ucTopReceipt1.lblTimereal.Text = formattedTime;
                         this.ucFormStateComputer1.ucTopReceipt1.Show();
                         
                         this.ucFormStateComputer1.ucReceiptComputer1.flpOrder.Controls.Clear();
@@ -311,17 +318,18 @@ namespace NetStore.Form.FormStateComputer
                                 orderspdf.Add(orderService);
                             }
                         }
-                        ExplorePDF("D://DAI HOC DUNG HOC DAI//THIRD//HK2//DBMS//bill.pdf", nameComputer, orderspdf, computerCost, serviceCost, totalCost);
+                       
                         StaffDAO staffDAO = new StaffDAO();
                         DataTable staff = staffDAO.FindStaff(LoginSave.Username, LoginSave.Password);
                         DataRow staffRow = staff.Rows[0];
+                        ExplorePDF("D://DAI HOC DUNG HOC DAI//THIRD//HK2//DBMS//bill.pdf", nameComputer, orderspdf, computerCost, serviceCost, totalCost, staffRow["nameStaff"].ToString());
                         receiptDAO.UpdateReceipt(Convert.ToInt32(dataRowReceipt["receiptID"]), Convert.ToInt32(staffRow["staffID"]));
                     }
                 }
             
 
         }
-        private void ExplorePDF(string filePath,string nameComputer, List<OrderService> items, double computerCost,double serviceCost,double totalCost )
+        private void ExplorePDF(string filePath,string nameComputer, List<OrderService> items, double computerCost,double serviceCost,double totalCost,string nameStaff )
         {
             PdfWriter writer = new PdfWriter(filePath);
             PdfDocument pdf = new PdfDocument(writer);
@@ -357,6 +365,10 @@ namespace NetStore.Form.FormStateComputer
 
            
             document.Add(new Paragraph("Tiền dịch vụ: " + serviceCost.ToString("N0") + " VND")
+                .SetFont(font)
+                .SetTextAlignment(TextAlignment.RIGHT)
+                .SetFontSize(11));
+            document.Add(new Paragraph("Nhân viên: " + nameStaff)
                 .SetFont(font)
                 .SetTextAlignment(TextAlignment.RIGHT)
                 .SetFontSize(11));

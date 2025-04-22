@@ -115,7 +115,7 @@
 
         #endregion
 
-        private UCSideBarTop ucSideBarTop1;
+        public UCSideBarTop ucSideBarTop1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public UCReceiptComputer ucReceiptComputer1;
         public UCTopReceipt ucTopReceipt1;
