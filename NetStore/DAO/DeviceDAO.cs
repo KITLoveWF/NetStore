@@ -61,7 +61,7 @@ namespace NetStore.DAO
         public DataTable FindDevice(string name)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "SELECT * FROM Device WHERE nameDevice = @nameDevice";
+            string sqlStr = "sp_FindDevice";
 
             SqlParameter[] parameters = new SqlParameter[]
             {

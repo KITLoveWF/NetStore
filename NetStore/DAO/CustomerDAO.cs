@@ -15,8 +15,8 @@ namespace NetStore
 
         public Customer Login(string username, string password)
         {
-            string query = "SELECT * FROM Customer WHERE username = @username AND password = @password";
-
+            //string query = "SELECT * FROM Customer WHERE username = @username AND password = @password";
+            string query = "sp_LoginCustomer";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@username", username),
@@ -43,8 +43,8 @@ namespace NetStore
          public bool Add(Customer customer)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "INSERT INTO Customer(username, password) VALUES (@username, @password)";
-
+            //string sqlStr = "INSERT INTO Customer(username, password) VALUES (@username, @password)";
+            string sqlStr = "sp_AddCustomer";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@username", customer.Username),
@@ -56,8 +56,8 @@ namespace NetStore
         public bool Delete(Customer customer)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "DELETE FROM Customer WHERE customerID = @id";
-
+            //string sqlStr = "DELETE FROM Customer WHERE customerID = @id";
+            string sqlStr = "sp_DeleteCustomer";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@id", customer.Id)
@@ -68,8 +68,8 @@ namespace NetStore
         public bool Fix(Customer customer)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "UPDATE Customer SET username = @username, password = @password WHERE customerID = @id";
-
+            //string sqlStr = "UPDATE Customer SET username = @username, password = @password WHERE customerID = @id";
+            string sqlStr = "sp_UpdateCustomer";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@username", customer.Username),
@@ -84,8 +84,14 @@ namespace NetStore
 
         public DataTable LoadDB()
         {
+            //DBConnection dbconnection = new DBConnection();
+            //string SQL = string.Format("SELECT * FROM Customer");
+            //return dbconnection.Find(SQL);
+            //DBConnection dbconnection = new DBConnection();
+            //string SQL = "sp_GetAllCustomers";
+            //return dbconnection.Find(SQL);
             DBConnection dbconnection = new DBConnection();
-            string SQL = string.Format("SELECT * FROM Customer");
+            string SQL = "SELECT * FROM vw_GetAllCustomers";
             return dbconnection.Find(SQL);
         }
     }

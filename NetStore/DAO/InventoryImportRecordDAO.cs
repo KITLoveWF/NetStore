@@ -65,61 +65,79 @@ namespace NetStore.DAO
         public bool Add(InventoryImportRecord log)
         {
             DBConnection dbconnection = new DBConnection();
-            string username = LoginSave.Username;
-            string password = LoginSave.Password;
 
-            InventoryDAO inventoryDAO = new InventoryDAO();
-            StaffDAO staffDAO = new StaffDAO();
+            string sqlStr = "sp_AddInventoryImportRecord";
 
-            DataTable dtstaff = staffDAO.FindStaff(username, password);
-            DataTable dtInventory = inventoryDAO.FindInventory(log.InventoryName);
-
-            if (dtstaff.Rows.Count > 0)
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                DataRow rowStaff = dtstaff.Rows[0];
-                int staffID = Convert.ToInt32(rowStaff["staffID"]);
-                int inventoryID = -1;
+                new SqlParameter("@username", LoginSave.Username),
+                new SqlParameter("@password", LoginSave.Password),
+                new SqlParameter("@inventoryName", log.InventoryName),
+                new SqlParameter("@quantityImport", log.QuantityImport),
+                new SqlParameter("@price", log.Price)
+            };
 
-                if (dtInventory.Rows.Count == 0)
-                {
-                    Inventory inventory = new Inventory(log.InventoryName, 0);
-                    inventory.Image = "";
-                    inventory.Type = "";
-                    inventory.SellingPrice = 0;
-                    inventoryDAO.Add(inventory);
+            return dbconnection.Excute(sqlStr, parameters);
+            //DBConnection dbconnection = new DBConnection();
+            //string username = LoginSave.Username;
+            //string password = LoginSave.Password;
 
-                    DataTable dtInventoryNew = inventoryDAO.FindInventory(log.InventoryName);
-                    DataRow rowInventoryNew = dtInventoryNew.Rows[0];
-                    inventoryID = Convert.ToInt32(rowInventoryNew["inventoryID"]);
-                }
-                else
-                {
-                    DataRow rowInventory = dtInventory.Rows[0];
-                    inventoryID = Convert.ToInt32(rowInventory["inventoryID"]);
-                }
+            //InventoryDAO inventoryDAO = new InventoryDAO();
+            //StaffDAO staffDAO = new StaffDAO();
 
-                // Truy vấn dùng parameter
-                string sqlStr = @"INSERT INTO InventoryImportRecord(inventoryID, staffID, quantityImport, price) 
-                          VALUES (@inventoryID, @staffID, @quantityImport, @price)";
+            //DataTable dtstaff = staffDAO.FindStaff(username, password);
+            //DataTable dtInventory = inventoryDAO.FindInventory(log.InventoryName);
 
-                SqlParameter[] parameters = new SqlParameter[]
-                {
-                    new SqlParameter("@inventoryID", inventoryID),
-                    new SqlParameter("@staffID", staffID),
-                    new SqlParameter("@quantityImport", log.QuantityImport),
-                    new SqlParameter("@price", log.Price)
-                };
+            //if (dtstaff.Rows.Count > 0)
+            //{
+            //    DataRow rowStaff = dtstaff.Rows[0];
+            //    int staffID = Convert.ToInt32(rowStaff["staffID"]);
+            //    int inventoryID = -1;
 
-                return dbconnection.Excute(sqlStr, parameters);
-            }
+            //    if (dtInventory.Rows.Count == 0)
+            //    {
+            //        Inventory inventory = new Inventory(log.InventoryName, 0);
+            //        inventory.Image = "";
+            //        inventory.Type = "";
+            //        inventory.SellingPrice = 0;
+            //        inventoryDAO.Add(inventory);
 
-            return false;
+            //        DataTable dtInventoryNew = inventoryDAO.FindInventory(log.InventoryName);
+            //        DataRow rowInventoryNew = dtInventoryNew.Rows[0];
+            //        inventoryID = Convert.ToInt32(rowInventoryNew["inventoryID"]);
+            //    }
+            //    else
+            //    {
+            //        DataRow rowInventory = dtInventory.Rows[0];
+            //        inventoryID = Convert.ToInt32(rowInventory["inventoryID"]);
+            //    }
+
+            //    // Truy vấn dùng parameter
+            //    string sqlStr = @"INSERT INTO InventoryImportRecord(inventoryID, staffID, quantityImport, price) 
+            //              VALUES (@inventoryID, @staffID, @quantityImport, @price)";
+
+            //    SqlParameter[] parameters = new SqlParameter[]
+            //    {
+            //        new SqlParameter("@inventoryID", inventoryID),
+            //        new SqlParameter("@staffID", staffID),
+            //        new SqlParameter("@quantityImport", log.QuantityImport),
+            //        new SqlParameter("@price", log.Price)
+            //    };
+
+            //    return dbconnection.Excute(sqlStr, parameters);
+            //}
+
+            //return false;
         }
 
         public DataTable LoadDB()
         {
+            //DBConnection dbconnection = new DBConnection();
+            //string sql = string.Format("SELECT \r\n    i.nameInventory,\r\n    i.quantity AS totalQuantity,\r\n    iir.quantityImport,\r\n    iir.price AS totalPriceImport,\r\n    s.nameStaff AS staffName\r\nFROM \r\n    Inventory i\r\nJOIN \r\n    InventoryImportRecord iir ON i.inventoryID = iir.inventoryID\r\nJOIN \r\n    staff s ON iir.staffID = s.staffID");
+            //return dbconnection.Find(sql);
+
             DBConnection dbconnection = new DBConnection();
-            string sql = string.Format("SELECT \r\n    i.nameInventory,\r\n    i.quantity AS totalQuantity,\r\n    iir.quantityImport,\r\n    iir.price AS totalPriceImport,\r\n    s.nameStaff AS staffName\r\nFROM \r\n    Inventory i\r\nJOIN \r\n    InventoryImportRecord iir ON i.inventoryID = iir.inventoryID\r\nJOIN \r\n    staff s ON iir.staffID = s.staffID");
+            string sql = string.Format("SELECT * FROM v_InventoryImportDetails");
             return dbconnection.Find(sql);
         }
     }

@@ -43,7 +43,7 @@ namespace NetStore.DAO
         {
             DBConnection dbconnection = new DBConnection();
 
-            string sqlStr = "SELECT * FROM Staff WHERE username = @username AND password = @password";
+            string sqlStr = "sp_FindStaff";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@username", username),

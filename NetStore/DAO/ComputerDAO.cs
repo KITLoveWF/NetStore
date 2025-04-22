@@ -41,8 +41,8 @@ namespace NetStore.DAO
         public bool Add(Computer computer)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "INSERT INTO Computer(status, price, nameComputer) VALUES (@status, @price, @nameComputer)";
-
+            //string sqlStr = "INSERT INTO Computer(status, price, nameComputer) VALUES (@status, @price, @nameComputer)";
+            string sqlStr = "sp_AddComputer";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@status", computer.Status),
@@ -56,8 +56,8 @@ namespace NetStore.DAO
         public bool Fix(Computer computer)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "UPDATE Computer SET status = @status, price = @price, nameComputer = @nameComputer WHERE computerID = @id";
-
+            //string sqlStr = "UPDATE Computer SET status = @status, price = @price, nameComputer = @nameComputer WHERE computerID = @id";
+            string sqlStr = "sp_UpdateComputer";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@status", computer.Status),
@@ -72,8 +72,8 @@ namespace NetStore.DAO
         public DataTable FindComputer(string name)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "SELECT * FROM Computer WHERE nameComputer = @nameComputer";
-
+            //string sqlStr = "SELECT * FROM Computer WHERE nameComputer = @nameComputer";
+            string sqlStr = "sp_FindComputerByName";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@nameComputer", name)
@@ -87,7 +87,8 @@ namespace NetStore.DAO
         public DataTable LoadDB()
         {
             DBConnection dbconnection = new DBConnection();
-            string SQL = string.Format("SELECT * FROM Computer");
+            //string SQL = string.Format("SELECT * FROM Computer");
+            string SQL = "SELECT * FROM v_GetAllComputers";
             return dbconnection.Find(SQL);
         }
     }

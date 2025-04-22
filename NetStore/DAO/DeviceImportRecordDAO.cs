@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -64,66 +65,84 @@ namespace NetStore.DAO
         public bool Add(DeviceImportRecord log)
         {
             DBConnection dbconnection = new DBConnection();
-            string username = LoginSave.Username;
-            string password = LoginSave.Password;
+            string sqlStr = "sp_AddDeviceImportRecord";
 
-            DeviceDAO deviceDAO = new DeviceDAO();
-            StaffDAO staffDAO = new StaffDAO();
-
-            // Tìm staff
-            DataTable dtstaff = staffDAO.FindStaff(username, password);
-
-            // Tìm device
-            DataTable dtDevice = deviceDAO.FindDevice(log.DeviceName);
-
-            if (dtstaff.Rows.Count > 0)
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                DataRow rowStaff = dtstaff.Rows[0];
-                int staffID = Convert.ToInt32(rowStaff["staffID"]);
-                int deviceID;
+                new SqlParameter("@username", LoginSave.Username),
+                new SqlParameter("@password", LoginSave.Password),
+                new SqlParameter("@deviceName", log.DeviceName),
+                new SqlParameter("@quantityImport", log.QuantityImport),
+                new SqlParameter("@price", log.Price)
+            };
+            return dbconnection.Excute(sqlStr, parameters);
 
-                if (dtDevice.Rows.Count == 0)
-                {
-                    // Chưa có thiết bị -> thêm mới
-                    Device device = new Device(log.DeviceName, 0);
-                    deviceDAO.Add(device);
+            //return dbconnection.Excute(sqlStr, parameters, CommandType.StoredProcedure);
+            //string username = LoginSave.Username;
+            //string password = LoginSave.Password;
 
-                    // Lấy lại deviceID sau khi thêm
-                    DataTable dtDeviceNew = deviceDAO.FindDevice(log.DeviceName);
-                    DataRow rowDeviceNew = dtDeviceNew.Rows[0];
-                    deviceID = Convert.ToInt32(rowDeviceNew["deviceID"]);
-                }
-                else
-                {
-                    // Thiết bị đã có
-                    DataRow rowDevice = dtDevice.Rows[0];
-                    deviceID = Convert.ToInt32(rowDevice["deviceID"]);
-                }
+            //DeviceDAO deviceDAO = new DeviceDAO();
+            //StaffDAO staffDAO = new StaffDAO();
 
-                // Câu lệnh thêm phiếu nhập
-                string sqlStr = "INSERT INTO DeviceImportRecord(deviceID, staffID, quantityImport, price) " +
-                                "VALUES (@deviceID, @staffID, @quantityImport, @price)";
+            //// Tìm staff
+            //DataTable dtstaff = staffDAO.FindStaff(username, password);
 
-                SqlParameter[] parameters = new SqlParameter[]
-                {
-                    new SqlParameter("@deviceID", deviceID),
-                    new SqlParameter("@staffID", staffID),
-                    new SqlParameter("@quantityImport", log.QuantityImport),
-                    new SqlParameter("@price", log.Price)
-                };
+            //// Tìm device
+            //DataTable dtDevice = deviceDAO.FindDevice(log.DeviceName);
 
-                return dbconnection.Excute(sqlStr, parameters);
-            }
+            //if (dtstaff.Rows.Count > 0)
+            //{
+            //    DataRow rowStaff = dtstaff.Rows[0];
+            //    int staffID = Convert.ToInt32(rowStaff["staffID"]);
+            //    int deviceID;
 
-            return false;
+            //    if (dtDevice.Rows.Count == 0)
+            //    {
+            //        // Chưa có thiết bị -> thêm mới
+            //        Device device = new Device(log.DeviceName, 0);
+            //        deviceDAO.Add(device);
+
+            //        // Lấy lại deviceID sau khi thêm
+            //        DataTable dtDeviceNew = deviceDAO.FindDevice(log.DeviceName);
+            //        DataRow rowDeviceNew = dtDeviceNew.Rows[0];
+            //        deviceID = Convert.ToInt32(rowDeviceNew["deviceID"]);
+            //    }
+            //    else
+            //    {
+            //        // Thiết bị đã có
+            //        DataRow rowDevice = dtDevice.Rows[0];
+            //        deviceID = Convert.ToInt32(rowDevice["deviceID"]);
+            //    }
+
+            //    // Câu lệnh thêm phiếu nhập
+            //    string sqlStr = "INSERT INTO DeviceImportRecord(deviceID, staffID, quantityImport, price) " +
+            //                    "VALUES (@deviceID, @staffID, @quantityImport, @price)";
+
+            //    SqlParameter[] parameters = new SqlParameter[]
+            //    {
+            //        new SqlParameter("@deviceID", deviceID),
+            //        new SqlParameter("@staffID", staffID),
+            //        new SqlParameter("@quantityImport", log.QuantityImport),
+            //        new SqlParameter("@price", log.Price)
+            //    };
+
+            //    return dbconnection.Excute(sqlStr, parameters);
+            //}
+
+            //return false;
         }
 
 
         public DataTable LoadDB()
         {
-            DBConnection dbconnection = new DBConnection();
-            string sql = string.Format("SELECT \r\n    d.nameDevice,\r\n    d.quantity AS totalQuantity,\r\n    di.quantityImport,\r\n    di.price AS totalPriceImport,\r\n    s.nameStaff AS staffName\r\nFROM \r\n    Device d\r\nJOIN \r\n    DeviceImportRecord di ON d.deviceID = di.deviceID\r\nJOIN \r\n    Staff s ON di.staffID = s.staffID");
-            return dbconnection.Find(sql);
+            //DBConnection dbconnection = new DBConnection();
+            //string sql = string.Format("SELECT \r\n    d.nameDevice,\r\n    d.quantity AS totalQuantity,\r\n    di.quantityImport,\r\n    di.price AS totalPriceImport,\r\n    s.nameStaff AS staffName\r\nFROM \r\n    Device d\r\nJOIN \r\n    DeviceImportRecord di ON d.deviceID = di.deviceID\r\nJOIN \r\n    Staff s ON di.staffID = s.staffID");
+            //return dbconnection.Find(sql);
+            DBConnection dBConnection = new DBConnection();
+            //string sql = "sp_GetDeviceImportRecords";
+            string sql = "SELECT * FROM vw_GetDeviceImportRecords";
+            return dBConnection.Find(sql);
+
         }
     }
 }

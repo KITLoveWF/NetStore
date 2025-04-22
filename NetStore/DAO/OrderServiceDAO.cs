@@ -31,7 +31,8 @@ namespace NetStore
         public DataTable FindOrder(int id)
         {
             DBConnection dbconnection = new DBConnection();
-            string sql = "SELECT * FROM OrderService WHERE receiptID = @id";
+            //string sql = "SELECT * FROM OrderService WHERE receiptID = @id";
+            string sql = "sp_FindOrderByReceiptID";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@id", id)

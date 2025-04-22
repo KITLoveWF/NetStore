@@ -72,8 +72,8 @@ namespace NetStore
         public bool Add(Inventory inventory)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "INSERT INTO Inventory(nameInventory, sellingPrice, quantity, image, type) VALUES (@name, @price, @quantity, @image, @type)";
-
+            //string sqlStr = "INSERT INTO Inventory(nameInventory, sellingPrice, quantity, image, type) VALUES (@name, @price, @quantity, @image, @type)";
+            string sqlStr = "sp_AddInventory";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@name", inventory.NameInventory),
@@ -88,8 +88,8 @@ namespace NetStore
         public bool Update(Inventory inventory)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "UPDATE Inventory SET quantity = @quantity WHERE nameInventory = @name";
-
+            //string sqlStr = "UPDATE Inventory SET quantity = @quantity WHERE nameInventory = @name";
+            string sqlStr = "sp_UpdateInventoryQuantity";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@quantity", inventory.Quantity),
@@ -102,8 +102,8 @@ namespace NetStore
         public bool UpdateMenu(Inventory inventory)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "UPDATE Inventory SET sellingPrice = @price, image = @image, type = @type WHERE nameInventory = @name";
-
+            //string sqlStr = "UPDATE Inventory SET sellingPrice = @price, image = @image, type = @type WHERE nameInventory = @name";
+            string sqlStr = "sp_UpdateInventoryMenu";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@price", inventory.SellingPrice),
@@ -118,8 +118,8 @@ namespace NetStore
         public bool UpdateMenu2(double SellingPrice, string Image, string NameInventory)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "UPDATE Inventory SET sellingPrice = @price, image = @image WHERE nameInventory = @name";
-
+            //string sqlStr = "UPDATE Inventory SET sellingPrice = @price, image = @image WHERE nameInventory = @name";
+            string sqlStr = "sp_UpdateInventoryMenu2";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@price", SellingPrice),
@@ -132,8 +132,8 @@ namespace NetStore
         public DataTable FindInventory(string name)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "SELECT * FROM Inventory WHERE nameInventory = @name";
-
+            //string sqlStr = "SELECT * FROM Inventory WHERE nameInventory = @name";
+            string sqlStr = "sp_FindInventory";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@name", name)
@@ -144,8 +144,8 @@ namespace NetStore
         public DataTable FindInventoryType(string type)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "SELECT * FROM Inventory WHERE type = @type";
-
+            //string sqlStr = "SELECT * FROM Inventory WHERE type = @type";
+            string sqlStr = "sp_FindInventoryType";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@type", type)
@@ -156,8 +156,8 @@ namespace NetStore
         public DataTable FindInventoryID(int id)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "SELECT * FROM Inventory WHERE inventoryID = @id";
-
+            //string sqlStr = "SELECT * FROM Inventory WHERE inventoryID = @id";
+            string sqlStr = "sp_FindInventoryID";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@id", id)
@@ -168,7 +168,8 @@ namespace NetStore
         public DataTable LoadDB()
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = string.Format("select * from Inventory");
+            //string sqlStr = string.Format("select * from Inventory");
+            string sqlStr = "SELECT * FROM vw_GetAllInventory";
             return dbconnection.Find(sqlStr);
         }
     }
