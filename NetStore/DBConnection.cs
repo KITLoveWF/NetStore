@@ -46,6 +46,7 @@ namespace NetStore
 
                 using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
                 {
+                    cmd.CommandType = CommandType.StoredProcedure;
                     if (parameters != null)
                     {
                         cmd.Parameters.AddRange(parameters);
@@ -109,6 +110,7 @@ namespace NetStore
 
                 using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
                 {
+                    cmd.CommandType = CommandType.StoredProcedure;
                     if (parameters != null)
                     {
                         cmd.Parameters.AddRange(parameters);
@@ -141,6 +143,7 @@ namespace NetStore
 
                 using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
                 {
+                    cmd.CommandType = CommandType.StoredProcedure;
                     if (parameters != null)
                     {
                         cmd.Parameters.AddRange(parameters);
