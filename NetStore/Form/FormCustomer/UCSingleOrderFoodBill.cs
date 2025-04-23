@@ -16,7 +16,15 @@ namespace NetStore.Form.FormCustomer
         public event EventHandler<int> ItemRemoved; // int: price để cập nhật lblTotal
         private int id;
         private int remainingQuantity;
-
+        public void IncreaseQuantity()
+        {
+            int quantity = int.Parse(lblQuantity.Text);
+            if (quantity < remainingQuantity)
+            {
+                quantity++;
+                lblQuantity.Text = quantity.ToString();
+            }
+        }
         public UCSingleOrderFoodBill()
         {
             InitializeComponent();

@@ -115,6 +115,49 @@ namespace NetStore.Form
                 flpCard.Controls.Add(food);
             }
         }
+        //private void Food_FoodClicked(object sender, EventArgs e)
+        //{
+        //    UCSingleFood clickedFood = sender as UCSingleFood;
+        //    if (clickedFood != null)
+        //    {
+        //        int id = clickedFood.GetID();
+        //        int quantity = clickedFood.GetQuantity();
+        //        string foodName = clickedFood.GetFoodName();
+
+        //        // Lấy giá và xử lý định dạng từ UCSingleFood
+        //        string rawPrice = clickedFood.GetPrice();
+        //        string cleanedPrice = rawPrice.Replace("VND", "").Replace(",", "").Trim();
+
+        //        int price = int.Parse(cleanedPrice);
+
+        //        // Lấy giá trị hiện tại từ lblTotal
+        //        string currentText = lblTotal.Text.Replace("VND", "").Replace(",", "").Trim();
+        //        int currentTotal = 0;
+
+        //        // Nếu lblTotal có giá trị, parse ra số
+        //        if (!string.IsNullOrEmpty(currentText))
+        //        {
+        //            int.TryParse(currentText, out currentTotal);
+        //        }
+
+        //        // Tính tổng mới
+        //        int newTotal = currentTotal + price;
+
+        //        // Gán lại lblTotal với định dạng đẹp
+        //        lblTotal.Text = $"{newTotal:N0} VND"; // Ví dụ: 100000 => "100,000 VND"
+
+        //        // Thêm item vào hóa đơn
+        //        UCSingleOrderFoodBill billItem = new UCSingleOrderFoodBill();
+        //        billItem.SetFoodName(foodName); // Có thể truyền thêm giá, id,...
+        //        billItem.SetPrice(rawPrice);
+        //        billItem.SetID(id);
+        //        billItem.SetRemainingQuantity(quantity);
+        //        billItem.QuantityChanged += BillItem_QuantityChanged;
+        //        billItem.ItemRemoved += BillItem_ItemRemoved;
+
+        //        flpBill.Controls.Add(billItem);
+        //    }
+        //}
         private void Food_FoodClicked(object sender, EventArgs e)
         {
             UCSingleFood clickedFood = sender as UCSingleFood;
@@ -123,32 +166,31 @@ namespace NetStore.Form
                 int id = clickedFood.GetID();
                 int quantity = clickedFood.GetQuantity();
                 string foodName = clickedFood.GetFoodName();
-                
-                // Lấy giá và xử lý định dạng từ UCSingleFood
+
                 string rawPrice = clickedFood.GetPrice();
                 string cleanedPrice = rawPrice.Replace("VND", "").Replace(",", "").Trim();
-
                 int price = int.Parse(cleanedPrice);
 
-                // Lấy giá trị hiện tại từ lblTotal
-                string currentText = lblTotal.Text.Replace("VND", "").Replace(",", "").Trim();
-                int currentTotal = 0;
-
-                // Nếu lblTotal có giá trị, parse ra số
-                if (!string.IsNullOrEmpty(currentText))
+                // Tìm xem món ăn đã có trong flpBill chưa
+                foreach (Control control in flpBill.Controls)
                 {
-                    int.TryParse(currentText, out currentTotal);
+                    if (control is UCSingleOrderFoodBill existingBillItem && existingBillItem.GetID() == id)
+                    {
+                        // Nếu đã có món này, tăng số lượng
+                        existingBillItem.IncreaseQuantity(); // hoặc existingBillItem.AddQuantity(1);
+                                               // Cập nhật tổng tiền
+                        string currentText = lblTotal.Text.Replace("VND", "").Replace(",", "").Trim();
+                        int currentTotal = string.IsNullOrEmpty(currentText) ? 0 : int.Parse(currentText);
+                        int newTotal = currentTotal + price;
+                        lblTotal.Text = $"{newTotal:N0} VND";
+
+                        return; // Thoát khỏi hàm, không thêm mới
+                    }
                 }
 
-                // Tính tổng mới
-                int newTotal = currentTotal + price;
-
-                // Gán lại lblTotal với định dạng đẹp
-                lblTotal.Text = $"{newTotal:N0} VND"; // Ví dụ: 100000 => "100,000 VND"
-
-                // Thêm item vào hóa đơn
+                // Nếu chưa có món này trong flpBill => thêm mới
                 UCSingleOrderFoodBill billItem = new UCSingleOrderFoodBill();
-                billItem.SetFoodName(foodName); // Có thể truyền thêm giá, id,...
+                billItem.SetFoodName(foodName);
                 billItem.SetPrice(rawPrice);
                 billItem.SetID(id);
                 billItem.SetRemainingQuantity(quantity);
@@ -156,8 +198,25 @@ namespace NetStore.Form
                 billItem.ItemRemoved += BillItem_ItemRemoved;
 
                 flpBill.Controls.Add(billItem);
+
+                // Cập nhật tổng tiền
+                string totalText = lblTotal.Text.Replace("VND", "").Replace(",", "").Trim();
+                int currentTotalAdd = string.IsNullOrEmpty(totalText) ? 0 : int.Parse(totalText);
+                int newTotalAdd = currentTotalAdd + price;
+                lblTotal.Text = $"{newTotalAdd:N0} VND";
             }
         }
+
+        //public void IncreaseQuantity(int amount)
+        //{
+        //    int currentQuantity = int.Parse(lblQuantity.Text); // hoặc cách bạn lưu quantity
+        //    int newQuantity = currentQuantity + amount;
+        //    lblQuantity.Text = newQuantity.ToString();
+
+        //    // Có thể kích hoạt sự kiện QuantityChanged nếu cần cập nhật tổng tiền:
+        //    QuantityChanged?.Invoke(this, amount);
+        //}
+
         private void BillItem_QuantityChanged(object sender, int delta)
         {
             UCSingleOrderFoodBill billItem = sender as UCSingleOrderFoodBill;
