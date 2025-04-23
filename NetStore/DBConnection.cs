@@ -7,10 +7,10 @@ namespace NetStore
 {
     internal class DBConnection
     {
-        //public static string sqlCon =
-        //    "Data Source=DESKTOP-AQBQ14F\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
+        public static string sqlCon =
+            "Data Source=DESKTOP-AQBQ14F\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
 
-        public static string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
+        //public static string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn = null;
         public DataTable Find(string sqlStr)
         {
@@ -101,38 +101,38 @@ namespace NetStore
 
         //    return dt;
         //}
-        public bool Execute(string sqlStr, SqlParameter[] parameters)
-        {
-            try
-            {
-                conn = new SqlConnection(sqlCon);
-                conn.Open();
+        //public bool Execute(string sqlStr, SqlParameter[] parameters)
+        //{
+        //    try
+        //    {
+        //        conn = new SqlConnection(sqlCon);
+        //        conn.Open();
 
-                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    if (parameters != null)
-                    {
-                        cmd.Parameters.AddRange(parameters);
-                    }
+        //        using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+        //        {
+        //            cmd.CommandType = CommandType.StoredProcedure;
+        //            if (parameters != null)
+        //            {
+        //                cmd.Parameters.AddRange(parameters);
+        //            }
 
-                    if (cmd.ExecuteNonQuery() > 0)
-                    {
-                        return true;
-                    }
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        //            if (cmd.ExecuteNonQuery() > 0)
+        //            {
+        //                return true;
+        //            }
+        //            return false;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        return false;
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
         public DataTable Find(string sqlStr, SqlParameter[] parameters)
         {
             DataTable dt = new DataTable();

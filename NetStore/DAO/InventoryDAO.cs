@@ -15,21 +15,23 @@ namespace NetStore
 
         public DataTable GetAllInventories()
         {
-            string query = "SELECT * FROM Inventory";
-            return db.Find(query); // sử dụng hàm Find không có parameters
+            string query = "sp_GetAllInventories";
+            return db.Find(query); // Không cần truyền parameters
         }
+
 
         public DataTable GetInventoriesByType(string type)
         {
-            string query = "SELECT * FROM Inventory WHERE type = @type";
+            string query = "sp_GetInventoriesByType";
 
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@type", type)
+              new SqlParameter("@type", type)
             };
 
             return db.Find(query, parameters);
         }
+
         //public bool Add(Inventory inventory)
         //{
         //    DBConnection dbconnection = new DBConnection();

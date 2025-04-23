@@ -15,8 +15,7 @@ namespace NetStore
 
         public bool AddOrderService(OrderService orderService)
         {
-            string query = "INSERT INTO OrderService (inventoryID, receiptID, quantityOrder) " +
-                           "VALUES (@inventoryID, @receiptID, @quantityOrder)";
+            string sql = "sp_AddOrderService"; // Gọi stored procedure
 
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -25,7 +24,7 @@ namespace NetStore
                 new SqlParameter("@quantityOrder", orderService.QuantityOrder)
             };
 
-            return db.Execute(query, parameters);
+            return db.Excute(sql, parameters); // Execute giống như Find sử dụng SP
         }
 
         public DataTable FindOrder(int id)
