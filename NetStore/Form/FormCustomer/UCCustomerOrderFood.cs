@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NetStore.Form.FormCustomer;
 using NetStore.Model;
+using NetStore.Form.FormMenu;
+using System.IO;
 
 namespace NetStore.Form
 {
@@ -44,7 +46,7 @@ namespace NetStore.Form
 
             DataTable dtRice = inventoryDAO.GetInventoriesByType("Rice");
             DataTable dtDrink = inventoryDAO.GetInventoriesByType("Drink");
-            DataTable dtNoodle = inventoryDAO.GetInventoriesByType("Noodle");
+            DataTable dtNoodle = inventoryDAO.GetInventoriesByType("Noodles");
             DataTable dtCard = inventoryDAO.GetInventoriesByType("Card");
 
             foreach (DataRow row in dtRice.Rows)
@@ -61,6 +63,22 @@ namespace NetStore.Form
                 food.SetPrice(price);
                 food.SetQuantity(quantity);
 
+
+                //Set image
+                string rootPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+                string resourcesPath = Path.Combine(rootPath, "resources");
+
+                string imageFileName = row["image"].ToString(); // ví dụ: "pho.jpg"
+                string imagePath = Path.Combine(resourcesPath, imageFileName);
+
+                if (!File.Exists(imagePath))
+                {
+                    imagePath = Path.Combine(resourcesPath, "notfound.jpg");
+                }
+                food.SetImagePath(imagePath);
+
+
+                food.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 flpRice.Controls.Add(food);
             }
             foreach (DataRow row in dtDrink.Rows)
@@ -77,7 +95,21 @@ namespace NetStore.Form
                 food.FoodClicked += Food_FoodClicked;
                 food.SetPrice(price);
                 food.SetQuantity(quantity);
+                //Set image
+                string rootPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+                string resourcesPath = Path.Combine(rootPath, "resources");
 
+                string imageFileName = row["image"].ToString(); // ví dụ: "pho.jpg"
+                string imagePath = Path.Combine(resourcesPath, imageFileName);
+
+                if (!File.Exists(imagePath))
+                {
+                    imagePath = Path.Combine(resourcesPath, "notfound.jpg");
+                }
+                food.SetImagePath(imagePath);
+
+
+                food.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 flpDrink.Controls.Add(food);
             }
             foreach (DataRow row in dtNoodle.Rows)
@@ -94,7 +126,21 @@ namespace NetStore.Form
                 food.FoodClicked += Food_FoodClicked;
                 food.SetPrice(price);
                 food.SetQuantity(quantity);
+                //Set image
+                string rootPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+                string resourcesPath = Path.Combine(rootPath, "resources");
 
+                string imageFileName = row["image"].ToString(); // ví dụ: "pho.jpg"
+                string imagePath = Path.Combine(resourcesPath, imageFileName);
+
+                if (!File.Exists(imagePath))
+                {
+                    imagePath = Path.Combine(resourcesPath, "notfound.jpg");
+                }
+                food.SetImagePath(imagePath);
+
+
+                food.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 flpNoodle.Controls.Add(food);
             }
             foreach (DataRow row in dtCard.Rows)
@@ -111,7 +157,21 @@ namespace NetStore.Form
                 food.FoodClicked += Food_FoodClicked;
                 food.SetPrice(price);
                 food.SetQuantity(quantity);
+                //Set image
+                string rootPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+                string resourcesPath = Path.Combine(rootPath, "resources");
 
+                string imageFileName = row["image"].ToString(); // ví dụ: "pho.jpg"
+                string imagePath = Path.Combine(resourcesPath, imageFileName);
+
+                if (!File.Exists(imagePath))
+                {
+                    imagePath = Path.Combine(resourcesPath, "notfound.jpg");
+                }
+                food.SetImagePath(imagePath);
+
+
+                food.ptxBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 flpCard.Controls.Add(food);
             }
         }

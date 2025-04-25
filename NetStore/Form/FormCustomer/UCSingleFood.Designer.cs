@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptxBox = new System.Windows.Forms.PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxBox)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.ptxBox);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -48,17 +48,17 @@
             this.guna2Panel1.Size = new System.Drawing.Size(300, 150);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // pictureBox1
+            // ptxBox
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::NetStore.Properties.Resources.image_5__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.ptxBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptxBox.Image = global::NetStore.Properties.Resources.image_5__1_;
+            this.ptxBox.Location = new System.Drawing.Point(0, 0);
+            this.ptxBox.Margin = new System.Windows.Forms.Padding(5);
+            this.ptxBox.Name = "ptxBox";
+            this.ptxBox.Size = new System.Drawing.Size(163, 150);
+            this.ptxBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptxBox.TabIndex = 1;
+            this.ptxBox.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -101,7 +101,7 @@
             this.Name = "UCSingleFood";
             this.Size = new System.Drawing.Size(300, 150);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxBox)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -112,8 +112,8 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblName;
+        public System.Windows.Forms.PictureBox ptxBox;
     }
 }

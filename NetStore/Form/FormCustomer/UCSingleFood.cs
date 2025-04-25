@@ -15,7 +15,7 @@ namespace NetStore.Form
         public event EventHandler FoodClicked;
         private int id;
         private int quantity;
-
+        private string imagePath;
         public UCSingleFood()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace NetStore.Form
             this.Click += UCSingleFood_Click;
             guna2Panel1.Click += UCSingleFood_Click;
             guna2Panel2.Click += UCSingleFood_Click;
-            pictureBox1.Click += UCSingleFood_Click;
+            ptxBox.Click += UCSingleFood_Click;
             lblName.Click += UCSingleFood_Click;
             lblPrice.Click += UCSingleFood_Click;
         }
@@ -34,6 +34,16 @@ namespace NetStore.Form
             {
                 FoodClicked(this, e);
             }
+        }
+        public string GetImagePath()
+        {
+            return imagePath;
+        }
+        public void SetImagePath(string imagePath)
+        {
+            this.imagePath = imagePath;
+
+            ptxBox.Image = System.Drawing.Image.FromFile(imagePath);
         }
         public void SetQuantity(int quantity)
         {
