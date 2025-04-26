@@ -61,14 +61,14 @@ namespace NetStore.DAO
         public DataTable FindDevice(string name)
         {
             DBConnection dbconnection = new DBConnection();
-            string sqlStr = "sp_FindDevice";
+            string sqlStr = "SELECT * FROM dbo.fn_FindDevice(@nameDevice)";
 
             SqlParameter[] parameters = new SqlParameter[]
             {
         new SqlParameter("@nameDevice", name)
             };
 
-            return dbconnection.Find(sqlStr, parameters);
+            return dbconnection.Function_Find(sqlStr, parameters);
         }
 
 

@@ -137,37 +137,37 @@ namespace NetStore
         {
             DBConnection dbconnection = new DBConnection();
             //string sqlStr = "SELECT * FROM Inventory WHERE nameInventory = @name";
-            string sqlStr = "sp_FindInventory";
+            string sqlStr = "SELECT * FROM dbo.fn_FindInventory(@name)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@name", name)
             };
 
-            return dbconnection.Find(sqlStr, parameters);
+            return dbconnection.Function_Find(sqlStr, parameters);
         }
         public DataTable FindInventoryType(string type)
         {
             DBConnection dbconnection = new DBConnection();
             //string sqlStr = "SELECT * FROM Inventory WHERE type = @type";
-            string sqlStr = "sp_FindInventoryType";
+            string sqlStr = "SELECT * FROM dbo.fn_FindInventoryType(@type)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@type", type)
             };
-            return dbconnection.Find(sqlStr, parameters);
+            return dbconnection.Function_Find(sqlStr, parameters);
         }
 
         public DataTable FindInventoryID(int id)
         {
             DBConnection dbconnection = new DBConnection();
             //string sqlStr = "SELECT * FROM Inventory WHERE inventoryID = @id";
-            string sqlStr = "sp_FindInventoryID";
+            string sqlStr = "SELECT * FROM dbo.fn_FindInventoryID(@id)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@id", id)
             };
 
-            return dbconnection.Find(sqlStr, parameters);
+            return dbconnection.Function_Find(sqlStr, parameters);
         }
         public DataTable LoadDB()
         {

@@ -31,12 +31,12 @@ namespace NetStore
         {
             DBConnection dbconnection = new DBConnection();
             //string sql = "SELECT * FROM OrderService WHERE receiptID = @id";
-            string sql = "sp_FindOrderByReceiptID";
+            string sql = "SELECT * FROM dbo.fn_FindOrderByReceiptID(@id)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@id", id)
             };
-            return dbconnection.Find(sql, parameters);
+            return dbconnection.Function_Find(sql, parameters);
         }
     }
 }

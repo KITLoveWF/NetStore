@@ -124,12 +124,12 @@ namespace NetStore.DAO
         {
             DBConnection dbconnection = new DBConnection();
             //string sql = "SELECT * FROM Receipt WHERE computerID = @computerID AND staffID IS NULL";
-            string sql = "sp_FindReceipt";
+            string sql = "SELECT * FROM dbo.fn_FindReceipt(@computerID)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@computerID", id)
             };
-            return dbconnection.Find(sql, parameters);
+            return dbconnection.Function_Find(sql, parameters);
         }
         public bool UpdateReceipt(int id, int staffID)
         {

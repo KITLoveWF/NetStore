@@ -43,14 +43,14 @@ namespace NetStore.DAO
         {
             DBConnection dbconnection = new DBConnection();
 
-            string sqlStr = "sp_FindStaff";
+            string sqlStr = "SELECT * FROM dbo.fn_FindStaff(@username, @password)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@username", username),
                 new SqlParameter("@password", password)
             };
 
-            return dbconnection.Find(sqlStr, parameters);
+            return dbconnection.Function_Find(sqlStr, parameters);
         }
 
 

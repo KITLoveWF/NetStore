@@ -73,13 +73,13 @@ namespace NetStore.DAO
         {
             DBConnection dbconnection = new DBConnection();
             //string sqlStr = "SELECT * FROM Computer WHERE nameComputer = @nameComputer";
-            string sqlStr = "sp_FindComputerByName";
+            string sqlStr = "SELECT * FROM dbo.fn_FindComputerByName(@nameComputer)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@nameComputer", name)
             };
 
-            return dbconnection.Find(sqlStr, parameters);
+            return dbconnection.Function_Find(sqlStr, parameters);
         }
 
 
