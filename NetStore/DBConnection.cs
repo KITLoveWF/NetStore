@@ -7,10 +7,10 @@ namespace NetStore
 {
     internal class DBConnection
     {
-        public static string sqlCon =
-            "Data Source=DESKTOP-AQBQ14F\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
+        //public static string sqlCon =
+        //    "Data Source=DESKTOP-AQBQ14F\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;";
 
-        //public static string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
+        public static string sqlCon = "Data Source=DESKTOP-G7D21BM\\SQLEXPRESS;Initial Catalog=NetDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn = null;
         public DataTable Find(string sqlStr)
         {
