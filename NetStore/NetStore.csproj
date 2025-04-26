@@ -534,6 +534,7 @@
     <None Include="Resources\minus1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\intro.png" />
     <Content Include="Resources\notfound.jpg" />
     <Content Include="Resources\Screenshot %281%29.png" />
   </ItemGroup>

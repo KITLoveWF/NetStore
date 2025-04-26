@@ -166,6 +166,69 @@ namespace NetStore
 
             return dt;
         }
+        public DataTable View_Find(string sqlStr)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                conn = new SqlConnection(sqlCon);
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    cmd.CommandType = CommandType.Text; // Sử dụng CommandType.Text cho các câu lệnh SELECT
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt); // Lấy kết quả vào DataTable
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
+        }
+
+        public DataTable Function_Find(string sqlStr, SqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                conn = new SqlConnection(sqlCon);
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    cmd.CommandType = CommandType.Text; // Đổi CommandType thành Text để sử dụng SELECT thay vì StoredProcedure
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
+        }
 
     }
 }

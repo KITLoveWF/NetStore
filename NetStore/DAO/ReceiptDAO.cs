@@ -30,13 +30,17 @@ namespace NetStore.DAO
         // Tìm hóa đơn chưa kết thúc theo customerID
         public Receipt FindActiveReceiptByCustomerID(int customerID)
         {
-            string query = "sp_FindActiveReceiptByCustomerID";
+            // Câu lệnh SQL để gọi function thay vì stored procedure
+            string query = "SELECT * FROM dbo.fn_FindActiveReceiptByCustomerID(@customerID)"; // Gọi function
+
+            // Thêm tham số vào câu lệnh SQL
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@customerID", customerID)
+        new SqlParameter("@customerID", customerID)
             };
 
-            DataTable dt = db.Find(query, parameters);
+            // Gọi db.Function_Find để thực hiện truy vấn và lấy dữ liệu
+            DataTable dt = db.Function_Find(query, parameters);
 
             if (dt.Rows.Count > 0)
             {
@@ -54,6 +58,7 @@ namespace NetStore.DAO
 
             return null;
         }
+
 
 
         // Cập nhật thông tin hóa đơn
@@ -76,27 +81,37 @@ namespace NetStore.DAO
         // Lấy thông tin các dịch vụ theo mã hóa đơn
         public DataTable GetOrderServiceDetailsByReceiptID(int receiptID)
         {
-            string query = "sp_GetOrderServiceDetailsByReceiptID";
+            // Câu lệnh SQL để gọi function thay vì stored procedure
+            string query = "SELECT * FROM dbo.fn_GetOrderServiceDetailsByReceiptID(@receiptID)"; // Gọi function
+
+            // Thêm tham số vào câu lệnh SQL
             SqlParameter[] parameters = new SqlParameter[]
             {
-                 new SqlParameter("@receiptID", receiptID)
+        new SqlParameter("@receiptID", receiptID)
             };
 
-            return db.Find(query, parameters);
+            // Gọi db.Function_Find để thực hiện truy vấn và lấy dữ liệu
+            return db.Function_Find(query,parameters);
         }
+
 
 
         // Lấy thông tin sử dụng máy theo mã hóa đơn
         public DataTable GetComputerUsageDetailByReceiptID(int receiptID)
         {
-            string query = "sp_GetComputerUsageDetailByReceiptID";
+            // Câu lệnh SQL để gọi function thay vì stored procedure
+            string query = "SELECT * FROM dbo.fn_GetComputerUsageDetailByReceiptID(@receiptID)"; // Gọi function
+
+            // Thêm tham số vào câu lệnh SQL
             SqlParameter[] parameters = new SqlParameter[]
             {
-               new SqlParameter("@receiptID", receiptID)
+        new SqlParameter("@receiptID", receiptID)
             };
 
-            return db.Find(query, parameters);
+            // Gọi db.Function_Find để thực hiện truy vấn và lấy dữ liệu
+            return db.Function_Find(query, parameters);
         }
+
 
         public DataTable LoadDB()
         {

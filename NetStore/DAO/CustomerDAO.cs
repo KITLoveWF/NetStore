@@ -15,15 +15,16 @@ namespace NetStore
 
         public Customer Login(string username, string password)
         {
-            //string query = "SELECT * FROM Customer WHERE username = @username AND password = @password";
-            string query = "sp_LoginCustomer";
+            // Thay vì gọi stored procedure, chúng ta sử dụng function
+            string query = "SELECT * FROM fn_LoginCustomer(@username, @password)";
+
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@username", username),
-                new SqlParameter("@password", password)
+        new SqlParameter("@username", username),
+        new SqlParameter("@password", password)
             };
 
-            DataTable dt = db.Find(query, parameters);
+            DataTable dt = db.Function_Find(query, parameters);
 
             if (dt.Rows.Count > 0)
             {
@@ -40,7 +41,8 @@ namespace NetStore
             return null; // Sai tài khoản/mật khẩu
         }
 
-         public bool Add(Customer customer)
+
+        public bool Add(Customer customer)
         {
             DBConnection dbconnection = new DBConnection();
             //string sqlStr = "INSERT INTO Customer(username, password) VALUES (@username, @password)";

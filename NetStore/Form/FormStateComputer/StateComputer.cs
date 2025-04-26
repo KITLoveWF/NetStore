@@ -322,8 +322,9 @@ namespace NetStore.Form.FormStateComputer
                         StaffDAO staffDAO = new StaffDAO();
                         DataTable staff = staffDAO.FindStaff(LoginSave.Username, LoginSave.Password);
                         DataRow staffRow = staff.Rows[0];
-                        ExplorePDF("D://DAI HOC DUNG HOC DAI//THIRD//HK2//DBMS//bill.pdf", nameComputer, orderspdf, computerCost, serviceCost, totalCost, staffRow["nameStaff"].ToString());
-                        receiptDAO.UpdateReceipt(Convert.ToInt32(dataRowReceipt["receiptID"]), Convert.ToInt32(staffRow["staffID"]));
+                        ExplorePDF("D:\\Documents\\HKII-2025\\dbms\\NetStore\\Resources\\bill.pdf", nameComputer, orderspdf, computerCost, serviceCost, totalCost, staffRow["nameStaff"].ToString());
+                    //ExplorePDF("D://DAI HOC DUNG HOC DAI//THIRD//HK2//DBMS//bill.pdf", nameComputer, orderspdf, computerCost, serviceCost, totalCost, staffRow["nameStaff"].ToString());
+                    receiptDAO.UpdateReceipt(Convert.ToInt32(dataRowReceipt["receiptID"]), Convert.ToInt32(staffRow["staffID"]));
                     }
                 }
             
@@ -335,7 +336,9 @@ namespace NetStore.Form.FormStateComputer
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-            string fontpath = "D:\\DAI HOC DUNG HOC DAI\\THIRD\\HK2\\DBMS\\week3\\Project\\NetStore\\NetStore\\Resources\\arial.ttf";
+            string fontpath = "D:\\Documents\\HKII-2025\\dbms\\NetStore\\Resources\\arial.ttf";
+            //string fontpath = "D:\\DAI HOC DUNG HOC DAI\\THIRD\\HK2\\DBMS\\week3\\Project\\NetStore\\NetStore\\Resources\\arial.ttf";
+
 
             PdfFont font = PdfFontFactory.CreateFont(fontpath, PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.FORCE_EMBEDDED);
             document.Add(new Paragraph(nameComputer)
@@ -373,7 +376,9 @@ namespace NetStore.Form.FormStateComputer
                 .SetTextAlignment(TextAlignment.RIGHT)
                 .SetFontSize(11));
 
-            string fontbold = "D:\\DAI HOC DUNG HOC DAI\\THIRD\\HK2\\DBMS\\week3\\Project\\NetStore\\NetStore\\Resources\\arialbd.ttf";
+            string fontbold = "D:\\Documents\\HKII-2025\\dbms\\NetStore\\Resources\\arialbd.ttf";
+            //string fontbold = "D:\\DAI HOC DUNG HOC DAI\\THIRD\\HK2\\DBMS\\week3\\Project\\NetStore\\NetStore\\Resources\\arialbd.ttf";
+
 
             PdfFont boldFont = PdfFontFactory.CreateFont(fontbold, PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.FORCE_EMBEDDED);
             document.Add(new Paragraph("Tổng cộng: " + totalCost.ToString("N0") + " VND")
