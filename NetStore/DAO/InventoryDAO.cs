@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace NetStore
 {
@@ -168,6 +169,13 @@ namespace NetStore
             };
 
             return dbconnection.Function_Find(sqlStr, parameters);
+        }
+        public DataTable FindInventoryName()
+        {
+            DBConnection dbconnection = new DBConnection();
+            string sqlStr = "SELECT * FROM vw_InventoryNoImage";
+            return dbconnection.Find(sqlStr);
+
         }
         public DataTable LoadDB()
         {
