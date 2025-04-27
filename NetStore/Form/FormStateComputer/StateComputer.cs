@@ -792,7 +792,7 @@ namespace NetStore.Form.FormStateComputer
             AddNewFood addNewFood = new AddNewFood();   
             //addNewFood.Show();
             InventoryDAO inventoryDAO   = new InventoryDAO();
-            DataTable dt = inventoryDAO.LoadDB();
+            DataTable dt = inventoryDAO.FindInventoryName();
             foreach(DataRow dr in dt.Rows)
             {
                 addNewFood.cbxName.Items.Add(dr["nameInventory"]);
